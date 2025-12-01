@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Ivan Tech Coach",
+    "title": "Frictionless Technology.",
+    "subtitle": "I transform technological complexity into clear, actionable solutions. No jargon, no complications, just results that drive your business forward.",
+    "ctaPrimary": "Let's talk now",
+    "ctaSecondary": "View services"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm Ivan, and I believe in technology that actually works. Over the years, I've seen how companies get lost in empty promises and solutions that don't deliver. That's why I decided to focus on what really matters: clear results, honest communication, and technology that drives your business without unnecessary complications. My goal is to help you make informed technology decisions, without unnecessary technical jargon, with a practical approach and measurable results.",
+    "cta": "Contact me"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "How I can help you",
+    "items": [
+      {
+        "title": "Technology Consulting",
+        "description": "Clear strategies to make informed technology decisions without getting lost in complexity.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Software Architecture",
+        "description": "Design of scalable and maintainable systems that grow with your business.",
+        "icon": "layers"
+      },
+      {
+        "title": "Digital Transformation",
+        "description": "Step-by-step guidance to modernize your processes without disrupting your operation.",
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Team Training",
+        "description": "Practical training that actually improves your team's productivity.",
+        "icon": "users"
+      },
+      {
+        "title": "Process Optimization",
+        "description": "I identify and eliminate bottlenecks that slow your growth.",
+        "icon": "zap"
+      },
+      {
+        "title": "Executive Mentoring",
+        "description": "Personalized support for leaders who need technological clarity.",
+        "icon": "target"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear answers about my work",
+    "items": [
+      {
+        "question": "What exactly does it mean that you are a \"Technology Architect\"?",
+        "answer": "It means I design, integrate, and optimize complete systems: infrastructure, networks, servers, hardware, AI automation, security, and web platforms. I don't work on isolated pieces; I build the complete technological ecosystem that supports a modern digital business."
+      },
+      {
+        "question": "How does hiring a Technology Architect benefit me instead of several specialists?",
+        "answer": "You don't need a programmer, a sysadmin, an automation specialist, and a security technician separately. I cover all these areas in an integrated way, ensuring coherence, stability, and efficiency. You save costs, reduce friction, and get a functional system from start to finish."
+      },
+      {
+        "question": "Can you analyze my current infrastructure and propose real improvements?",
+        "answer": "Yes. I perform technical audits where I evaluate performance, security, configurations, compatibility, automations, hardware, networks, and deployments. I identify bottlenecks and deliver a clear strategic plan based on professional technical criteria."
+      },
+      {
+        "question": "What type of AI automations can you implement in my business?",
+        "answer": "From intelligent operational assistants to advanced flows with n8n for administrative tasks, documentation, customer service, information classification, API integrations, and internal processes. Designed to reduce operational time and increase real efficiency."
+      },
+      {
+        "question": "Can you design the complete technological infrastructure of my company?",
+        "answer": "Yes. From hardware and server selection to network configuration, virtualization, production environments, security, and web deployment. This includes scalability, basic redundancy, and best practices to avoid failures and downtime."
+      },
+      {
+        "question": "Do you also offer DevOps or SysOps services?",
+        "answer": "Yes, with a practical approach adapted to small and medium-sized businesses. I configure environments, pipelines, secure deployments, VPS, basic containers, monitoring, and technical automations, without the unnecessary complexity of enterprise environments."
+      },
+      {
+        "question": "Can I change my entire technological environment even if you don't know how it's currently built?",
+        "answer": "Yes. I have experience auditing and rebuilding legacy, hybrid, obsolete, or poorly integrated systems. I can migrate, modernize, and stabilize them without interrupting your operation."
+      },
+      {
+        "question": "Do you offer advice on equipment purchases or technological renewal of a company?",
+        "answer": "Yes. I evaluate real needs, desired performance, compatibility, durability, and scalability. My approach avoids impulsive purchases or bad investments, ensuring that the chosen hardware performs and has a prolonged useful life."
+      },
+      {
+        "question": "What level of security can you implement in my systems?",
+        "answer": "I apply practical technical security: server hardening, secure configuration, basic network segmentation, web best practices, attack vector review, operational shields, and monitoring. Realistic and effective security for SMEs and professionals."
+      },
+      {
+        "question": "What type of projects can you complete fully and turnkey?",
+        "answer": "– Modern corporate web\n– VPS + deployment + security\n– AI automation\n– Hybrid systems (local + cloud)\n– Networks and cameras\n– Infrastructure for digital businesses\n– Audits and environment modernization\n– Comprehensive support and maintenance"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Scalability and Growth",
+    "subtitle": "Ready to take the next step?",
+    "description": "Let's work together to build technology solutions that truly drive your business. No smoke, no complications, just results.",
+    "button": "Start conversation"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk",
+    "description": "Have a question or want to learn more about how I can help you? Write to me and I'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "There was an error. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Frictionless Technology.",
+    "rights": "Ivan Tech Coach. All rights reserved.",
+    "madeBy": "Designed and developed by Ivan, combining modern web architecture with Context Engineering and Vibe Coding techniques assisted by AI.",
+    "social": {
+      "instagram": "https://instagram.com",
+      "youtube": "https://youtube.com",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    }
+  }
+}
+

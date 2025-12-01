@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Ivan Tech Coach",
+    "title": "Tecnología sin fricción.",
+    "subtitle": "Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.",
+    "ctaPrimary": "Hablemos ahora",
+    "ctaSecondary": "Ver servicios"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy Ivan, y creo en la tecnología que realmente funciona. Durante años, he visto cómo las empresas se pierden en promesas vacías y soluciones que no cumplen. Por eso decidí enfocarme en lo que realmente importa: resultados claros, comunicación honesta y tecnología que impulse tu negocio sin complicaciones innecesarias. Mi objetivo es ayudarte a tomar decisiones tecnológicas informadas, sin jerga técnica innecesaria, con un enfoque práctico y resultados medibles.",
+    "cta": "Contáctame"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Cómo puedo ayudarte",
+    "items": [
+      {
+        "title": "Consultoría Tecnológica",
+        "description": "Estrategias claras para tomar decisiones tecnológicas informadas sin perderte en la complejidad.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Arquitectura de Software",
+        "description": "Diseño de sistemas escalables y mantenibles que crecen con tu negocio.",
+        "icon": "layers"
+      },
+      {
+        "title": "Transformación Digital",
+        "description": "Guía paso a paso para modernizar tus procesos sin interrumpir tu operación.",
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Capacitación de Equipos",
+        "description": "Formación práctica que realmente mejora la productividad de tu equipo.",
+        "icon": "users"
+      },
+      {
+        "title": "Optimización de Procesos",
+        "description": "Identifico y elimino cuellos de botella que frenan tu crecimiento.",
+        "icon": "zap"
+      },
+      {
+        "title": "Mentoría Ejecutiva",
+        "description": "Acompañamiento personalizado para líderes que necesitan claridad tecnológica.",
+        "icon": "target"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas claras sobre mi trabajo",
+    "items": [
+      {
+        "question": "¿Qué significa exactamente que eres un \"Arquitecto Tecnológico\"?",
+        "answer": "Significa que diseño, integro y optimizo sistemas completos: infraestructura, redes, servidores, hardware, automatización con IA, seguridad y plataformas web. No trabajo piezas sueltas; construyo el ecosistema tecnológico completo que sostiene un negocio digital moderno."
+      },
+      {
+        "question": "¿Cómo me beneficia contratar a un Arquitecto Tecnológico en vez de varios especialistas?",
+        "answer": "No necesitas un programador, un sysadmin, un automatizador y un técnico de seguridad por separado. Yo cubro todas esas áreas de forma integrada, asegurando coherencia, estabilidad y eficiencia. Ahorras costes, reduces fricción y obtienes un sistema funcional de principio a fin."
+      },
+      {
+        "question": "¿Puedes analizar mi infraestructura actual y proponer mejoras reales?",
+        "answer": "Sí. Realizo auditorías técnicas donde evalúo rendimiento, seguridad, configuraciones, compatibilidad, automatizaciones, hardware, redes y despliegues. Identifico cuellos de botella y entrego un plan estratégico claro basado en criterios técnicos profesionales."
+      },
+      {
+        "question": "¿Qué tipo de automatizaciones con IA puedes implementar en mi negocio?",
+        "answer": "Desde asistentes inteligentes operativos hasta flujos avanzados con n8n para tareas administrativas, documentación, atención al cliente, clasificación de información, integraciones con APIs y procesos internos. Diseñadas para reducir tiempo operativo y aumentar eficiencia real."
+      },
+      {
+        "question": "¿Puedes diseñar la infraestructura tecnológica completa de mi empresa?",
+        "answer": "Sí. Desde la selección de hardware y servidores hasta la configuración de redes, virtualización, entornos de producción, seguridad y despliegue web. Esto incluye escalabilidad, redundancia básica y buenas prácticas para evitar fallos y caídas."
+      },
+      {
+        "question": "¿También ofreces servicios de DevOps o SysOps?",
+        "answer": "Sí, en un enfoque práctico y adaptado a pequeñas y medianas empresas. Configuro entornos, pipelines, despliegues seguros, VPS, contenedores básicos, monitorización y automatizaciones técnicas, sin la complejidad innecesaria de entornos enterprise."
+      },
+      {
+        "question": "¿Puedo cambiar todo mi entorno tecnológico aunque no sepas cómo está construido actualmente?",
+        "answer": "Sí. Tengo experiencia auditando y reconstruyendo sistemas heredados, híbridos, obsoletos o mal integrados. Puedo migrarlos, modernizarlos y estabilizarlos sin interrumpir tu operación."
+      },
+      {
+        "question": "¿Ofreces asesoría en compras de equipos o en la renovación tecnológica de una empresa?",
+        "answer": "Sí. Evalúo necesidades reales, rendimiento deseado, compatibilidad, durabilidad y escalabilidad. Mi enfoque evita compras impulsivas o malas inversiones, garantizando que el hardware elegido rinda y tenga vida útil prolongada."
+      },
+      {
+        "question": "¿Qué nivel de seguridad puedes implementar en mis sistemas?",
+        "answer": "Aplico seguridad técnica práctica: hardening de servidores, configuración segura, segmentación básica de redes, buenas prácticas en web, revisión de vectores de ataque, blindajes operativos y monitorización. Seguridad realista y efectiva para PYMEs y profesionales."
+      },
+      {
+        "question": "¿Qué tipo de proyectos puedes realizar de forma completa y llave en mano?",
+        "answer": "– Web moderna corporativa\n– VPS + despliegue + seguridad\n– Automatización con IA\n– Sistemas híbridos (local + nube)\n– Redes y cámaras\n– Infraestructura para negocios digitales\n– Auditorías y modernización de entornos\n– Soporte y mantenimiento integral"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Escalabilidad y Crecimiento",
+    "subtitle": "Listo para dar el siguiente paso?",
+    "description": "Trabajemos juntos para construir soluciones tecnológicas que realmente impulsen tu negocio. Sin humo, sin complicaciones, solo resultados.",
+    "button": "Iniciar conversación"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Hablemos",
+    "description": "Tengo una pregunta o quieres conocer más sobre cómo puedo ayudarte? Escríbeme y te responderé lo antes posible.",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderé pronto.",
+      "error": "Hubo un error. Por favor, intenta de nuevo."
+    }
+  },
+  "footer": {
+    "tagline": "Tecnología sin fricción.",
+    "rights": "Ivan Tech Coach. Todos los derechos reservados.",
+    "madeBy": "Diseñado y desarrollado por Ivan, combinando arquitectura web moderna con técnicas de Context Engineering y Vibe Coding asistidas por IA.",
+    "social": {
+      "instagram": "https://instagram.com",
+      "youtube": "https://youtube.com",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    }
+  }
+}
+

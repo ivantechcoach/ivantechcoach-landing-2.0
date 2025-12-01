@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --transition: 0.25s ease-in-out;
+  }
+
+  /* Tema LIGHT */
+  .theme-light {
+    --bg: #ffffff;
+    --bg-2: #f5f7fa;
+    --text: #111111;
+    --text-soft: #444444;
+    --card: #ffffff;
+    --nav: rgba(255,255,255,0.75);
+    --primary: #0070f3;
+    --primary-light: #51a7ff;
+    --primary-dark: #0054b0;
+    --border: rgba(0,0,0,0.12);
+    --wave-top: rgba(0,0,0,0.04);
+    --wave-mid: rgba(0,118,255,0.18);
+    --wave-bottom: rgba(0,0,0,0.03);
+    --glow: rgba(0,118,255,0.12);
+  }
+
+  /* Tema DARK */
+  .theme-dark {
+    --bg: #0d0f13;
+    --bg-2: #16181d;
+    --text: #f4f4f7;
+    --text-soft: #b5b5c7;
+    --card: #16181d;
+    --nav: rgba(15,15,20,0.65);
+    --primary: #3ddcf3;
+    --primary-light: #82ecff;
+    --primary-dark: #1eb4c4;
+    --border: rgba(255,255,255,0.15);
+    --wave-top: rgba(255,255,255,0.07);
+    --wave-mid: rgba(61,220,243,0.25);
+    --wave-bottom: rgba(255,255,255,0.05);
+    --glow: rgba(61,220,243,0.15);
+  }
+
+  body {
+    background-color: var(--bg) !important;
+    color: var(--text);
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    will-change: background-color, color;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out forwards;
+  }
+  
+  .animate-fade-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-up,
+  .animate-slide-up,
+  .animate-on-scroll {
+    animation: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2;
+  outline-color: var(--primary);
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--glow);
+  color: var(--text);
+}
