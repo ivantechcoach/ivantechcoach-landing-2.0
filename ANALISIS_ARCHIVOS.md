@@ -45,7 +45,7 @@
 
 ### Archivos de Proyecto
 - ✅ `package.json` - Dependencias y scripts
-- ✅ `package-lock.json` - Lock file de npm
+- ✅ `pnpm-lock.yaml` - Lock file de pnpm
 - ✅ `.gitignore` - Archivos ignorados por Git
 - ✅ `.eslintrc.json` - Configuración ESLint (opcional pero recomendado)
 - ✅ `README.md` - Documentación del proyecto
@@ -191,7 +191,7 @@
 ## 4. PLAN DE LIMPIEZA (Paso a Paso)
 
 ### FASE 1: Verificación Pre-Limpieza
-1. ✅ Verificar que el proyecto funciona correctamente (`npm run dev`)
+1. ✅ Verificar que el proyecto funciona correctamente (`pnpm run dev`)
 2. ✅ Hacer commit de cualquier cambio pendiente
 3. ✅ Crear branch de limpieza: `git checkout -b cleanup/project-structure`
 
@@ -213,9 +213,9 @@
     - `middleware.ts`
 
 ### FASE 5: Verificación Post-Limpieza
-13. ✅ Ejecutar `npm run dev` y verificar que todo funciona
-14. ✅ Ejecutar `npm run build` y verificar que el build es exitoso
-15. ✅ Ejecutar `npm run lint` y corregir cualquier warning
+13. ✅ Ejecutar `pnpm run dev` y verificar que todo funciona
+14. ✅ Ejecutar `pnpm run build` y verificar que el build es exitoso
+15. ✅ Ejecutar `pnpm run lint` y corregir cualquier warning
 16. ✅ Verificar que TypeScript compila sin errores
 
 ### FASE 6: Commit y Merge

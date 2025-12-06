@@ -149,6 +149,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
           <button
             onClick={toggleLang}
+            aria-label={`Cambiar idioma a ${lang === "es" ? "inglés" : "español"}`}
             className="flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] transition"
           >
             <Globe size={16} />
@@ -165,7 +166,12 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
           </button>
         </nav>
 
-        <button className="md:hidden text-[var(--text)] p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button 
+          className="md:hidden text-[var(--text)] p-2" 
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileOpen}
+        >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -194,7 +200,11 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
                 </span>
               </div>
 
-              <button className="text-[var(--text)] p-2" onClick={() => setMobileOpen(false)}>
+              <button 
+                className="text-[var(--text)] p-2" 
+                onClick={() => setMobileOpen(false)}
+                aria-label="Cerrar menú"
+              >
                 <X size={26} />
               </button>
             </div>
@@ -230,6 +240,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
               <button
                 onClick={() => toggleLang()}
+                aria-label={`Cambiar idioma a ${lang === "es" ? "inglés" : "español"}`}
                 className="mt-6 flex items-center gap-3 text-lg text-[var(--text)]"
               >
                 <Globe size={22} />

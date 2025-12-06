@@ -24,7 +24,7 @@ Landing page profesional y moderna para Ivan Tech Coach, desarrollada con Next.j
 ## 📋 Requisitos Previos
 
 - Node.js 18.x o superior
-- npm o yarn
+- pnpm (recomendado por seguridad) - [Instalación](https://pnpm.io/installation)
 
 ## 🔧 Instalación
 
@@ -36,22 +36,40 @@ cd ivantechcoach-landing-2.0
 
 2. Instala las dependencias:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Ejecuta el servidor de desarrollo:
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ## 📜 Scripts Disponibles
 
-- `npm run dev`: Inicia el servidor de desarrollo en modo desarrollo
-- `npm run build`: Construye la aplicación para producción
-- `npm run start`: Inicia el servidor de producción (requiere build previo)
-- `npm run lint`: Ejecuta el linter para verificar el código
+### Desarrollo
+- `pnpm run dev`: Inicia el servidor de desarrollo
+- `pnpm run build`: Construye la aplicación para producción
+- `pnpm run start`: Inicia el servidor de producción (requiere build previo)
+
+### QA y Testing
+- `pnpm run lint`: Ejecuta el linter (ESLint)
+- `pnpm run lint:fix`: Ejecuta el linter con corrección automática
+- `pnpm run typecheck`: Verifica tipos de TypeScript
+- `pnpm run test`: Ejecuta tests unitarios
+- `pnpm run test:watch`: Ejecuta tests en modo watch
+- `pnpm run test:coverage`: Ejecuta tests con reporte de cobertura
+
+### Seguridad
+- `pnpm run audit`: Auditoría de seguridad de dependencias
+- `pnpm run audit:fix`: Intenta corregir vulnerabilidades automáticamente
+- `pnpm run store:prune`: Limpia el caché de pnpm
+
+### Todo en uno
+- `pnpm run qa`: Ejecuta lint + typecheck + test + build (recomendado antes de commit)
+
+> **Nota:** Este proyecto usa **pnpm** en lugar de npm por razones de seguridad. Asegúrate de tener pnpm instalado antes de continuar.
 
 ## 📁 Estructura del Proyecto
 
@@ -124,8 +142,8 @@ Las imágenes se almacenan en `public/images/` y se optimizan automáticamente p
 ### Otros Proveedores
 
 ```bash
-npm run build
-npm run start
+pnpm run build
+pnpm run start
 ```
 
 ## 📝 Licencia
