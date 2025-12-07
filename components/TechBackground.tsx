@@ -220,15 +220,22 @@ const TechBackground: React.FC = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         init();
+        // Redraw static grid if reduced motion is enabled
+        if (prefersReducedMotion) {
+          const { gridColor } = getThemeColors();
+          drawGrid(gridColor);
+        }
       }, 150);
     };
 
     // Initialize and start animation
     init();
     
+    // Always register resize handler regardless of motion preferences
+    window.addEventListener("resize", handleResize, { passive: true });
+    
     if (!prefersReducedMotion) {
       animationFrameIdRef.current = requestAnimationFrame(animate);
-      window.addEventListener("resize", handleResize, { passive: true });
     } else {
       // Draw static grid for reduced motion
       const { gridColor } = getThemeColors();
