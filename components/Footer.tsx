@@ -27,7 +27,7 @@ export default function Footer({ content }: FooterProps) {
   ]
 
   return (
-    <footer className="relative bg-[var(--bg)] border-t border-[var(--border)] py-12" role="contentinfo">
+    <footer className="relative bg-transparent border-t border-[var(--border)] py-12" role="contentinfo">
       <div className="container-custom relative z-10">
         <div className="flex flex-col items-center gap-6">
           <nav className="flex gap-4" aria-label="Social media links">

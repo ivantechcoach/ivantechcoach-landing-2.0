@@ -1,6 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+
+const AntigravityLite = dynamic(
+  () => import("@/components/AntigravityLite"),
+  { ssr: false }
+);
+
+const WarpHover = dynamic(
+  () => import("@/components/WarpHover"),
+  { ssr: false }
+);
 
 /**
  * SNYK++ Premium Background System
@@ -95,10 +106,9 @@ const TechBackground: React.FC = () => {
 
   return (
     <div
-      className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-[-1] overflow-hidden"
       aria-hidden="true"
       style={{
-        zIndex: -1,
         transform: `translateY(${parallaxTransform}px)`,
         willChange: "transform",
       }}
@@ -108,12 +118,12 @@ const TechBackground: React.FC = () => {
         className="absolute inset-0 w-full h-full energy-layer"
         style={{
           background: `
-            radial-gradient(circle at 20% 30%, var(--bg-gradient-1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, var(--bg-gradient-2) 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, var(--bg-gradient-3) 0%, transparent 60%),
-            radial-gradient(circle at 10% 80%, var(--bg-gradient-1) 0%, transparent 40%),
+            var(--bg-gradient-1),
+            var(--bg-gradient-2),
+            var(--bg-gradient-3),
             var(--bg)
           `,
+          opacity: "0.65",
         }}
       />
 
@@ -129,7 +139,7 @@ const TechBackground: React.FC = () => {
             top: "-10%",
             background: `radial-gradient(circle, var(--blob-color-1) 0%, transparent 70%)`,
             filter: "blur(120px)",
-            opacity: "var(--blob-opacity-1)",
+            opacity: "calc(var(--blob-opacity-1) * 0.55)",
             animation: prefersReducedMotion
               ? "none"
               : "blob-pulse 30s ease-in-out infinite alternate",
@@ -148,7 +158,7 @@ const TechBackground: React.FC = () => {
             bottom: "-15%",
             background: `radial-gradient(circle, var(--blob-color-2) 0%, transparent 70%)`,
             filter: "blur(140px)",
-            opacity: "var(--blob-opacity-2)",
+            opacity: "calc(var(--blob-opacity-2) * 0.55)",
             animation: prefersReducedMotion
               ? "none"
               : "blob-pulse 35s ease-in-out infinite alternate",
@@ -167,7 +177,7 @@ const TechBackground: React.FC = () => {
             top: "40%",
             background: `radial-gradient(circle, var(--blob-color-3) 0%, transparent 70%)`,
             filter: "blur(100px)",
-            opacity: "var(--blob-opacity-3)",
+            opacity: "calc(var(--blob-opacity-3) * 0.55)",
             animation: prefersReducedMotion
               ? "none"
               : "blob-pulse 40s ease-in-out infinite alternate",
@@ -176,6 +186,12 @@ const TechBackground: React.FC = () => {
           }}
         />
       </div>
+
+      {/* LAYER 5: ANTIGRAVITY LITE ENERGY FIELD */}
+      <AntigravityLite />
+
+      {/* LAYER 6: WARP HOVER INTERACTIONS */}
+      <WarpHover />
 
       {/* LAYER 3: FOG / NOISE LAYER */}
       {noiseTexture && (

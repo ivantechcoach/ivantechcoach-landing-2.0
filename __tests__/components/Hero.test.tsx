@@ -33,12 +33,5 @@ describe('Hero Component', () => {
     expect(ctaLink).toHaveAttribute('href', '/es/contact')
   })
 
-  it('should render scroll indicator', () => {
-    render(<Hero lang="es" content={mockContent} />)
-    
-    const scrollLink = screen.getByLabelText('Scroll to next section')
-    expect(scrollLink).toBeInTheDocument()
-    expect(scrollLink).toHaveAttribute('href', '#about')
-  })
 })
 

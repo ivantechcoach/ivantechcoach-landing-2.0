@@ -89,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
               href={`/${lang}/contact`}
-              className="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-semibold text-lg shadow-lg hover:bg-[var(--primary-dark)] hover:scale-105 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+              className="interactive px-8 py-4 bg-[var(--primary)] text-white rounded-full font-semibold text-lg shadow-lg hover:bg-[var(--primary-dark)] hover:scale-105 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
               style={{
                 boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
               }}
@@ -100,7 +100,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
 
             <Link
               href="#services"
-              className="px-8 py-4 rounded-full font-semibold text-lg text-white hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)] hero-secondary-cta"
+              className="interactive px-8 py-4 rounded-full font-semibold text-lg text-white hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)] hero-secondary-cta"
             >
               {content.ctaSecondary}
             </Link>
@@ -113,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
             <div className="absolute inset-0 bg-[var(--glow)] rounded-full blur-3xl animate-pulse" aria-hidden="true"></div>
 
             <div 
-              className="relative z-10 p-8 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-2xl shadow-xl shadow-[var(--card-shadow)] transform rotate-3 hover:rotate-0 transition-all duration-500 backdrop-blur-xl before:absolute before:inset-0 before:rounded-2xl before:bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_70%)] before:pointer-events-none"
+              className="interactive relative z-10 p-8 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-2xl shadow-xl shadow-[var(--card-shadow)] transform rotate-3 hover:rotate-0 transition-all duration-500 backdrop-blur-xl before:absolute before:inset-0 before:rounded-2xl before:bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_70%)] before:pointer-events-none"
             >
               <div className="flex items-center gap-3 mb-4 border-b border-[var(--border)] pb-4 relative z-10" aria-hidden="true">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>

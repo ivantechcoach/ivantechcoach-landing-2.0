@@ -114,7 +114,7 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
 
   return (
     <section
-      className="relative section-padding bg-[var(--bg)] text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)]"
       aria-labelledby="contact-title"
     >
       <div className="container-custom relative z-10">

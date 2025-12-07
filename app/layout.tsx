@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import LangUpdater from '@/components/LangUpdater'
+import TechBackground from '@/components/TechBackground'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -108,6 +109,7 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
+        <TechBackground />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:px-4 focus:py-2 focus:bg-[var(--bg-2)] focus:text-[var(--text)] focus:rounded-md focus:shadow-lg"

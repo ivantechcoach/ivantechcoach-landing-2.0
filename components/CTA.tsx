@@ -35,7 +35,7 @@ export default function CTA({ lang: langProp, content }: CTAProps = {}) {
 
         <a
           href={`/${lang}/contact`}
-          className="
+          className="interactive
             inline-block px-10 py-4 rounded-full font-semibold
             bg-[var(--text)] text-[var(--bg)]
             hover:bg-[var(--text-soft)]

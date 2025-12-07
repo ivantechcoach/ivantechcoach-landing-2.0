@@ -1,7 +1,6 @@
 import { getContent } from '@/lib/content'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import WaveCanvas from '@/components/WaveCanvas'
 import TechBackground from '@/components/TechBackground'
 import About from '@/components/About'
 import Services from '@/components/Services'
@@ -38,8 +37,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <main id="main-content">
       <Header lang={lang} content={content} />
-      <section className="relative overflow-hidden bg-[var(--bg)]">
-        <WaveCanvas />
+      <section className="relative overflow-hidden bg-transparent">
         <Hero lang={lang} content={content.hero} />
       </section>
       <div className="relative">
