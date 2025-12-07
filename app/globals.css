@@ -53,6 +53,21 @@
     --glow: rgba(0,118,255,0.12);
     --grid-line-light: rgba(0,0,0,0.06);
     --particle-light: rgba(0,118,255,0.15);
+    
+    /* SNYK++ Background System - Light Theme */
+    --bg-gradient-1: rgba(0, 118, 255, 0.08);
+    --bg-gradient-2: rgba(102, 255, 204, 0.06);
+    --bg-gradient-3: rgba(138, 43, 226, 0.05);
+    --blob-color-1: rgba(0, 118, 255, 0.25);
+    --blob-color-2: rgba(102, 255, 204, 0.20);
+    --blob-color-3: rgba(138, 43, 226, 0.18);
+    --blob-opacity-1: 0.25;
+    --blob-opacity-2: 0.20;
+    --blob-opacity-3: 0.18;
+    --fog-opacity: 0.06;
+    --grid-color: rgba(0, 0, 0, 0.04);
+    --grid-size: 50px;
+    --grid-opacity: 0.04;
   }
 
   /* Tema DARK */
@@ -73,6 +88,21 @@
     --glow: rgba(61,220,243,0.15);
     --grid-line-dark: rgba(255,255,255,0.08);
     --particle-dark: rgba(61,220,243,0.25);
+    
+    /* SNYK++ Background System - Dark Theme */
+    --bg-gradient-1: rgba(61, 220, 243, 0.12);
+    --bg-gradient-2: rgba(102, 255, 204, 0.10);
+    --bg-gradient-3: rgba(138, 43, 226, 0.08);
+    --blob-color-1: rgba(61, 220, 243, 0.35);
+    --blob-color-2: rgba(102, 255, 204, 0.30);
+    --blob-color-3: rgba(138, 43, 226, 0.25);
+    --blob-opacity-1: 0.35;
+    --blob-opacity-2: 0.30;
+    --blob-opacity-3: 0.25;
+    --fog-opacity: 0.08;
+    --grid-color: rgba(255, 255, 255, 0.05);
+    --grid-size: 50px;
+    --grid-opacity: 0.05;
   }
 
   body {
@@ -104,6 +134,27 @@
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* SNYK++ Background System Utilities */
+  .energy-layer {
+    will-change: background-position;
+    transform: translateZ(0);
+  }
+
+  .tech-grid-layer {
+    will-change: background-position;
+    transform: translateZ(0);
+  }
+
+  .blob {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+
+  .fog-layer {
+    will-change: background-position;
+    transform: translateZ(0);
   }
 }
 
@@ -196,6 +247,49 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+/* SNYK++ Background System Animations */
+@keyframes blobPulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(20px, 30px) scale(1.05);
+  }
+}
+
+@keyframes fogDrift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 256px 256px;
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes parallaxFloat {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 20px 20px;
   }
 }
 

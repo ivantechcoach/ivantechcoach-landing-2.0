@@ -1,263 +1,217 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  angle: number;
-  angleSpeed: number;
-  radius: number;
-}
+/**
+ * SNYK++ Premium Background System
+ * 
+ * Four-layer architecture:
+ * 1. Background Gradient Layer - Multiple radial gradients with dark energy tonality
+ * 2. Energy Blobs Layer - 2-3 large amorphous blobs with slow animation
+ * 3. Fog/Noise Layer - Subtle noise texture with soft-light blend mode
+ * 4. Tech Grid Layer - Blueprint-style grid pattern
+ * 
+ * Features:
+ * - Full light/dark theme support via CSS variables
+ * - Subtle parallax on scroll (enterprise-grade)
+ * - GPU-accelerated animations
+ * - prefers-reduced-motion support
+ */
 
 const TechBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const animationFrameIdRef = useRef<number | null>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const gridOffsetRef = useRef<number>(0);
+  const [scrollY, setScrollY] = useState(0);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
+  // Check for reduced motion preference
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mediaQuery.matches);
 
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let width = 0;
-    let height = 0;
-    let gridSpacing = 100;
-    let gridDriftSpeed = 0.1;
-    const connectionDistance = 120;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Get colors from CSS variables - called every frame for theme awareness
-    const getThemeColors = () => {
-      const styles = getComputedStyle(document.documentElement);
-      const isDark = document.documentElement.classList.contains('theme-dark');
-      
-      const gridColor = styles.getPropertyValue(isDark ? '--grid-line-dark' : '--grid-line-light').trim() || 
-        (isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)');
-      
-      const particleColor = styles.getPropertyValue(isDark ? '--particle-dark' : '--particle-light').trim() || 
-        (isDark ? 'rgba(61,220,243,0.25)' : 'rgba(0,118,255,0.15)');
-      
-      return { gridColor, particleColor };
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
     };
 
-    const init = () => {
-      const dpr = window.devicePixelRatio || 1;
-      width = window.innerWidth;
-      height = window.innerHeight;
-
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.scale(dpr, dpr);
-
-      // Grid spacing: 80-120px, responsive
-      gridSpacing = width < 768 ? 80 : width < 1200 ? 100 : 120;
-      
-      // Grid drift speed: 0.05-0.15 px per frame
-      gridDriftSpeed = prefersReducedMotion ? 0 : (0.05 + Math.random() * 0.1);
-
-      // Initialize 25-35 particles
-      const particleCount = Math.floor(25 + Math.random() * 11);
-      particlesRef.current = [];
-      
-      for (let i = 0; i < particleCount; i++) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = 0.1 + Math.random() * 0.2; // 0.1-0.3 px per frame
-        
-        particlesRef.current.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed,
-          angle: angle,
-          angleSpeed: (Math.random() - 0.5) * 0.01, // Subtle angle change
-          radius: 1.5 + Math.random() * 1.5,
-        });
-      }
-
-      gridOffsetRef.current = 0;
-    };
-
-    const drawGrid = (gridColor: string) => {
-      ctx.strokeStyle = gridColor;
-      ctx.lineWidth = 1;
-      ctx.globalAlpha = 1;
-
-      const offset = gridOffsetRef.current;
-
-      // Vertical lines with horizontal drift
-      const startX = Math.floor(-offset / gridSpacing) * gridSpacing - (offset % gridSpacing);
-      for (let x = startX; x <= width + gridSpacing; x += gridSpacing) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
-        ctx.stroke();
-      }
-
-      // Horizontal lines
-      for (let y = 0; y <= height; y += gridSpacing) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-        ctx.stroke();
-      }
-    };
-
-    const updateParticles = () => {
-      if (prefersReducedMotion) return;
-      
-      const particles = particlesRef.current;
-      
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-        
-        // Update angle slightly for smooth direction change
-        p.angle += p.angleSpeed;
-        
-        // Update velocity based on angle (smooth, professional motion)
-        const baseSpeed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-        p.vx = Math.cos(p.angle) * baseSpeed;
-        p.vy = Math.sin(p.angle) * baseSpeed;
-        
-        // Update position
-        p.x += p.vx;
-        p.y += p.vy;
-
-        // Soft bounce within canvas boundaries
-        if (p.x < 0) {
-          p.x = 0;
-          p.angle = Math.PI - p.angle;
-        } else if (p.x > width) {
-          p.x = width;
-          p.angle = Math.PI - p.angle;
-        }
-        
-        if (p.y < 0) {
-          p.y = 0;
-          p.angle = -p.angle;
-        } else if (p.y > height) {
-          p.y = height;
-          p.angle = -p.angle;
-        }
-        
-        // Normalize angle
-        p.angle = ((p.angle % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
-      }
-    };
-
-    const drawParticles = (particleColor: string) => {
-      const particles = particlesRef.current;
-
-      // Draw connections between nearby particles
-      ctx.strokeStyle = particleColor;
-      ctx.lineWidth = 0.5;
-      
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < connectionDistance) {
-            // Opacity fades with distance
-            const opacity = (1 - (distance / connectionDistance)) * 0.3;
-            ctx.globalAlpha = opacity;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw particles
-      ctx.fillStyle = particleColor;
-      ctx.globalAlpha = 1;
-      
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    };
-
-    const animate = () => {
-      // Clear canvas
-      ctx.clearRect(0, 0, width, height);
-
-      // Get theme colors every frame for dynamic theme switching
-      const { gridColor, particleColor } = getThemeColors();
-
-      // Update grid offset for horizontal drift
-      if (!prefersReducedMotion) {
-        gridOffsetRef.current += gridDriftSpeed;
-        if (gridOffsetRef.current >= gridSpacing) {
-          gridOffsetRef.current = 0;
-        }
-      }
-
-      // Draw grid
-      drawGrid(gridColor);
-
-      // Update and draw particles
-      updateParticles();
-      drawParticles(particleColor);
-
-      animationFrameIdRef.current = requestAnimationFrame(animate);
-    };
-
-    // Resize handler
-    let resizeTimeout: NodeJS.Timeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        init();
-        // Redraw static grid if reduced motion is enabled
-        if (prefersReducedMotion) {
-          const { gridColor } = getThemeColors();
-          drawGrid(gridColor);
-        }
-      }, 150);
-    };
-
-    // Initialize and start animation
-    init();
-    
-    // Always register resize handler regardless of motion preferences
-    window.addEventListener("resize", handleResize, { passive: true });
-    
-    if (!prefersReducedMotion) {
-      animationFrameIdRef.current = requestAnimationFrame(animate);
-    } else {
-      // Draw static grid for reduced motion
-      const { gridColor } = getThemeColors();
-      drawGrid(gridColor);
-    }
-
-    // Cleanup
-    return () => {
-      clearTimeout(resizeTimeout);
-      window.removeEventListener("resize", handleResize);
-      if (animationFrameIdRef.current !== null) {
-        cancelAnimationFrame(animationFrameIdRef.current);
-      }
-    };
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
+  // Parallax scroll handler
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // Use requestAnimationFrame for smooth parallax
+    let rafId: number | null = null;
+    const throttledScroll = () => {
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          handleScroll();
+          rafId = null;
+        });
+      }
+    };
+
+    window.addEventListener("scroll", throttledScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
+  }, [prefersReducedMotion]);
+
+  // Generate noise texture as data URL
+  const generateNoiseTexture = (): string => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 256;
+    canvas.height = 256;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return "";
+
+    const imageData = ctx.createImageData(256, 256);
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+      const value = Math.random() * 255;
+      data[i] = value; // R
+      data[i + 1] = value; // G
+      data[i + 2] = value; // B
+      data[i + 3] = 255; // A
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+    return canvas.toDataURL();
+  };
+
+  const [noiseTexture, setNoiseTexture] = useState<string>("");
+
+  useEffect(() => {
+    setNoiseTexture(generateNoiseTexture());
+  }, []);
+
+  // Parallax transform value (subtle, enterprise-grade)
+  const parallaxTransform = prefersReducedMotion ? 0 : scrollY * 0.02;
+
   return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
+    <div
+      className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden"
       aria-hidden="true"
-    />
+      style={{
+        zIndex: -1,
+        transform: `translateY(${parallaxTransform}px)`,
+        willChange: "transform",
+      }}
+    >
+      {/* LAYER 1: BACKGROUND GRADIENT LAYER */}
+      <div
+        className="absolute inset-0 w-full h-full energy-layer"
+        style={{
+          background: `
+            radial-gradient(circle at 20% 30%, var(--bg-gradient-1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, var(--bg-gradient-2) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--bg-gradient-3) 0%, transparent 60%),
+            radial-gradient(circle at 10% 80%, var(--bg-gradient-1) 0%, transparent 40%),
+            var(--bg)
+          `,
+        }}
+      />
+
+      {/* LAYER 2: ENERGY BLOBS LAYER */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {/* Blob 1 - Top Left */}
+        <div
+          className="absolute blob"
+          style={{
+            width: "600px",
+            height: "600px",
+            left: "-10%",
+            top: "-10%",
+            background: `radial-gradient(circle, var(--blob-color-1) 0%, transparent 70%)`,
+            filter: "blur(120px)",
+            opacity: "var(--blob-opacity-1)",
+            animation: prefersReducedMotion
+              ? "none"
+              : "blob-pulse 30s ease-in-out infinite alternate",
+            animationDelay: "0s",
+            willChange: "transform, opacity",
+          }}
+        />
+
+        {/* Blob 2 - Bottom Right */}
+        <div
+          className="absolute blob"
+          style={{
+            width: "700px",
+            height: "700px",
+            right: "-15%",
+            bottom: "-15%",
+            background: `radial-gradient(circle, var(--blob-color-2) 0%, transparent 70%)`,
+            filter: "blur(140px)",
+            opacity: "var(--blob-opacity-2)",
+            animation: prefersReducedMotion
+              ? "none"
+              : "blob-pulse 35s ease-in-out infinite alternate",
+            animationDelay: "5s",
+            willChange: "transform, opacity",
+          }}
+        />
+
+        {/* Blob 3 - Center Right */}
+        <div
+          className="absolute blob"
+          style={{
+            width: "500px",
+            height: "500px",
+            right: "10%",
+            top: "40%",
+            background: `radial-gradient(circle, var(--blob-color-3) 0%, transparent 70%)`,
+            filter: "blur(100px)",
+            opacity: "var(--blob-opacity-3)",
+            animation: prefersReducedMotion
+              ? "none"
+              : "blob-pulse 40s ease-in-out infinite alternate",
+            animationDelay: "10s",
+            willChange: "transform, opacity",
+          }}
+        />
+      </div>
+
+      {/* LAYER 3: FOG / NOISE LAYER */}
+      {noiseTexture && (
+        <div
+          className="absolute inset-0 w-full h-full fog-layer"
+          style={{
+            backgroundImage: `url(${noiseTexture})`,
+            backgroundSize: "256px 256px",
+            backgroundRepeat: "repeat",
+            opacity: "var(--fog-opacity)",
+            mixBlendMode: "soft-light",
+            animation: prefersReducedMotion
+              ? "none"
+              : "fog-drift 60s linear infinite",
+            willChange: "background-position",
+          }}
+        />
+      )}
+
+      {/* LAYER 4: TECH GRID LAYER */}
+      <div
+        className="absolute inset-0 w-full h-full tech-grid-layer"
+        style={{
+          backgroundImage: `
+            linear-gradient(var(--grid-color) 1px, transparent 1px),
+            linear-gradient(90deg, var(--grid-color) 1px, transparent 1px)
+          `,
+          backgroundSize: "var(--grid-size) var(--grid-size)",
+          opacity: "var(--grid-opacity)",
+          animation: prefersReducedMotion
+            ? "none"
+            : "parallax-float 20s ease-in-out infinite alternate",
+          willChange: "background-position",
+        }}
+      />
+    </div>
   );
 };
 
