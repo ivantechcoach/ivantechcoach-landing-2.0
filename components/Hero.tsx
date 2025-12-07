@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, UserCheck, ChevronDown } from "lucide-react";
+import { ArrowRight, UserCheck } from "lucide-react";
 
 interface HeroProps {
   lang: string;
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden flex items-center justify-center z-10 min-h-[85vh] section-padding pb-16 md:pb-20 bg-[var(--bg)] text-[var(--text)]"
+      className="relative overflow-hidden flex items-center justify-center z-10 min-h-[85vh] section-padding pb-16 md:pb-20 bg-transparent text-[var(--text)]"
       aria-label="Hero section"
     >
       {/* Animated Liquid Blur Background */}
@@ -90,6 +90,9 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
             <Link
               href={`/${lang}/contact`}
               className="px-8 py-4 bg-[var(--primary)] text-white rounded-full font-semibold text-lg shadow-lg hover:bg-[var(--primary-dark)] hover:scale-105 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+              style={{
+                boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)',
+              }}
             >
               {content.ctaPrimary}
               <ArrowRight size={20} aria-hidden="true" />
@@ -97,7 +100,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
 
             <Link
               href="#services"
-              className="px-8 py-4 border-2 border-[var(--primary)] text-[var(--primary)] rounded-full font-semibold text-lg hover:bg-[var(--primary)]/10 hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+              className="px-8 py-4 rounded-full font-semibold text-lg text-white hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)] hero-secondary-cta"
             >
               {content.ctaSecondary}
             </Link>
@@ -110,18 +113,18 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
             <div className="absolute inset-0 bg-[var(--glow)] rounded-full blur-3xl animate-pulse" aria-hidden="true"></div>
 
             <div 
-              className="relative z-10 p-8 border border-[var(--border)] rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 backdrop-blur-xl glass-card"
+              className="relative z-10 p-8 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-2xl shadow-xl shadow-[var(--card-shadow)] transform rotate-3 hover:rotate-0 transition-all duration-500 backdrop-blur-xl before:absolute before:inset-0 before:rounded-2xl before:bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_70%)] before:pointer-events-none"
             >
-              <div className="flex items-center gap-3 mb-4 border-b border-[var(--border)] pb-4" aria-hidden="true">
+              <div className="flex items-center gap-3 mb-4 border-b border-[var(--border)] pb-4 relative z-10" aria-hidden="true">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 <span className="text-xs text-[var(--text-soft)] ml-auto">{terminal.status}</span>
               </div>
 
-              <div className="space-y-3 font-mono text-sm text-[var(--primary-light)]" role="text" aria-label="System status messages">
-                <p>{">"} {terminal.line1}</p>
-                <p>{">"} {terminal.line2}</p>
+              <div className="space-y-3 font-mono text-sm text-[var(--primary-light)] relative z-10" role="text" aria-label="System status messages">
+                <p className="text-[var(--text)]">{">"} {terminal.line1}</p>
+                <p className="text-[var(--text)]">{">"} {terminal.line2}</p>
                 <p className="text-[var(--text)]">{">"} {terminal.line3}</p>
                 <p className="text-green-400 flex items-center gap-2">
                   <UserCheck size={16} aria-hidden="true" /> {terminal.line4}
@@ -130,18 +133,6 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Smooth Scroll Indicator */}
-      <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <a
-          href="#about"
-          className="flex flex-col items-center gap-2 text-[var(--text-soft)] hover:text-[var(--primary)] transition-colors"
-          aria-label="Scroll to next section"
-        >
-          <span className="text-sm font-medium">Scroll</span>
-          <ChevronDown size={24} aria-hidden="true" />
-        </a>
       </div>
 
       <style jsx global>{`
@@ -167,6 +158,19 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
           50% {
             background-position: 100% 50%;
           }
+        }
+
+        .hero-secondary-cta {
+          background: rgba(255,255,255,0.15);
+          border: 1px solid var(--primary-light);
+          backdrop-filter: blur(8px);
+          color: #ffffff;
+        }
+
+        .hero-secondary-cta:hover {
+          background: rgba(255,255,255,0.25);
+          border-color: var(--primary);
+          color: #ffffff;
         }
 
         @media (prefers-reduced-motion: reduce) {

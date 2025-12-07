@@ -58,23 +58,23 @@ export default function Contact({ content }: ContactProps) {
   return (
     <section
       id="contact"
-      className="relative py-24 md:py-32 bg-[color-mix(in srgb, var(--bg) 96%, black)]"
+      className="relative section-padding bg-transparent"
       aria-labelledby="contact-title"
     >
       {/* Separador superior */}
       <div className="pointer-events-none absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[var(--bg)] opacity-40"></div>
       
-      <div className="container-custom relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2
               id="contact-title"
-              className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-4"
+              className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--text)] mb-4"
             >
               {content.title}
             </h2>
-            <p className="text-lg text-[var(--text)]/70 mb-4">{content.subtitle}</p>
-            <p className="text-base text-[var(--text)]/80">{content.description}</p>
+            <p className="text-lg font-normal leading-relaxed text-[var(--text-soft)] mb-4">{content.subtitle}</p>
+            <p className="text-base font-normal leading-relaxed text-[var(--text-soft)]">{content.description}</p>
           </div>
 
           <form

@@ -33,75 +33,99 @@
     --anim-fast: 150ms ease;
     --anim-base: 250ms ease;
     --anim-slow: 350ms ease;
+    
+    /* IvanTechCoach Brand Colors - Default (Light Theme) */
+    --primary: #00D1FF;
+    --primary-light: #B5F4FF;
+    --primary-dark: #009AC1;
+    --accent-blue: #007BFF;
+    --accent-purple: #5B3DF5;
+    --text: #0A0A0A;
+    --text-soft: rgba(10,10,10,0.7);
+    
+    /* SNYK++ Background System - Default (Light Theme) */
+    --bg-gradient-1: radial-gradient(circle at 20% 20%, #4c1d95 0%, transparent 60%);
+    --bg-gradient-2: radial-gradient(circle at 80% 30%, #0ea5e9 0%, transparent 70%);
+    --bg-gradient-3: radial-gradient(circle at 50% 80%, #22d3ee 0%, transparent 70%);
+    --blob-color-1: #4c1d95;
+    --blob-color-2: #0ea5e9;
+    --blob-color-3: #22d3ee;
+    --blob-opacity-1: 0.35;
+    --blob-opacity-2: 0.30;
+    --blob-opacity-3: 0.20;
+    --grid-color: rgba(255,255,255,0.05);
+    --grid-size: 42px;
+    --grid-opacity: 0.05;
   }
 
   /* Tema LIGHT */
   .theme-light {
     --bg: #ffffff;
     --bg-2: #f5f7fa;
-    --text: #111111;
-    --text-soft: #444444;
+    --text: #0A0A0A;
+    --text-soft: rgba(10,10,10,0.7);
     --card: #ffffff;
     --nav: rgba(255,255,255,0.75);
-    --primary: #0070f3;
-    --primary-light: #51a7ff;
-    --primary-dark: #0054b0;
+    --primary: #00D1FF;
+    --primary-light: #B5F4FF;
+    --primary-dark: #009AC1;
+    --accent-blue: #007BFF;
+    --accent-purple: #5B3DF5;
     --border: rgba(0,0,0,0.12);
-    --wave-top: rgba(0,0,0,0.04);
-    --wave-mid: rgba(0,118,255,0.18);
-    --wave-bottom: rgba(0,0,0,0.03);
-    --glow: rgba(0,118,255,0.12);
+    --glow: rgba(0,209,255,0.12);
     --grid-line-light: rgba(0,0,0,0.06);
-    --particle-light: rgba(0,118,255,0.15);
+    --particle-light: rgba(0,209,255,0.15);
     
     /* SNYK++ Background System - Light Theme */
-    --bg-gradient-1: rgba(0, 118, 255, 0.08);
-    --bg-gradient-2: rgba(102, 255, 204, 0.06);
-    --bg-gradient-3: rgba(138, 43, 226, 0.05);
-    --blob-color-1: rgba(0, 118, 255, 0.25);
-    --blob-color-2: rgba(102, 255, 204, 0.20);
-    --blob-color-3: rgba(138, 43, 226, 0.18);
-    --blob-opacity-1: 0.25;
-    --blob-opacity-2: 0.20;
-    --blob-opacity-3: 0.18;
+    --bg-gradient-1: radial-gradient(circle at 20% 20%, #4c1d95 0%, transparent 60%);
+    --bg-gradient-2: radial-gradient(circle at 80% 30%, #0ea5e9 0%, transparent 70%);
+    --bg-gradient-3: radial-gradient(circle at 50% 80%, #22d3ee 0%, transparent 70%);
+    --blob-color-1: #4c1d95;
+    --blob-color-2: #0ea5e9;
+    --blob-color-3: #22d3ee;
+    --blob-opacity-1: 0.35;
+    --blob-opacity-2: 0.30;
+    --blob-opacity-3: 0.20;
     --fog-opacity: 0.06;
-    --grid-color: rgba(0, 0, 0, 0.04);
-    --grid-size: 50px;
-    --grid-opacity: 0.04;
+    --grid-color: rgba(255,255,255,0.05);
+    --grid-size: 42px;
+    --grid-opacity: 0.05;
   }
 
   /* Tema DARK */
   .theme-dark {
     --bg: #0d0f13;
     --bg-2: #16181d;
-    --text: #f4f4f7;
-    --text-soft: #b5b5c7;
+    --text: #F5F5F7;
+    --text-soft: rgba(245,245,247,0.75);
     --card: #16181d;
+    --card-bg: rgba(22,24,29,0.85);
+    --card-border: rgba(255,255,255,0.2);
+    --card-shadow: rgba(0,0,0,0.3);
     --nav: rgba(15,15,20,0.65);
-    --primary: #3ddcf3;
-    --primary-light: #82ecff;
-    --primary-dark: #1eb4c4;
+    --primary: #00D1FF;
+    --primary-light: #B5F4FF;
+    --primary-dark: #009AC1;
+    --accent-blue: #007BFF;
+    --accent-purple: #5B3DF5;
     --border: rgba(255,255,255,0.15);
-    --wave-top: rgba(255,255,255,0.07);
-    --wave-mid: rgba(61,220,243,0.25);
-    --wave-bottom: rgba(255,255,255,0.05);
-    --glow: rgba(61,220,243,0.15);
+    --glow: rgba(0,209,255,0.15);
     --grid-line-dark: rgba(255,255,255,0.08);
-    --particle-dark: rgba(61,220,243,0.25);
+    --particle-dark: rgba(0,209,255,0.25);
     
     /* SNYK++ Background System - Dark Theme */
-    --bg-gradient-1: rgba(61, 220, 243, 0.12);
-    --bg-gradient-2: rgba(102, 255, 204, 0.10);
-    --bg-gradient-3: rgba(138, 43, 226, 0.08);
-    --blob-color-1: rgba(61, 220, 243, 0.35);
-    --blob-color-2: rgba(102, 255, 204, 0.30);
-    --blob-color-3: rgba(138, 43, 226, 0.25);
+    --bg-gradient-1: radial-gradient(circle at 20% 20%, #3b0f6b 0%, transparent 60%);
+    --bg-gradient-2: radial-gradient(circle at 80% 30%, #0c7a9e 0%, transparent 70%);
+    --bg-gradient-3: radial-gradient(circle at 50% 80%, #1ba8c4 0%, transparent 70%);
+    --blob-color-1: #3b0f6b;
+    --blob-color-2: #0c7a9e;
+    --blob-color-3: #1ba8c4;
     --blob-opacity-1: 0.35;
     --blob-opacity-2: 0.30;
-    --blob-opacity-3: 0.25;
+    --blob-opacity-3: 0.20;
     --fog-opacity: 0.08;
     --grid-color: rgba(255, 255, 255, 0.05);
-    --grid-size: 50px;
+    --grid-size: 42px;
     --grid-opacity: 0.05;
   }
 
@@ -129,7 +153,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-24 md:py-32;
+    @apply py-20 md:py-32 lg:py-40;
   }
 
   .container-custom {

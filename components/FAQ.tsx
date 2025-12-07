@@ -26,14 +26,14 @@ export default function FAQ({ content }: FAQProps) {
   return (
     <section
       id="faq"
-      className="relative section-padding bg-[var(--bg)] text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)]"
       aria-labelledby="faq-title"
     >
-      <div className="container-custom relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2
             id="faq-title"
-            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-4"
+            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--text)] mb-4"
           >
             {content.title}
           </h2>
@@ -73,7 +73,7 @@ export default function FAQ({ content }: FAQProps) {
                   aria-controls={`faq-answer-${index}`}
                 >
                   <h3 className="
-                    text-lg md:text-xl font-semibold
+                    text-lg md:text-xl font-extrabold tracking-tight
                     text-[var(--text)]
                     pr-8
                     group-hover:text-[var(--primary-dark)]
@@ -104,6 +104,7 @@ export default function FAQ({ content }: FAQProps) {
                   <div className="px-6 md:px-8 pb-5 md:pb-6">
                     <div className="
                       pt-2
+                      font-normal
                       text-[var(--text-soft)]
                       leading-relaxed
                       text-base md:text-lg

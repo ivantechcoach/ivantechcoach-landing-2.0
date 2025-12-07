@@ -37,14 +37,14 @@ export default function Services({ content }: ServicesProps) {
   return (
     <section
       id="services"
-      className="relative section-padding bg-[var(--bg)] text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)]"
       aria-labelledby="services-title"
     >
-      <div className="container-custom relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2
             id="services-title"
-            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-4"
+            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--text)] mb-4"
           >
             {content.title}
           </h2>
@@ -88,7 +88,7 @@ export default function Services({ content }: ServicesProps) {
                   <Icon className="w-6 h-6" aria-hidden="true" strokeWidth={2.5} />
                 </div>
                 <h3 className="
-                  text-2xl font-semibold tracking-tight 
+                  text-2xl font-extrabold tracking-tight 
                   mb-3
                   text-[var(--text)]
                   group-hover:text-[var(--primary-dark)]
@@ -98,7 +98,7 @@ export default function Services({ content }: ServicesProps) {
                 >
                   {service.title}
                 </h3>
-                <p className="text-[var(--text-soft)] leading-relaxed text-lg">
+                <p className="text-[var(--text-soft)] font-normal leading-relaxed text-lg">
                   {service.description}
                 </p>
               </div>

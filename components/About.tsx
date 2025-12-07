@@ -40,40 +40,22 @@ export default function About({ content }: AboutProps) {
     <section
       ref={sectionRef}
       id="about"
-      className="relative section-padding bg-[var(--bg)] text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)]"
       aria-labelledby="about-title"
     >
-      <div className="container-custom relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className={`max-w-2xl mx-auto text-center transition-all duration-[var(--anim-slow)] ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="mb-10 relative inline-block">
-            <div 
-              className="absolute inset-0 rounded-full border-2 border-[var(--primary)]/20"
-              style={{ 
-                animation: 'spin-slow 20s linear infinite',
-                willChange: 'transform'
-              }}
-            ></div>
-            
+          <div className="mb-10 relative mx-auto w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border border-[var(--primary-light)] shadow-[0_0_38px_rgba(0,209,255,0.35)] hover:scale-105 transition-transform duration-500 ease-out hover:-rotate-1 hover:translate-y-[-2px]">
             <Image
               src="/images/ivan-techcoach-hero.webp"
               alt="Professional portrait"
               width={260}
               height={260}
-              className="
-                relative z-10
-                rounded-full border-[3px] border-[var(--border)]
-                shadow-2xl
-                mx-auto
-                hover:scale-[1.05] 
-                hover:border-[var(--primary)]
-                hover:shadow-[var(--glow)]
-                transition-all duration-500 ease-out
-                group
-              "
+              className="object-cover w-full h-full"
               style={{ 
-                willChange: 'transform, border-color, box-shadow',
+                willChange: 'transform',
                 animation: isVisible ? 'fadeInScale 0.8s ease-out 0.2s both' : 'none'
               }}
               priority
@@ -97,7 +79,7 @@ export default function About({ content }: AboutProps) {
 
           <p 
             className={`
-              leading-relaxed md:leading-loose text-lg md:text-xl tracking-tight max-w-3xl mx-auto text-[var(--text-soft)]
+              font-normal leading-relaxed text-lg md:text-xl max-w-3xl mx-auto text-[var(--text-soft)]
               transition-all duration-700 ease-out
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
             `}
