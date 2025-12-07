@@ -53,9 +53,10 @@ export default function FAQ({ content }: FAQProps) {
                   border border-[var(--border)]
                   rounded-xl
                   overflow-hidden
-                  transition-[border-color,box-shadow] duration-200 ease-out
+                  transition-[border-color,box-shadow] duration-[var(--anim-fast)] ease-out
                   hover:border-[var(--primary)]
                   hover:shadow-lg
+                  hover:scale-[1.01]
                 "
                 style={{ willChange: 'border-color, box-shadow' }}
               >
@@ -66,7 +67,7 @@ export default function FAQ({ content }: FAQProps) {
                     flex items-center justify-between
                     text-left
                     focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2
-                    transition-colors duration-200
+                    transition-colors duration-[var(--anim-fast)]
                   "
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
@@ -76,7 +77,7 @@ export default function FAQ({ content }: FAQProps) {
                     text-[var(--text)]
                     pr-8
                     group-hover:text-[var(--primary-dark)]
-                    transition-colors duration-200
+                    transition-colors duration-[var(--anim-fast)]
                   ">
                     {item.question}
                   </h3>
@@ -85,7 +86,7 @@ export default function FAQ({ content }: FAQProps) {
                       w-5 h-5 md:w-6 md:h-6
                       text-[var(--text-soft)]
                       flex-shrink-0
-                      transition-transform duration-300 ease-out
+                      transition-transform duration-[var(--anim-base)] ease-out
                       ${isOpen ? 'transform rotate-180' : ''}
                     `}
                     aria-hidden="true"
@@ -96,7 +97,7 @@ export default function FAQ({ content }: FAQProps) {
                   id={`faq-answer-${index}`}
                   className={`
                     overflow-hidden
-                    transition-all duration-300 ease-out
+                    transition-all duration-[var(--anim-base)] ease-out
                     ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
                   `}
                 >

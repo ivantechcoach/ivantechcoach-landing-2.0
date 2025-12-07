@@ -70,7 +70,6 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
     setStatus('sending')
     setErrors({})
 
-    // Simulate API call - Replace with your actual endpoint
     try {
       // Sanitize inputs (basic sanitization)
       const sanitizedData = {
@@ -79,7 +78,20 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
         message: formData.message.trim().substring(0, 2000),
       }
 
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sanitizedData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || 'Error sending message')
+      }
+
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
       
@@ -221,10 +233,31 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
                 type="submit"
                 disabled={status === 'sending'}
                 className="w-full bg-[var(--primary)] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[var(--primary-dark)] border border-[var(--primary)] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+                aria-busy={status === 'sending'}
               >
                 {status === 'sending' ? (
                   <>
-                    <span className="animate-spin">⏳</span>
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      />
+                    </svg>
                     {content.form.sending}
                   </>
                 ) : (

@@ -8,8 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        mint: 'var(--color-mint)',
         primary: {
-          DEFAULT: '#38bdf8',
+          DEFAULT: 'var(--color-primary)',
           dark: '#0ea5e9',
           light: '#7dd3fc',
         },
@@ -17,6 +18,33 @@ const config: Config = {
           DEFAULT: '#0f172a',
           light: '#1e293b',
         },
+        gray: {
+          100: 'var(--color-gray-100)',
+          900: 'var(--color-gray-900)',
+        },
+      },
+      spacing: {
+        '1': 'var(--space-1)',
+        '2': 'var(--space-2)',
+        '3': 'var(--space-3)',
+        '4': 'var(--space-4)',
+        '6': 'var(--space-6)',
+        '8': 'var(--space-8)',
+        '12': 'var(--space-12)',
+        '16': 'var(--space-16)',
+      },
+      boxShadow: {
+        'sm': 'var(--shadow-sm)',
+        'md': 'var(--shadow-md)',
+        'lg': 'var(--shadow-lg)',
+      },
+      transitionDuration: {
+        'fast': 'var(--anim-fast)',
+        'base': 'var(--anim-base)',
+        'slow': 'var(--anim-slow)',
+      },
+      transitionTimingFunction: {
+        'ease-base': 'ease',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

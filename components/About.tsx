@@ -44,7 +44,7 @@ export default function About({ content }: AboutProps) {
       aria-labelledby="about-title"
     >
       <div className="container-custom relative z-10">
-        <div className={`max-w-2xl mx-auto text-center transition-all duration-1000 ease-out ${
+        <div className={`max-w-2xl mx-auto text-center transition-all duration-[var(--anim-slow)] ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="mb-10 relative inline-block">

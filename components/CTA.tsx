@@ -39,7 +39,9 @@ export default function CTA({ lang: langProp, content }: CTAProps = {}) {
             inline-block px-10 py-4 rounded-full font-semibold
             bg-[var(--text)] text-[var(--bg)]
             hover:bg-[var(--text-soft)]
-            transition-all duration-300
+            hover:scale-105
+            hover:shadow-xl
+            transition-all duration-[var(--anim-base)]
             shadow-lg
             focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]
           "

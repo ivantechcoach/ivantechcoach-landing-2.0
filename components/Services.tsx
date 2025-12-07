@@ -62,7 +62,7 @@ export default function Services({ content }: ServicesProps) {
                   bg-[var(--card)]
                   border border-[var(--border)]
                   shadow-lg
-                  transition-[transform,box-shadow,border-color] duration-200 ease-out
+                  transition-[transform,box-shadow,border-color] duration-[var(--anim-base)] ease-out
                   hover:shadow-xl
                   hover:scale-[1.04]
                   hover:border-[var(--primary)]
@@ -81,7 +81,7 @@ export default function Services({ content }: ServicesProps) {
                     text-[var(--primary-dark)]
                     group-hover:bg-[var(--primary)]/25
                     group-hover:scale-110
-                    transition-[transform,background-color] duration-200 ease-out
+                    transition-[transform,background-color] duration-[var(--anim-base)] ease-out
                   "
                   style={{ willChange: 'transform, background-color' }}
                 >

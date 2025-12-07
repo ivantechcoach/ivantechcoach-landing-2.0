@@ -135,31 +135,43 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm md:text-base">
-          <a href="#about" className="text-[var(--text)] hover:text-[var(--primary)] transition">
+          <a 
+            href="#about" 
+            className="text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-[var(--anim-fast)] relative group py-2"
+          >
             {content.nav.about}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--primary)] group-hover:w-full transition-all duration-[var(--anim-base)]" />
           </a>
 
-          <a href="#services" className="text-[var(--text)] hover:text-[var(--primary)] transition">
+          <a 
+            href="#services" 
+            className="text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-[var(--anim-fast)] relative group py-2"
+          >
             {content.nav.services}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--primary)] group-hover:w-full transition-all duration-[var(--anim-base)]" />
           </a>
 
-          <Link href={`/${lang}/contact`} className="text-[var(--text)] hover:text-[var(--primary)] transition">
+          <Link 
+            href={`/${lang}/contact`} 
+            className="text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-[var(--anim-fast)] relative group py-2"
+          >
             {content.nav.contact}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--primary)] group-hover:w-full transition-all duration-[var(--anim-base)]" />
           </Link>
 
           <button
             onClick={toggleLang}
             aria-label={`Cambiar idioma a ${lang === "es" ? "inglés" : "español"}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] transition"
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] hover:scale-105 transition-all duration-[var(--anim-fast)]"
           >
-            <Globe size={16} />
+            <Globe size={16} className="transition-transform duration-[var(--anim-fast)] hover:rotate-12" />
             <span className="uppercase text-xs md:text-sm">{lang === "es" ? "EN" : "ES"}</span>
           </button>
 
           <button
             onClick={toggleTheme}
             aria-label="Cambiar tema"
-            className="flex items-center justify-center w-10 h-10 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] transition-colors"
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] hover:scale-110 hover:rotate-12 transition-all duration-[var(--anim-fast)]"
             title={`Tema: ${theme}`}
           >
             {getThemeIcon()}

@@ -51,7 +51,7 @@ export default function Footer({ content }: FooterProps) {
                   hover:shadow-lg
                   hover:shadow-[var(--glow)]
                   hover:border-[var(--primary)]
-                  transition-all duration-300 ease-out
+                  transition-all duration-[var(--anim-base)] ease-out
                   focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2
                 "
                 aria-label={label}
