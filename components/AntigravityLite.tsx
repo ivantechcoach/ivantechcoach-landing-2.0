@@ -186,7 +186,7 @@ const AntigravityLite: React.FC = () => {
           const b = parseInt(hex.substring(4, 6), 16);
           color = `rgba(${r}, ${g}, ${b}, ${p.opacity})`;
         } else {
-          color = "rgba(0,90,150,0.85)";
+          color = "rgba(0,90,150,0.55)"; // Reduced opacity for light mode
         }
         
         ctx.beginPath();
@@ -314,8 +314,8 @@ const AntigravityLite: React.FC = () => {
           const b = parseInt(hex.substring(4, 6), 16);
           rgba = `rgba(${r}, ${g}, ${b}, ${p.opacity})`;
         } else {
-          // Use deep cyan for light mode
-          rgba = "rgba(0,90,150,0.85)";
+          // Use deep cyan for light mode with reduced opacity
+          rgba = "rgba(0,90,150,0.55)"; // Reduced from 0.85 to 0.55 (35% less visible)
         }
 
         ctx.beginPath();
@@ -358,7 +358,7 @@ const AntigravityLite: React.FC = () => {
 
   // Determine opacity based on theme
   const getOpacity = () => {
-    return isDarkTheme ? 0.55 : 0.78; // Increased opacity for light mode
+    return isDarkTheme ? 0.55 : 0.45; // Reduced opacity for light mode (30% less visible)
   };
 
   // Determine blend mode based on theme
