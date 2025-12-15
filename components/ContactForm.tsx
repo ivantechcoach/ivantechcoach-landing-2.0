@@ -29,6 +29,7 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({})
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -98,8 +99,17 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
       // Reset success message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000)
     } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : 'Error sending message'
+      setErrorMessage(errorMsg)
       setStatus('error')
-      setTimeout(() => setStatus('idle'), 5000)
+      // Only log errors in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[ContactForm] Network Error:', error)
+      }
+      setTimeout(() => {
+        setStatus('idle')
+        setErrorMessage('')
+      }, 5000)
     }
   }
 
@@ -284,7 +294,10 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
                   role="alert"
                   aria-live="polite"
                 >
-                  {content.form.error}
+                  <p className="font-medium">{content.form.error}</p>
+                  {errorMessage && (
+                    <p className="text-sm mt-1 opacity-90">{errorMessage}</p>
+                  )}
                 </div>
               )}
             </div>
@@ -294,7 +307,7 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-[var(--text-soft)]">
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-[var(--primary)]" aria-hidden="true" />
-              <span>contacto@ivantechcoach.com</span>
+              <span>contact@ivantechcoach.es</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-[var(--primary)]" aria-hidden="true" />

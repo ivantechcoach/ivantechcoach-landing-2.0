@@ -187,7 +187,7 @@ export default function Contact({ content }: ContactProps) {
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-[var(--text)]/70">
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-primary" aria-hidden="true" />
-              <span>contacto@ivantechcoach.com</span>
+              <span>contact@ivantechcoach.es</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-primary" aria-hidden="true" />
