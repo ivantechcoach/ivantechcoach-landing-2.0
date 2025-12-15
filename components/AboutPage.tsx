@@ -59,6 +59,11 @@ export default function AboutPage({ content, lang }: AboutPageProps) {
 
   // Efecto typewriter para el bloque de cierre
   useEffect(() => {
+    // Resetear el estado cuando content.closing cambia para permitir reiniciar la animación
+    hasStartedTypingRef.current = false
+    setDisplayedText('')
+    setIsTyping(false)
+    
     let timeoutId: NodeJS.Timeout | null = null
     
     const observer = new IntersectionObserver(
