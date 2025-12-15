@@ -17,6 +17,21 @@
     "description": "Soy Ivan, y creo en la tecnología que realmente funciona. Durante años, he visto cómo las empresas se pierden en promesas vacías y soluciones que no cumplen. Por eso decidí enfocarme en lo que realmente importa: resultados claros, comunicación honesta y tecnología que impulse tu negocio sin complicaciones innecesarias. Mi objetivo es ayudarte a tomar decisiones tecnológicas informadas, sin jerga técnica innecesaria, con un enfoque práctico y resultados medibles.",
     "cta": "Contáctame"
   },
+  "aboutPage": {
+    "pageTitle": "Sobre mí",
+    "pageSubtitle": "Profesional de la informática con más de 20 años de experiencia práctica en sistemas, hardware, redes y soporte técnico avanzado",
+    "content": [
+      "Soy un profesional de la informática con más de 20 años de experiencia práctica en sistemas, hardware, redes y soporte técnico avanzado. Desde mis inicios desmontando y optimizando ordenadores, configurando redes y diagnosticando fallos complejos, mi interés siempre ha estado en comprender cómo funciona la tecnología desde el nivel físico hasta la lógica de sistemas y cómo hacer que funcione de forma fiable, segura y eficiente.",
+      "Con el paso de los años, mi perfil evolucionó naturalmente: a la base sólida de infraestructura física y lógica se sumaron administración de sistemas (Windows, Linux, macOS), redes, ciberseguridad técnica básica, despliegues en nube y soporte en entornos profesionales. Esto me ha permitido enfrentar desafíos reales, resolver problemas complejos y diseñar soluciones que no solo funcionan, sino que perduran con el tiempo.",
+      "Mi enfoque no es construir soluciones improvisadas ni imponer modas tecnológicas. Trabajo con un criterio técnico claro: estabilidad operacional, optimización de recursos, conciencia de seguridad y costo-beneficio real para el negocio.",
+      "Además, ofrezco asesoría práctica en herramientas de IA y su aplicación en productividad empresarial. No busco vender soluciones mágicas, sino integrar IA cuando aporta valor tangible a flujos de trabajo, documentación, soporte o eficiencia operativa.",
+      "He apoyado directamente a empresas y profesionales en la resolución de incidencias avanzadas, en la mejora de infraestructuras existentes y en la construcción de entornos tecnológicos coherentes, seguros y alineados con sus objetivos.",
+      "Valoro profundamente la claridad, la ética profesional y la comunicación honesta. Trabajo con clientes y equipos que buscan resultados duraderos, comprensión de sus sistemas y una relación de confianza basada en la transparencia técnica.",
+      "Aquí no hay humo ni promesas vacías: hay experiencia, criterio demostrado y compromiso con soluciones que funcionan."
+    ],
+    "closing": "No implemento tecnología por moda, sino por criterio técnico.",
+    "cta": "Conversemos"
+  },
   "services": {
     "title": "Servicios",
     "subtitle": "Cómo puedo ayudarte",
@@ -49,6 +64,91 @@
       {
         "title": "Mentoría Ejecutiva",
         "description": "Acompañamiento personalizado para líderes que necesitan claridad tecnológica.",
+        "icon": "target"
+      }
+    ]
+  },
+  "servicesPage": {
+    "pageTitle": "Nuestros Servicios",
+    "pageSubtitle": "Soluciones tecnológicas integrales adaptadas a tus necesidades",
+    "pageDescription": "Descubre cómo puedo ayudarte a transformar tu infraestructura tecnológica, optimizar tus procesos e impulsar tu negocio con soluciones claras y accionables.",
+    "items": [
+      {
+        "title": "Consultoría Tecnológica",
+        "description": "Estrategias claras para tomar decisiones tecnológicas informadas sin perderte en la complejidad.",
+        "longDescription": "Proporciono consultoría tecnológica estratégica que corta el ruido. En lugar de abrumarte con jerga técnica, analizo tu situación actual, entiendo tus objetivos de negocio y entrego recomendaciones claras y accionables. Ya sea que estés eligiendo entre opciones tecnológicas, planificando actualizaciones de infraestructura o navegando una transformación digital, te ayudo a tomar decisiones que se alinean con tus objetivos de negocio y presupuesto.",
+        "benefits": [
+          "Recomendaciones claras, sin jerga",
+          "Estrategias tecnológicas rentables",
+          "Evaluación y mitigación de riesgos",
+          "Evaluación y selección de proveedores",
+          "Planificación de hoja de ruta tecnológica"
+        ],
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Arquitectura de Software",
+        "description": "Diseño de sistemas escalables y mantenibles que crecen con tu negocio.",
+        "longDescription": "Diseño arquitecturas de software construidas para durar. Mi enfoque se centra en crear sistemas que no solo sean escalables y mantenibles, sino también rentables y alineados con las necesidades de tu negocio. Desde microservicios hasta arquitecturas monolíticas, elijo el patrón correcto para tu situación. Aseguro que tus sistemas puedan crecer con tu negocio mientras permanecen estables, seguros y fáciles de mantener.",
+        "benefits": [
+          "Diseño de sistemas escalables",
+          "Estructura de código mantenible",
+          "Optimización de rendimiento",
+          "Arquitectura con seguridad primero",
+          "Soluciones preparadas para el futuro"
+        ],
+        "icon": "layers"
+      },
+      {
+        "title": "Transformación Digital",
+        "description": "Guía paso a paso para modernizar tus procesos sin interrumpir tu operación.",
+        "longDescription": "La transformación digital no tiene que ser disruptiva. Te guío a través de un proceso de modernización paso a paso que minimiza el riesgo y maximiza los resultados. Comenzamos entendiendo tus procesos actuales, identificando puntos de dolor, y luego implementando soluciones incrementalmente. Este enfoque asegura que tus operaciones continúen sin problemas mientras adoptas gradualmente nuevas tecnologías y procesos que impulsan la eficiencia y el crecimiento.",
+        "benefits": [
+          "Mínima interrupción operativa",
+          "Implementación incremental",
+          "Automatización de procesos",
+          "Modernización de sistemas heredados",
+          "Apoyo en gestión del cambio"
+        ],
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Capacitación de Equipos",
+        "description": "Formación práctica que realmente mejora la productividad de tu equipo.",
+        "longDescription": "Entregó formación que marca una diferencia real. En lugar de cursos genéricos, proporciono formación práctica y práctica adaptada a las necesidades específicas de tu equipo y tu stack tecnológico. Mi formación se centra en escenarios del mundo real que tu equipo realmente encontrará, asegurando que puedan aplicar inmediatamente lo que aprenden. Desde la adopción de nuevas tecnologías hasta las mejores prácticas, ayudo a tu equipo a ser más productivo y confiado.",
+        "benefits": [
+          "Formación práctica y práctica",
+          "Currículo personalizado",
+          "Escenarios del mundo real",
+          "Soporte continuo",
+          "Mejora medible de habilidades"
+        ],
+        "icon": "users"
+      },
+      {
+        "title": "Optimización de Procesos",
+        "description": "Identifico y elimino cuellos de botella que frenan tu crecimiento.",
+        "longDescription": "Analizo tus flujos de trabajo e identifico cuellos de botella que te están ralentizando. A través de un examen cuidadoso de tus procesos, encuentro ineficiencias, redundancias y áreas donde la automatización puede tener un impacto real. No solo identifico problemas, proporciono soluciones concretas que optimizan tus operaciones, reducen costos y liberan a tu equipo para enfocarse en lo que más importa. El resultado es una organización más eficiente y productiva.",
+        "benefits": [
+          "Identificación de cuellos de botella",
+          "Optimización de flujos de trabajo",
+          "Oportunidades de automatización",
+          "Reducción de costos",
+          "Mejoras de productividad"
+        ],
+        "icon": "zap"
+      },
+      {
+        "title": "Mentoría Ejecutiva",
+        "description": "Acompañamiento personalizado para líderes que necesitan claridad tecnológica.",
+        "longDescription": "Como líder, necesitas tomar decisiones tecnológicas sin perderte en detalles técnicos. Proporciono mentoría ejecutiva que te da la claridad y confianza para tomar decisiones informadas. Traduzco conceptos técnicos complejos a términos de negocio, te ayudo a entender las implicaciones de las opciones tecnológicas y te guío a través de la planificación tecnológica estratégica. Obtendrás el conocimiento que necesitas para liderar con confianza.",
+        "benefits": [
+          "Claridad en decisiones tecnológicas",
+          "Orientación en planificación estratégica",
+          "Evaluación de riesgos",
+          "Gestión de relaciones con proveedores",
+          "Confianza en el liderazgo tecnológico"
+        ],
         "icon": "target"
       }
     ]
@@ -124,10 +224,10 @@
     "rights": "Ivan Tech Coach. Todos los derechos reservados.",
     "madeBy": "Diseñado y desarrollado por Ivan, combinando arquitectura web moderna con técnicas de Context Engineering y Vibe Coding asistidas por IA.",
     "social": {
-      "instagram": "https://instagram.com",
-      "youtube": "https://youtube.com",
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "instagram": "https://www.instagram.com/ivantechcoach/",
+      "youtube": "https://www.youtube.com/@IvanTechCoach",
+      "linkedin": "https://www.linkedin.com/in/jivan-rodriguez-support",
+      "github": "https://github.com/ivantechcoach"
     }
   }
 }

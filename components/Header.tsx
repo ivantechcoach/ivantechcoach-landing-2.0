@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
       style={{ willChange: 'background-color, backdrop-filter' }}
     >
       <div className="container mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
-        <Link href={`/?lang=${lang}`} className="flex items-center gap-3 text-[var(--text)] hover:opacity-80 transition-opacity duration-200">
+        <Link href={`/${lang}`} className="flex items-center gap-3 text-[var(--text)] hover:opacity-80 transition-opacity duration-200">
           <Image
             src="/images/logo.png"
             alt="Ivan Tech Coach Logo"
@@ -135,21 +135,21 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm md:text-base">
-          <a 
-            href="#about" 
+          <Link 
+            href={`/${lang}/about`} 
             className="text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-[var(--anim-fast)] relative group py-2"
           >
             {content.nav.about}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--primary)] group-hover:w-full transition-all duration-[var(--anim-base)]" />
-          </a>
+          </Link>
 
-          <a 
-            href="#services" 
+          <Link 
+            href={`/${lang}/services`} 
             className="text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-[var(--anim-fast)] relative group py-2"
           >
             {content.nav.services}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--primary)] group-hover:w-full transition-all duration-[var(--anim-base)]" />
-          </a>
+          </Link>
 
           <Link 
             href={`/${lang}/contact`} 
@@ -222,25 +222,21 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
             </div>
 
             <div className="flex-1 px-6 py-8 space-y-6 text-[var(--text)]">
-              <button
-                onClick={() => {
-                  setMobileOpen(false);
-                  document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Link
+                href={`/${lang}/about`}
+                onClick={() => setMobileOpen(false)}
                 className="block text-2xl font-semibold text-left"
               >
                 {content.nav.about}
-              </button>
+              </Link>
 
-              <button
-                onClick={() => {
-                  setMobileOpen(false);
-                  document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <Link
+                href={`/${lang}/services`}
+                onClick={() => setMobileOpen(false)}
                 className="block text-2xl font-semibold text-left"
               >
                 {content.nav.services}
-              </button>
+              </Link>
 
               <Link
                 href={`/${lang}/contact`}

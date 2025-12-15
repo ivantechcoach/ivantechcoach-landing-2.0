@@ -17,6 +17,21 @@
     "description": "I'm Ivan, and I believe in technology that actually works. Over the years, I've seen how companies get lost in empty promises and solutions that don't deliver. That's why I decided to focus on what really matters: clear results, honest communication, and technology that drives your business without unnecessary complications. My goal is to help you make informed technology decisions, without unnecessary technical jargon, with a practical approach and measurable results.",
     "cta": "Contact me"
   },
+  "aboutPage": {
+    "pageTitle": "About me",
+    "pageSubtitle": "IT professional with over 20 years of hands-on experience in systems, hardware, networks, and advanced technical support",
+    "content": [
+      "I am an IT professional with over 20 years of hands-on experience in systems, hardware, networks, and advanced technical support. From my early days disassembling and optimizing computers, configuring networks, and diagnosing complex failures, my interest has always been in understanding how technology works from the physical level to system logic and how to make it work reliably, securely, and efficiently.",
+      "Over the years, my profile evolved naturally: to the solid foundation of physical and logical infrastructure, I added system administration (Windows, Linux, macOS), networks, basic technical cybersecurity, cloud deployments, and support in professional environments. This has allowed me to face real challenges, solve complex problems, and design solutions that not only work but endure over time.",
+      "My approach is not to build improvised solutions or impose technological trends. I work with clear technical criteria: operational stability, resource optimization, security awareness, and real cost-benefit for the business.",
+      "Additionally, I offer practical consulting on AI tools and their application in business productivity. I don't seek to sell magical solutions, but to integrate AI when it adds tangible value to workflows, documentation, support, or operational efficiency.",
+      "I have directly supported companies and professionals in resolving advanced incidents, improving existing infrastructures, and building coherent, secure technological environments aligned with their objectives.",
+      "I deeply value clarity, professional ethics, and honest communication. I work with clients and teams seeking lasting results, understanding of their systems, and a relationship of trust based on technical transparency.",
+      "There's no smoke or empty promises here: there's experience, proven judgment, and commitment to solutions that work."
+    ],
+    "closing": "I don't implement technology for trends, but for technical judgment.",
+    "cta": "Let's talk"
+  },
   "services": {
     "title": "Services",
     "subtitle": "How I can help you",
@@ -49,6 +64,91 @@
       {
         "title": "Executive Mentoring",
         "description": "Personalized support for leaders who need technological clarity.",
+        "icon": "target"
+      }
+    ]
+  },
+  "servicesPage": {
+    "pageTitle": "Our Services",
+    "pageSubtitle": "Comprehensive technology solutions tailored to your needs",
+    "pageDescription": "Discover how I can help transform your technology infrastructure, optimize your processes, and drive your business forward with clear, actionable solutions.",
+    "items": [
+      {
+        "title": "Technology Consulting",
+        "description": "Clear strategies to make informed technology decisions without getting lost in complexity.",
+        "longDescription": "I provide strategic technology consulting that cuts through the noise. Instead of overwhelming you with technical jargon, I analyze your current situation, understand your business goals, and deliver clear, actionable recommendations. Whether you're choosing between technology options, planning infrastructure upgrades, or navigating digital transformation, I help you make decisions that align with your business objectives and budget.",
+        "benefits": [
+          "Clear, jargon-free recommendations",
+          "Cost-effective technology strategies",
+          "Risk assessment and mitigation",
+          "Vendor evaluation and selection",
+          "Technology roadmap planning"
+        ],
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Software Architecture",
+        "description": "Design of scalable and maintainable systems that grow with your business.",
+        "longDescription": "I design software architectures that are built to last. My approach focuses on creating systems that are not only scalable and maintainable but also cost-effective and aligned with your business needs. From microservices to monolithic architectures, I choose the right pattern for your situation. I ensure your systems can grow with your business while remaining stable, secure, and easy to maintain.",
+        "benefits": [
+          "Scalable system design",
+          "Maintainable code structure",
+          "Performance optimization",
+          "Security-first architecture",
+          "Future-proof solutions"
+        ],
+        "icon": "layers"
+      },
+      {
+        "title": "Digital Transformation",
+        "description": "Step-by-step guidance to modernize your processes without disrupting your operation.",
+        "longDescription": "Digital transformation doesn't have to be disruptive. I guide you through a step-by-step modernization process that minimizes risk and maximizes results. We start by understanding your current processes, identifying pain points, and then implementing solutions incrementally. This approach ensures your operations continue smoothly while you gradually adopt new technologies and processes that drive efficiency and growth.",
+        "benefits": [
+          "Minimal operational disruption",
+          "Incremental implementation",
+          "Process automation",
+          "Legacy system modernization",
+          "Change management support"
+        ],
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Team Training",
+        "description": "Practical training that actually improves your team's productivity.",
+        "longDescription": "I deliver training that makes a real difference. Instead of generic courses, I provide hands-on, practical training tailored to your team's specific needs and your technology stack. My training focuses on real-world scenarios your team will actually encounter, ensuring they can immediately apply what they learn. From new technology adoption to best practices, I help your team become more productive and confident.",
+        "benefits": [
+          "Hands-on practical training",
+          "Customized curriculum",
+          "Real-world scenarios",
+          "Ongoing support",
+          "Measurable skill improvement"
+        ],
+        "icon": "users"
+      },
+      {
+        "title": "Process Optimization",
+        "description": "I identify and eliminate bottlenecks that slow your growth.",
+        "longDescription": "I analyze your workflows and identify bottlenecks that are slowing you down. Through careful examination of your processes, I find inefficiencies, redundancies, and areas where automation can make a real impact. I don't just identify problems—I provide concrete solutions that streamline your operations, reduce costs, and free up your team to focus on what matters most. The result is a more efficient, productive organization.",
+        "benefits": [
+          "Bottleneck identification",
+          "Workflow optimization",
+          "Automation opportunities",
+          "Cost reduction",
+          "Productivity improvements"
+        ],
+        "icon": "zap"
+      },
+      {
+        "title": "Executive Mentoring",
+        "description": "Personalized support for leaders who need technological clarity.",
+        "longDescription": "As a leader, you need to make technology decisions without getting lost in technical details. I provide executive mentoring that gives you the clarity and confidence to make informed decisions. I translate complex technical concepts into business terms, help you understand the implications of technology choices, and guide you through strategic technology planning. You'll gain the knowledge you need to lead with confidence.",
+        "benefits": [
+          "Technology decision clarity",
+          "Strategic planning guidance",
+          "Risk assessment",
+          "Vendor relationship management",
+          "Confidence in technology leadership"
+        ],
         "icon": "target"
       }
     ]
@@ -124,10 +224,10 @@
     "rights": "Ivan Tech Coach. All rights reserved.",
     "madeBy": "Designed and developed by Ivan, combining modern web architecture with Context Engineering and Vibe Coding techniques assisted by AI.",
     "social": {
-      "instagram": "https://instagram.com",
-      "youtube": "https://youtube.com",
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "instagram": "https://www.instagram.com/ivantechcoach/",
+      "youtube": "https://www.youtube.com/@IvanTechCoach",
+      "linkedin": "https://www.linkedin.com/in/jivan-rodriguez-support",
+      "github": "https://github.com/ivantechcoach"
     }
   }
 }
