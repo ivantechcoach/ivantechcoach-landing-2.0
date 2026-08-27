@@ -29,7 +29,7 @@ function getEmailHTML(name: string, email: string, message: string, timestamp: s
     </div>
     
     <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #888; font-size: 12px;">
-      <p style="margin: 0;">Este mensaje fue enviado desde el formulario de contacto de ivantechcoach.es</p>
+      <p style="margin: 0;">Este mensaje fue enviado desde el formulario de contacto de ivantechcoach.com</p>
     </div>
   </div>
 </body>
@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
     const smtpPort = process.env.SMTP_PORT
     const smtpUser = process.env.SMTP_USER
     const smtpPassword = process.env.SMTP_PASSWORD
-    const contactEmail = process.env.CONTACT_EMAIL || 'contact@ivantechcoach.es'
+    const contactEmail = process.env.CONTACT_EMAIL || 'contact@ivantechcoach.com'
 
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPassword) {
       console.error('[Contact API] Missing SMTP configuration:', {

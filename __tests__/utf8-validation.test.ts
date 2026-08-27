@@ -50,7 +50,7 @@ describe('UTF-8 Validation', () => {
   })
 
   it('should handle Spanish characters correctly', () => {
-    const spanishText = 'Tecnología sin fricción'
+    const spanishText = 'Tecnología y diseño sin fricción - español'
     const issues = checkForCorruption(spanishText, 'test')
     expect(issues).toHaveLength(0)
     expect(spanishText).toContain('ñ')

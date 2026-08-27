@@ -17,10 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${content.aboutPage.pageTitle} | Ivan Tech Coach`,
     description: content.aboutPage.pageSubtitle,
     alternates: {
-      canonical: `/${lang}/about`,
+      canonical: `https://www.ivantechcoach.com/${lang}/about`,
       languages: {
-        'es': '/es/about',
-        'en': '/en/about',
+        'es': 'https://www.ivantechcoach.com/es/about',
+        'en': 'https://www.ivantechcoach.com/en/about',
+        'x-default': 'https://www.ivantechcoach.com/es/about',
       },
     },
   }

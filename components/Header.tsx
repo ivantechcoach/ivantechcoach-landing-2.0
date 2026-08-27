@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
   const pathname = usePathname();
   const router = useRouter();
   
-  const lang = pathname.startsWith("/en") ? "en" : "es";
+  const lang = langProp || (pathname?.startsWith("/en") ? "en" : "es");
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
       sessionStorage.removeItem("itc-keep-menu");
     }
 
-    const newPath = pathname.replace(`/${lang}`, `/${nextLang}`);
+    const newPath = (pathname || "/").replace(`/${lang}`, `/${nextLang}`);
 
     router.replace(newPath, { scroll: false });
   };

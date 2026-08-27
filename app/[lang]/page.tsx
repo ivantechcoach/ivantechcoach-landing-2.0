@@ -21,10 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Ivan Tech Coach | ${lang === 'es' ? 'Tecnología sin fricción' : 'Frictionless Technology'}`,
     description: content.hero.subtitle,
     alternates: {
-      canonical: `/${lang}`,
+      canonical: `https://www.ivantechcoach.com/${lang}`,
       languages: {
-        'es': '/es',
-        'en': '/en',
+        'es': 'https://www.ivantechcoach.com/es',
+        'en': 'https://www.ivantechcoach.com/en',
+        'x-default': 'https://www.ivantechcoach.com/es',
       },
     },
   }

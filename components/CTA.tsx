@@ -15,7 +15,7 @@ interface CTAProps {
 export default function CTA({ lang: langProp, content }: CTAProps = {}) {
   const pathname = usePathname()
   
-  const lang = pathname.startsWith('/en') ? 'en' : 'es'
+  const lang = langProp || (pathname?.startsWith('/en') ? 'en' : 'es')
 
   return (
     <section

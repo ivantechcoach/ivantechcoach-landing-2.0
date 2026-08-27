@@ -12,6 +12,7 @@ jest.mock('next/server', () => ({
 
 function createMockRequest(pathname: string, acceptLanguage?: string): NextRequest {
   return {
+    url: `http://localhost:3000${pathname}`,
     nextUrl: {
       pathname,
       href: `http://localhost:3000${pathname}`,
@@ -76,7 +77,7 @@ describe('Middleware - Routing', () => {
     middleware(request)
     
     const redirectCall = (NextResponse.redirect as jest.Mock).mock.calls[0][0]
-    expect(redirectCall.href).toMatch(/^\/(es|en)\//)
+    expect(redirectCall.pathname).toMatch(/^\/(es|en)\//)
   })
 })
 

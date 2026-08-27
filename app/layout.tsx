@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import LangUpdater from '@/components/LangUpdater'
 import TechBackground from '@/components/TechBackground'
+import AntigravityBackground from '@/components/AntigravityBackground'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -11,6 +12,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ivantechcoach.com'),
+  alternates: {
+    canonical: 'https://www.ivantechcoach.com/es',
+    languages: {
+      'es': 'https://www.ivantechcoach.com/es',
+      'en': 'https://www.ivantechcoach.com/en',
+      'x-default': 'https://www.ivantechcoach.com/es',
+    },
+  },
   title: 'Ivan Tech Coach | Tecnología sin fricción',
   description: 'Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.',
   keywords: ['consultoría tecnológica', 'arquitectura de software', 'transformación digital', 'tecnología sin fricción', 'Ivan Tech Coach'],
@@ -109,6 +119,7 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
+        <AntigravityBackground />
         <TechBackground />
         <a
           href="#main-content"

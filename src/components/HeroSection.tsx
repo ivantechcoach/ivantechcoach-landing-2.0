@@ -34,7 +34,7 @@ export const HeroSection = () => {
               
               {/* Trust Quote */}
               <blockquote className="border-l-4 border-accent pl-4 italic text-lg opacity-90">
-                "La verdadera transformación comienza cuando dominas las herramientas que automatizan tu trabajo."
+                &ldquo;La verdadera transformación comienza cuando dominas las herramientas que automatizan tu trabajo.&rdquo;
               </blockquote>
 
               {/* Tech Skills Pills */}
@@ -88,7 +88,7 @@ export const HeroSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
               <img
-                src={coachAvatar}
+                src={typeof coachAvatar === 'string' ? coachAvatar : (coachAvatar as any)?.src || coachAvatar}
                 alt="Ivan - IT & AI Coach"
                 className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover aspect-square"
               />

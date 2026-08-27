@@ -7,7 +7,7 @@ export default function LangUpdater() {
   const pathname = usePathname()
 
   useEffect(() => {
-    const lang = pathname.startsWith('/en') ? 'en' : 'es'
+    const lang = pathname?.startsWith('/en') ? 'en' : 'es'
     document.documentElement.lang = lang
   }, [pathname])
 

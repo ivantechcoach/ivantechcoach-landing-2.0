@@ -33,9 +33,9 @@ Configurar en Vercel Dashboard → Settings → Environment Variables:
 ```
 SMTP_HOST=smtp.buzondecorreo.com
 SMTP_PORT=465
-SMTP_USER=contact@ivantechcoach.es
+SMTP_USER=contact@ivantechcoach.com
 SMTP_PASSWORD=[tu_contraseña_real]
-CONTACT_EMAIL=contact@ivantechcoach.es
+CONTACT_EMAIL=contact@ivantechcoach.com
 ```
 
 **⚠️ IMPORTANTE:** 

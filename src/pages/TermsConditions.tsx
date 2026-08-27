@@ -41,7 +41,7 @@ const TermsConditions = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">4. Limitación de Responsabilidad</h2>
             <p className="text-muted-foreground mb-4">
-              El contenido educativo y los scripts proporcionados se ofrecen "tal cual" sin garantías de ningún tipo. 
+              El contenido educativo y los scripts proporcionados se ofrecen &ldquo;tal cual&rdquo; sin garantías de ningún tipo. 
               IvanTechCoach no será responsable de ningún daño directo, indirecto, incidental, consecuente o punitivo 
               que surja del uso o la imposibilidad de usar el material proporcionado.
             </p>

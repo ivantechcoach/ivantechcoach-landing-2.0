@@ -16,7 +16,7 @@ interface FooterProps {
   }
 }
 
-export default function Footer({ content }: FooterProps) {
+export function Footer({ content }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
@@ -77,3 +77,5 @@ export default function Footer({ content }: FooterProps) {
     </footer>
   )
 }
+
+export default Footer;

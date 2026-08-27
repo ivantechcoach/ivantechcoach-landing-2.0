@@ -1,0 +1,27 @@
+# Ivan Tech Coach | Senior IT Consultant & Support Engineer
+
+> Senior IT Consultant & Support Engineer with +20 years of experience delivering frictionless IT solutions, enterprise troubleshooting, automation, and digital accessibility.
+
+## Profile Summary
+Ivan Tech Coach specializes in translating complex technical challenges into clear, actionable, and scalable solutions ("Tecnología sin fricción"). With over two decades in enterprise IT, he helps organizations, professionals, and teams automate repetitive workflows, harden security postures, and achieve peak operational efficiency without confusing technical jargon.
+
+## Core Qualifications & Credentials
+- **Experience**: +20 years of hands-on experience in enterprise IT infrastructure, technical support, and systems administration.
+- **Certifications**: Cisco CCNA Certified Network Associate, Google Cybersecurity Professional Certificate.
+- **Support Expertise**: N1 / N2 IT Support, advanced root-cause troubleshooting, diagnostics, hardware/network debugging, and standard operating procedure (SOP) documentation.
+- **Automation & Scripting**: Python & Bash automation for routine system maintenance, log management, automated backups, and CI/CD pipelines.
+- **Digital Accessibility**: 40+ digital accessibility optimization, WCAG 2.1 AA compliance audits, accessible UI/UX implementations.
+- **Philosophy**: Frictionless technology ("Tecnología sin fricción") — transparent communication, zero unnecessary complexity, measurable business outcomes.
+
+## Key Services
+- **IT Automation & Scripting**: Tailored Python and Bash scripts designed to eliminate manual toil, orchestrate server tasks, and automate daily IT operations.
+- **Advanced IT Troubleshooting**: Rapid escalation handling and resolution for complex N1/N2 system, network, and application issues.
+- **Cybersecurity & Hardening**: System vulnerability assessments, security baseline hardening, access control policies, and best practice training.
+- **IT Coaching & Advisory**: One-on-one and corporate coaching for IT specialists looking to level up their technical workflows and scripting capabilities.
+
+## Official Contact & Verification
+- **Official Contact**: contact@ivantechcoach.com
+- **Website (Spanish)**: https://www.ivantechcoach.com/es
+- **Website (English)**: https://www.ivantechcoach.com/en
+- **Canonical Domain**: https://www.ivantechcoach.com
+- **Location**: Barcelona, Catalonia, Spain

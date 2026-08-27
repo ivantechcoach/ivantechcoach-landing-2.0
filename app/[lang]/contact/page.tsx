@@ -16,10 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Contacto | Ivan Tech Coach`,
     description: content.contact.description,
     alternates: {
-      canonical: `/${lang}/contact`,
+      canonical: `https://www.ivantechcoach.com/${lang}/contact`,
       languages: {
-        'es': '/es/contact',
-        'en': '/en/contact',
+        'es': 'https://www.ivantechcoach.com/es/contact',
+        'en': 'https://www.ivantechcoach.com/en/contact',
+        'x-default': 'https://www.ivantechcoach.com/es/contact',
       },
     },
   }
