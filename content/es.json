@@ -115,9 +115,9 @@
       {
         "title": "Capacitación de Equipos",
         "description": "Formación práctica que realmente mejora la productividad de tu equipo.",
-        "longDescription": "Entregó formación que marca una diferencia real. En lugar de cursos genéricos, proporciono formación práctica y práctica adaptada a las necesidades específicas de tu equipo y tu stack tecnológico. Mi formación se centra en escenarios del mundo real que tu equipo realmente encontrará, asegurando que puedan aplicar inmediatamente lo que aprenden. Desde la adopción de nuevas tecnologías hasta las mejores prácticas, ayudo a tu equipo a ser más productivo y confiado.",
+        "longDescription": "Entrego formación que marca una diferencia real. En lugar de cursos genéricos, proporciono formación práctica y directa adaptada a las necesidades específicas de tu equipo y tu stack tecnológico. Mi formación se centra en escenarios del mundo real que tu equipo realmente encontrará, asegurando que puedan aplicar inmediatamente lo que aprenden. Desde la adopción de nuevas tecnologías hasta las mejores prácticas, ayudo a tu equipo a ser más productivo y confiado.",
         "benefits": [
-          "Formación práctica y práctica",
+          "Formación práctica y aplicada",
           "Currículo personalizado",
           "Escenarios del mundo real",
           "Soporte continuo",
@@ -201,14 +201,14 @@
   },
   "cta": {
     "title": "Escalabilidad y Crecimiento",
-    "subtitle": "Listo para dar el siguiente paso?",
+    "subtitle": "¿Listo para dar el siguiente paso?",
     "description": "Trabajemos juntos para construir soluciones tecnológicas que realmente impulsen tu negocio. Sin humo, sin complicaciones, solo resultados.",
     "button": "Iniciar conversación"
   },
   "contact": {
     "title": "Contacto",
     "subtitle": "Hablemos",
-    "description": "Tengo una pregunta o quieres conocer más sobre cómo puedo ayudarte? Escríbeme y te responderé lo antes posible.",
+    "description": "¿Tienes una pregunta o quieres conocer más sobre cómo puedo ayudarte? Escríbeme y te responderé lo antes posible.",
     "form": {
       "name": "Nombre",
       "email": "Email",
@@ -225,7 +225,7 @@
     "madeBy": "Diseñado y desarrollado por Ivan, combinando arquitectura web moderna con técnicas de Context Engineering y Vibe Coding asistidas por IA.",
     "social": {
       "instagram": "https://www.instagram.com/ivantechcoach/",
-      "youtube": "https://www.youtube.com/@IvanTechCoach",
+      "youtube": "https://www.youtube.com/@SinceramenteIvan",
       "linkedin": "https://www.linkedin.com/in/jivan-rodriguez-support",
       "github": "https://github.com/ivantechcoach"
     }

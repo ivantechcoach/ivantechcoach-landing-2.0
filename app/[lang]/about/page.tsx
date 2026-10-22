@@ -1,8 +1,8 @@
-import { getContent } from '@/lib/content'
+import { notFound } from 'next/navigation'
+import { getContent, isValidLanguage } from '@/lib/content'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AboutPage from '@/components/AboutPage'
-import TechBackground from '@/components/TechBackground'
 import type { Metadata } from 'next'
 
 type Props = {
@@ -10,37 +10,62 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const lang = params.lang || 'es'
+  const lang = isValidLanguage(params.lang) ? params.lang : 'es'
   const content = await getContent(lang)
+  const title = `${content.aboutPage.pageTitle} | Ivan Tech Coach`
+  const description = content.aboutPage.pageSubtitle
+  const url = `https://www.ivantechcoach.com/${lang}/about`
 
   return {
-    title: `${content.aboutPage.pageTitle} | Ivan Tech Coach`,
-    description: content.aboutPage.pageSubtitle,
+    title,
+    description,
     alternates: {
-      canonical: `https://www.ivantechcoach.com/${lang}/about`,
+      canonical: url,
       languages: {
         'es': 'https://www.ivantechcoach.com/es/about',
         'en': 'https://www.ivantechcoach.com/en/about',
         'x-default': 'https://www.ivantechcoach.com/es/about',
       },
     },
+    openGraph: {
+      type: 'website',
+      url,
+      locale: lang === 'en' ? 'en_US' : 'es_ES',
+      alternateLocale: lang === 'en' ? 'es_ES' : 'en_US',
+      title,
+      description,
+      siteName: 'Ivan Tech Coach',
+      images: [
+        {
+          url: '/images/og-cover.jpg',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/og-cover.jpg'],
+    },
   }
 }
 
 export default async function AboutRoutePage({ params }: Props) {
-  const lang = params.lang || 'es'
+  if (!isValidLanguage(params.lang)) {
+    notFound()
+  }
+
+  const lang = params.lang
   const content = await getContent(lang)
 
   return (
-    <main>
+    <main id="main-content">
       <Header lang={lang} content={content} />
-      <div className="relative">
-        <div className="absolute inset-0 pointer-events-none z-0">
-          <TechBackground />
-        </div>
-        <div className="relative z-10">
-          <AboutPage content={content.aboutPage} lang={lang} />
-        </div>
+      <div className="relative z-10">
+        <AboutPage content={content.aboutPage} lang={lang} />
       </div>
       <Footer content={content.footer} />
     </main>

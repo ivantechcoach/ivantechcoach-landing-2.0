@@ -3,14 +3,14 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
-interface AboutProps {
+interface AboutProps { lang?: string;
   content: {
     title: string
     description: string
   }
 }
 
-export default function About({ content }: AboutProps) {
+export default function About({ content, lang = 'es' }: AboutProps) {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -50,7 +50,7 @@ export default function About({ content }: AboutProps) {
           <div className="interactive mb-10 relative mx-auto w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border border-[var(--primary-light)] shadow-[0_0_38px_rgba(0,209,255,0.35)] hover:scale-105 transition-transform duration-500 ease-out hover:-rotate-1 hover:translate-y-[-2px]">
             <Image
               src="/images/ivan-techcoach-hero.webp"
-              alt="Professional portrait"
+              alt={lang === 'en' ? 'Ivan Tech Coach - Professional portrait' : 'Ivan Tech Coach - Retrato profesional'}
               width={260}
               height={260}
               className="object-cover w-full h-full"

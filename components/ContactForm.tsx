@@ -130,12 +130,12 @@ export default function ContactForm({ content, lang }: ContactFormProps) {
       <div className="container-custom relative z-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h2
+            <h1
               id="contact-title"
               className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-4"
             >
               {content.title}
-            </h2>
+            </h1>
             <p className="text-lg text-[var(--text-soft)] mb-4">{content.subtitle}</p>
             <p className="text-base text-[var(--text-soft)]">{content.description}</p>
           </div>

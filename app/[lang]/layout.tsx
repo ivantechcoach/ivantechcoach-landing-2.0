@@ -1,4 +1,11 @@
-import { isValidLanguage, getDefaultLanguage } from '@/lib/content'
+import { notFound } from 'next/navigation'
+import { isValidLanguage, supportedLanguages } from '@/lib/content'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return supportedLanguages.map((lang) => ({ lang }))
+}
 
 type Props = {
   children: React.ReactNode
@@ -6,19 +13,9 @@ type Props = {
 }
 
 export default async function LangLayout({ children, params }: Props) {
-  const lang = isValidLanguage(params.lang) ? params.lang : getDefaultLanguage()
-  
-  // Note: In Next.js App Router, only root layout can have <html> tag.
-  // The lang attribute is set dynamically via LangUpdater component.
-  // This layout ensures proper locale validation and content wrapping.
-  
+  if (!isValidLanguage(params.lang)) {
+    notFound()
+  }
+
   return <>{children}</>
 }
-
-
-
-
-
-
-
-

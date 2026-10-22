@@ -122,7 +122,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
                 <span className="text-xs text-[var(--text-soft)] ml-auto">{terminal.status}</span>
               </div>
 
-              <div className="space-y-3 font-mono text-sm text-[var(--primary-light)] relative z-10" role="text" aria-label="System status messages">
+              <div className="space-y-3 font-mono text-sm text-[var(--primary-light)] relative z-10" aria-label="System status messages">
                 <p className="text-[var(--text)]">{">"} {terminal.line1}</p>
                 <p className="text-[var(--text)]">{">"} {terminal.line2}</p>
                 <p className="text-[var(--text)]">{">"} {terminal.line3}</p>

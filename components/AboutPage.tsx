@@ -100,12 +100,12 @@ export default function AboutPage({ content, lang }: AboutPageProps) {
       { threshold: 0.3 }
     )
 
-    if (closingRef.current) {
-      observer.observe(closingRef.current)
+    const currentClosingRef = closingRef.current; if (currentClosingRef) {
+      observer.observe(currentClosingRef)
     }
 
     return () => {
-      if (closingRef.current) observer.unobserve(closingRef.current)
+      if (currentClosingRef) observer.unobserve(currentClosingRef)
       if (timeoutId) clearTimeout(timeoutId)
     }
   }, [content.closing])
@@ -244,7 +244,7 @@ export default function AboutPage({ content, lang }: AboutPageProps) {
             <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[var(--primary-light)] shadow-[0_0_60px_rgba(0,209,255,0.5)] backdrop-blur-sm bg-gradient-to-br from-[var(--primary)]/10 to-transparent group-hover:shadow-[0_0_80px_rgba(0,209,255,0.6)] transition-all duration-500 group-hover:scale-105">
               <Image
                 src="/images/ivan-techcoach-hero.webp"
-                alt="Ivan Tech Coach - Professional portrait"
+                alt={lang === 'en' ? 'Ivan Tech Coach - Professional portrait' : 'Ivan Tech Coach - Retrato profesional'}
                 width={288}
                 height={288}
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"

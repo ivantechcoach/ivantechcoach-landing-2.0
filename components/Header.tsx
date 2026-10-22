@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
           <button
             onClick={toggleLang}
-            aria-label={`Cambiar idioma a ${lang === "es" ? "inglés" : "español"}`}
+            aria-label={lang === "es" ? "Cambiar idioma a inglés" : "Switch language to Spanish"}
             className="flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] hover:scale-105 transition-all duration-[var(--anim-fast)]"
           >
             <Globe size={16} className="transition-transform duration-[var(--anim-fast)] hover:rotate-12" />
@@ -170,9 +170,9 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
           <button
             onClick={toggleTheme}
-            aria-label="Cambiar tema"
+            aria-label={lang === "es" ? "Cambiar tema" : "Toggle theme"}
             className="flex items-center justify-center w-10 h-10 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] hover:scale-110 hover:rotate-12 transition-all duration-[var(--anim-fast)]"
-            title={`Tema: ${theme}`}
+            title={lang === "es" ? `Tema: ${theme}` : `Theme: ${theme}`}
           >
             {getThemeIcon()}
           </button>
@@ -181,7 +181,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
         <button 
           className="md:hidden text-[var(--text)] p-2" 
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={mobileOpen ? (lang === "es" ? "Cerrar menú" : "Close menu") : (lang === "es" ? "Abrir menú" : "Open menu")}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
@@ -215,7 +215,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
               <button 
                 className="text-[var(--text)] p-2" 
                 onClick={() => setMobileOpen(false)}
-                aria-label="Cerrar menú"
+                aria-label={lang === "es" ? "Cerrar menú" : "Close menu"}
               >
                 <X size={26} />
               </button>
@@ -248,7 +248,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
               <button
                 onClick={() => toggleLang()}
-                aria-label={`Cambiar idioma a ${lang === "es" ? "inglés" : "español"}`}
+                aria-label={lang === "es" ? "Cambiar idioma a inglés" : "Switch language to Spanish"}
                 className="mt-6 flex items-center gap-3 text-lg text-[var(--text)]"
               >
                 <Globe size={22} />
@@ -257,9 +257,9 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
 
               <button
                 onClick={toggleTheme}
-                aria-label="Cambiar tema"
+                aria-label={lang === "es" ? "Cambiar tema" : "Toggle theme"}
                 className="mt-6 flex items-center justify-center w-12 h-12 rounded-full border border-[var(--border)] text-[var(--text)] hover:bg-[var(--bg-2)] transition-colors"
-                title={`Tema: ${theme}`}
+                title={lang === "es" ? `Tema: ${theme}` : `Theme: ${theme}`}
               >
                 {getThemeIcon()}
               </button>

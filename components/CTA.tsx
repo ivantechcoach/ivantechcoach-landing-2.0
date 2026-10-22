@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 interface CTAProps {
@@ -14,8 +15,16 @@ interface CTAProps {
 
 export default function CTA({ lang: langProp, content }: CTAProps = {}) {
   const pathname = usePathname()
-  
+
   const lang = langProp || (pathname?.startsWith('/en') ? 'en' : 'es')
+
+  const heading = content?.subtitle || (lang === 'es' ? 'Hablemos ahora' : "Let's talk now")
+  const description =
+    content?.description ||
+    (lang === 'es'
+      ? 'Te ayudo a transformar tu tecnología en claridad, eficiencia y resultados. Sin complicaciones.'
+      : 'I help you turn your technology into clarity, efficiency and results. No complications.')
+  const buttonText = content?.button || (lang === 'es' ? 'Contactar' : 'Contact me')
 
   return (
     <section
@@ -24,16 +33,14 @@ export default function CTA({ lang: langProp, content }: CTAProps = {}) {
     >
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-[var(--text)]">
-          {lang === 'es' ? 'Hablemos ahora' : "Let's talk now"}
+          {heading}
         </h2>
 
         <p className="max-w-2xl mx-auto text-lg font-normal text-[var(--text-soft)] mb-10 leading-relaxed">
-          {lang === 'es'
-            ? 'Te ayudo a transformar tu tecnología en claridad, eficiencia y resultados. Sin complicaciones.'
-            : 'I help you turn your technology into clarity, efficiency and results. No complications.'}
+          {description}
         </p>
 
-        <a
+        <Link
           href={`/${lang}/contact`}
           className="interactive
             inline-block px-10 py-4 rounded-full font-semibold
@@ -46,8 +53,8 @@ export default function CTA({ lang: langProp, content }: CTAProps = {}) {
             focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]
           "
         >
-          {lang === 'es' ? 'Contactar' : 'Contact me'}
-        </a>
+          {buttonText}
+        </Link>
       </div>
     </section>
   )
