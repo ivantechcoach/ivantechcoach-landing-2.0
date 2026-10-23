@@ -3,226 +3,369 @@
     "home": "Inicio",
     "about": "Sobre mí",
     "services": "Servicios",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "commandHint": "Comandos y Diagnóstico IA"
+  },
+  "commandPalette": {
+    "placeholder": "Buscar servicio de IA, caso de infraestructura o comando...",
+    "empty": "No se encontraron comandos coincidentes.",
+    "groups": {
+      "aiScenarios": "Simulador de Arquitectura e IA Aplicada",
+      "navigation": "Navegación Directa",
+      "preferences": "Preferencias del Sistema"
+    },
+    "actions": {
+      "toggleTheme": "Alternar Tema (Obsidian Oscuro / Dossier Pergamino)",
+      "toggleLang": "Cambiar Idioma (ES · CA · EN)",
+      "goContact": "Agendar Diagnóstico Técnico e IA",
+      "goServices": "Explorar Matriz de Servicios IA + Sistemas",
+      "goAbout": "Ver Dossier de +20 Años y Certificaciones"
+    }
   },
   "hero": {
-    "badge": "Ivan Tech Coach",
-    "title": "Tecnología sin fricción.",
-    "subtitle": "Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.",
-    "ctaPrimary": "Hablemos ahora",
-    "ctaSecondary": "Ver servicios"
+    "badge": "SYS-CORE // +20 AÑOS INFRAESTRUCTURA TI · CIBERSEGURIDAD · IA APLICADA",
+    "title": "Tecnología e IA sin fricción.",
+    "subtitle": "Integro modelos de Inteligencia Artificial sobre infraestructuras TI reales, seguras y ordenadas. Más de 20 años diagnosticando sistemas, redes y seguridad para que adoptes IA sin humo tecnológico y con retorno medible.",
+    "ctaPrimary": "Solicitar diagnóstico técnico",
+    "ctaSecondary": "Explorar arquitectura y servicios",
+    "metricsStrip": [
+      {
+        "value": "20+ Años",
+        "label": "Sistemas, Redes y Hardware"
+      },
+      {
+        "value": "95% FCR",
+        "label": "Resolución en 1er Contacto"
+      },
+      {
+        "value": "+200 GB",
+        "label": "Datos Cloud Estructurados"
+      },
+      {
+        "value": "-30% Costo",
+        "label": "Optimización Hardware/IT"
+      }
+    ],
+    "simulator": {
+      "headerTitle": "CONSOLA DE ARQUITECTURA E INFERENCIA // DIAGNÓSTICO EN VIVO",
+      "statusBadge": "TELEMETRÍA ACTIVA · CERO HUMO",
+      "scenarioLabel": "Selecciona un desafío real de negocio:",
+      "labels": {
+        "problem": "DIAGNÓSTICO DE CAMPO",
+        "architecture": "ARQUITECTURA Y MODELOS IA",
+        "security": "CAPA DE SEGURIDAD / INFRAESTRUCTURA",
+        "impact": "IMPACTO VERIFICADO"
+      },
+      "scenarios": [
+        {
+          "id": "cloud-rag",
+          "code": "MOD-01",
+          "tab": "Datos Cloud & IA Privada",
+          "problem": "«Queremos usar IA con nuestros presupuestos, contratos y manuales, pero tenemos cientos de gigabytes desordenados y miedo a filtrar datos confidenciales.»",
+          "architecture": "Reestructuración en Microsoft 365 (SharePoint / OneDrive) o Google Workspace + despliegue de asistentes sobre corpus documental limpio (Claude Enterprise / Copilot / RAG privado).",
+          "security": "Segmentación de permisos por rol, políticas Zero-Data-Retention en llamadas a modelos y trazabilidad de acceso.",
+          "impact": "+40% velocidad de recuperación documental (caso real +200 GB migrados en MASMEL)."
+        },
+        {
+          "id": "sec-governance",
+          "code": "MOD-02",
+          "tab": "Ciberseguridad para IA",
+          "problem": "«Nuestro equipo ya usa ChatGPT o Claude por su cuenta sin control técnico, exponiendo credenciales, clientes y la red interna.»",
+          "architecture": "Protocolo de gobernanza de modelos de IA, estandarización de cuentas corporativas y pasarelas de acceso auditadas.",
+          "security": "Hardening de endpoints (Windows, Linux, macOS), segmentación de red LAN/WAN (criterio Cisco CCNA) y controles Google Cybersecurity / FUNDAE.",
+          "impact": "100% disponibilidad en operaciones críticas y -25% en tiempo de inactividad mensual."
+        },
+        {
+          "id": "hardware-llm",
+          "code": "MOD-03",
+          "tab": "Hardware AI-Ready vs Cloud",
+          "problem": "«No sabemos si pagar licencias mensuales de IA en la nube o invertir en estaciones de trabajo con GPU para correr modelos locales privados.»",
+          "architecture": "Auditoría de cargas de trabajo: inferencia local (Ollama / vLLM / Open-Weights) para datos sensibles frente a APIs frontier (Claude / GPT) para razonamiento complejo.",
+          "security": "Dimensionamiento exacto de VRAM, GPU, RAM y almacenamiento local sin sobreprecio comercial.",
+          "impact": "-30% ahorro en inversión de hardware, +40% rendimiento por estación y +3 años de vida útil."
+        },
+        {
+          "id": "ops-automation",
+          "code": "MOD-04",
+          "tab": "Automatización & SOPs IA",
+          "problem": "«Perdemos horas cada semana en soporte repetitivo, redacción de informes técnicos y formación de nuevo personal.»",
+          "architecture": "Flujos automatizados (n8n / APIs de modelos) integrados con guías operativas estandarizadas (SOPs) asistidas por IA.",
+          "security": "Validación humana en el bucle (Human-in-the-Loop) y control de errores antes de producción.",
+          "impact": "-30% en incidencias recurrentes y -20% en tiempo de incorporación (onboarding) de personal."
+        }
+      ]
+    }
   },
   "about": {
-    "title": "Sobre mí",
-    "description": "Soy Ivan, y creo en la tecnología que realmente funciona. Durante años, he visto cómo las empresas se pierden en promesas vacías y soluciones que no cumplen. Por eso decidí enfocarme en lo que realmente importa: resultados claros, comunicación honesta y tecnología que impulse tu negocio sin complicaciones innecesarias. Mi objetivo es ayudarte a tomar decisiones tecnológicas informadas, sin jerga técnica innecesaria, con un enfoque práctico y resultados medibles.",
-    "cta": "Contáctame"
+    "eyebrow": "DOSSIER TÉCNICO // TRAYECTORIA VERIFICADA",
+    "title": "Sobre mí: Criterio de Ingeniería + IA Práctica",
+    "roleHeadline": "Consultor Senior de Infraestructura TI, Ciberseguridad y Adopción Práctica de Modelos de IA",
+    "description": "Soy Jaime Iván Rodríguez Morales. A diferencia de los consultores que llegaron a la tecnología hace seis meses con un curso de prompts, llevo más de 20 años en las trincheras reales de la informática: he ensamblado y diagnosticado más de 500 estaciones de trabajo, diseñado más de 50 redes LAN/WAN, migrado cientos de gigabytes corporativos a la nube y asegurado entornos Windows, Linux y macOS. Integro modelos de IA únicamente donde aportan retorno real, sobre una base sólida de infraestructura y ciberseguridad.",
+    "cta": "Consultar disponibilidad",
+    "metrics": [
+      {
+        "code": "KPI-01",
+        "value": "95%",
+        "label": "Resolución en 1er Contacto",
+        "detail": "Diagnóstico avanzado multiplataforma (Windows, Linux, macOS) reduciendo incidentes recurrentes un 30%."
+      },
+      {
+        "code": "KPI-02",
+        "value": "+40%",
+        "label": "Eficiencia Documental Cloud",
+        "detail": "Liderazgo en migración y estructuración de +200 GB en SharePoint y OneDrive listos para flujos de IA."
+      },
+      {
+        "code": "KPI-03",
+        "value": "-30%",
+        "label": "Reducción de Costo Hardware",
+        "detail": "Asesoría en +150 proyectos y +500 equipos optimizados, extendiendo la vida útil en +3 años."
+      },
+      {
+        "code": "KPI-04",
+        "value": "-25%",
+        "label": "Menos Tiempo de Inactividad",
+        "detail": "Monitoreo proactivo de infraestructura, redes LAN/WAN y endurecimiento de seguridad operativa."
+      }
+    ],
+    "certificationsTitle": "Credenciales y Formación Continua Verificada",
+    "certifications": [
+      {
+        "year": "2025",
+        "title": "Protocolos de Red Aplicados a Ciberseguridad & Ciberseguridad Básica",
+        "issuer": "FUNDAE (España)"
+      },
+      {
+        "year": "2024",
+        "title": "Google Cybersecurity Professional Certificate",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2024",
+        "title": "Herramientas Linux, SQL & Seguridad de Redes",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2017–2018",
+        "title": "Cisco CCNA 1, CCNA 2, CCNA 3 & IT Essentials",
+        "issuer": "Cisco Networking Academy"
+      },
+      {
+        "year": "2001",
+        "title": "Técnico Superior Universitario (TSU) en Informática",
+        "issuer": "Instituto Tecnológico Sucre"
+      }
+    ]
   },
   "aboutPage": {
     "pageTitle": "Sobre mí",
-    "pageSubtitle": "Profesional de la informática con más de 20 años de experiencia práctica en sistemas, hardware, redes y soporte técnico avanzado",
+    "pageSubtitle": "Especialista con más de 20 años en infraestructura TI, redes y ciberseguridad unidos a la consultoría práctica en modelos de IA",
     "content": [
-      "Soy un profesional de la informática con más de 20 años de experiencia práctica en sistemas, hardware, redes y soporte técnico avanzado. Desde mis inicios desmontando y optimizando ordenadores, configurando redes y diagnosticando fallos complejos, mi interés siempre ha estado en comprender cómo funciona la tecnología desde el nivel físico hasta la lógica de sistemas y cómo hacer que funcione de forma fiable, segura y eficiente.",
-      "Con el paso de los años, mi perfil evolucionó naturalmente: a la base sólida de infraestructura física y lógica se sumaron administración de sistemas (Windows, Linux, macOS), redes, ciberseguridad técnica básica, despliegues en nube y soporte en entornos profesionales. Esto me ha permitido enfrentar desafíos reales, resolver problemas complejos y diseñar soluciones que no solo funcionan, sino que perduran con el tiempo.",
-      "Mi enfoque no es construir soluciones improvisadas ni imponer modas tecnológicas. Trabajo con un criterio técnico claro: estabilidad operacional, optimización de recursos, conciencia de seguridad y costo-beneficio real para el negocio.",
-      "Además, ofrezco asesoría práctica en herramientas de IA y su aplicación en productividad empresarial. No busco vender soluciones mágicas, sino integrar IA cuando aporta valor tangible a flujos de trabajo, documentación, soporte o eficiencia operativa.",
-      "He apoyado directamente a empresas y profesionales en la resolución de incidencias avanzadas, en la mejora de infraestructuras existentes y en la construcción de entornos tecnológicos coherentes, seguros y alineados con sus objetivos.",
-      "Valoro profundamente la claridad, la ética profesional y la comunicación honesta. Trabajo con clientes y equipos que buscan resultados duraderos, comprensión de sus sistemas y una relación de confianza basada en la transparencia técnica.",
-      "Aquí no hay humo ni promesas vacías: hay experiencia, criterio demostrado y compromiso con soluciones que funcionan."
+      "Soy un profesional de la informática con más de 20 años de experiencia práctica en sistemas, hardware, redes, ciberseguridad y soporte técnico avanzado. Desde mis inicios ensamblando y optimizando más de 500 estaciones de trabajo, configurando más de 50 redes LAN/WAN y diagnosticando fallos críticos, mi enfoque siempre ha sido comprender la tecnología desde el hierro físico hasta la lógica de sistemas y la inteligencia artificial.",
+      "Con el paso de los años, mi perfil evolucionó de forma integral: a la base sólida de hardware e infraestructura se sumaron la administración avanzada de sistemas (Windows, Linux, macOS), ingeniería de redes (Cisco CCNA 1–3), ciberseguridad técnica (Google Cybersecurity y FUNDAE 2025) y reestructuración de datos corporativos en la nube (+200 GB en SharePoint y OneDrive).",
+      "Mi criterio es tajante: no construyo soluciones improvisadas ni impongo modas tecnológicas. Cada recomendación responde a estabilidad operacional, optimización de recursos, privacidad de datos y costo-beneficio medible para el negocio.",
+      "En el ámbito de la Inteligencia Artificial, asesoro a empresas y profesionales para integrar modelos de IA (LLMs en la nube o locales, flujos automatizados y asistentes documentales) sobre cimientos seguros. El 90% de los fallos al adoptar IA provienen de datos desorganizados, redes vulnerables o compras erróneas de hardware: exactamente los tres frentes que llevo dos décadas resolviendo.",
+      "En proyectos recientes como Consultor Senior en MASMEL Rehabilitaciones y Reformas y Especialista Nivel 2 en Mundofabian.com, he logrado un 95% de resolución en primer contacto, una reducción del 25% en tiempos de inactividad mensual, un 40% de mejora en recuperación de archivos en la nube y una reducción del 20% en tiempos de incorporación mediante documentación estandarizada.",
+      "Valoro la claridad, la ética técnica y la transparencia absoluta. Aquí no hay humo ni promesas mágicas: hay ingeniería de campo demostrada y resultados que perduran."
     ],
-    "closing": "No implemento tecnología por moda, sino por criterio técnico.",
-    "cta": "Conversemos"
+    "closing": "No implemento IA ni tecnología por moda, sino por criterio técnico, seguridad y retorno real.",
+    "cta": "Conversemos sobre tu proyecto",
+    "portraitLabel": "ID VERIFICADO · 20+ AÑOS"
   },
   "services": {
+    "eyebrow": "MATRIZ DE CAPACIDADES // ARQUITECTURA IA + SISTEMAS",
     "title": "Servicios",
-    "subtitle": "Cómo puedo ayudarte",
+    "subtitle": "Soluciones donde la Inteligencia Artificial se apoya en infraestructura real, ciberseguridad y +20 años de criterio técnico",
     "items": [
       {
-        "title": "Consultoría Tecnológica",
-        "description": "Estrategias claras para tomar decisiones tecnológicas informadas sin perderte en la complejidad.",
+        "code": "SYS-01",
+        "title": "Asesoría e Integración de Modelos de IA",
+        "description": "Selección e implementación práctica de LLMs (Claude, GPT, Gemini o modelos locales privados) aplicados a tus flujos reales sin humo comercial.",
+        "metric": "ROI Operativo Medible",
+        "tags": ["LLMs", "Context Engineering", "IA Privada"],
         "icon": "lightbulb"
       },
       {
-        "title": "Arquitectura de Software",
-        "description": "Diseño de sistemas escalables y mantenibles que crecen con tu negocio.",
+        "code": "SYS-02",
+        "title": "Arquitectura de Datos Cloud para IA",
+        "description": "Reestructuración y migración de datos en SharePoint, OneDrive, Microsoft 365 y Google Workspace para que la IA trabaje sobre información ordenada y segura.",
+        "metric": "+40% Recuperación Documental",
+        "tags": ["SharePoint / M365", "RAG Corporativo", "+200 GB Migrados"],
         "icon": "layers"
       },
       {
-        "title": "Transformación Digital",
-        "description": "Guía paso a paso para modernizar tus procesos sin interrumpir tu operación.",
-        "icon": "refresh-cw"
+        "code": "SYS-03",
+        "title": "Ciberseguridad, Redes y Gobernanza IA",
+        "description": "Endurecimiento de sistemas (Windows, Linux, macOS), segmentación de redes LAN/WAN (CCNA) y políticas de privacidad para evitar fugas de datos al usar IA.",
+        "metric": "-25% Inactividad Mensual",
+        "tags": ["Google Cybersecurity", "Cisco CCNA", "Zero Data Leakage"],
+        "icon": "target"
       },
       {
-        "title": "Capacitación de Equipos",
-        "description": "Formación práctica que realmente mejora la productividad de tu equipo.",
-        "icon": "users"
-      },
-      {
-        "title": "Optimización de Procesos",
-        "description": "Identifico y elimino cuellos de botella que frenan tu crecimiento.",
+        "code": "SYS-04",
+        "title": "Automatización Operativa & SOPs con IA",
+        "description": "Diseño de flujos automatizados (n8n, integraciones API) y procedimientos técnicos estandarizados que eliminan cuellos de botella y tareas repetitivas.",
+        "metric": "-30% Incidencias Recurrentes",
+        "tags": ["n8n / Workflows", "SOPs Técnicos", "-20% Onboarding"],
         "icon": "zap"
       },
       {
-        "title": "Mentoría Ejecutiva",
-        "description": "Acompañamiento personalizado para líderes que necesitan claridad tecnológica.",
-        "icon": "target"
+        "code": "SYS-05",
+        "title": "Infraestructura AI-Ready & Optimización Hardware",
+        "description": "Auditoría y dimensionamiento de estaciones de trabajo, GPUs, servidores y redes para cargas de IA local o híbrida, evitando gastos innecesarios.",
+        "metric": "-30% Costo de Hardware",
+        "tags": ["+500 Equipos", "GPUs / Local AI", "+40% Rendimiento"],
+        "icon": "refresh-cw"
+      },
+      {
+        "code": "SYS-06",
+        "title": "Capacitación de Equipos & Soporte Senior N1–N3",
+        "description": "Formación práctica para que tu plantilla domine herramientas de IA con seguridad, acompañada de soporte técnico integral remoto y presencial.",
+        "metric": "95% Resolución 1er Contacto",
+        "tags": ["Formación Aplicada", "Soporte N1–N3", "Windows / Linux / macOS"],
+        "icon": "users"
       }
     ]
   },
   "servicesPage": {
-    "pageTitle": "Nuestros Servicios",
-    "pageSubtitle": "Soluciones tecnológicas integrales adaptadas a tus necesidades",
-    "pageDescription": "Descubre cómo puedo ayudarte a transformar tu infraestructura tecnológica, optimizar tus procesos e impulsar tu negocio con soluciones claras y accionables.",
+    "pageTitle": "Servicios de Ingeniería TI, Ciberseguridad e IA Aplicada",
+    "pageSubtitle": "Ecosistemas tecnológicos completos diseñados con criterio de sistemas, seguridad de datos y eficiencia operativa",
+    "pageDescription": "Descubre cómo fusiono más de 20 años de experiencia en infraestructura, redes y soporte avanzado con la adopción práctica y segura de modelos de Inteligencia Artificial.",
     "items": [
       {
-        "title": "Consultoría Tecnológica",
-        "description": "Estrategias claras para tomar decisiones tecnológicas informadas sin perderte en la complejidad.",
-        "longDescription": "Proporciono consultoría tecnológica estratégica que corta el ruido. En lugar de abrumarte con jerga técnica, analizo tu situación actual, entiendo tus objetivos de negocio y entrego recomendaciones claras y accionables. Ya sea que estés eligiendo entre opciones tecnológicas, planificando actualizaciones de infraestructura o navegando una transformación digital, te ayudo a tomar decisiones que se alinean con tus objetivos de negocio y presupuesto.",
+        "title": "Asesoría e Integración de Modelos de IA",
+        "description": "Selección e implementación práctica de LLMs aplicados a tus flujos reales sin humo comercial.",
+        "longDescription": "Evalúo tus procesos operativos y determino exactamente qué modelo de IA (Claude, OpenAI, Gemini o modelos open-weights ejecutados en local) resuelve tu problema con el menor costo y la máxima privacidad. No vendo promesas genéricas: diseño prompts de sistema, estructuras de contexto (Context Engineering) y criterios de validación para que la IA genere valor desde la primera semana.",
         "benefits": [
-          "Recomendaciones claras, sin jerga",
-          "Estrategias tecnológicas rentables",
-          "Evaluación y mitigación de riesgos",
-          "Evaluación y selección de proveedores",
-          "Planificación de hoja de ruta tecnológica"
+          "Evaluación objetiva entre modelos en nube y modelos locales privados",
+          "Diseño de Context Engineering y plantillas operativas para tu negocio",
+          "Reducción inmediata de tiempos en redacción técnica, análisis y soporte",
+          "Control estricto de costos por licencias o consumo de API",
+          "Adopción paso a paso sin interrumpir la operación diaria"
         ],
         "icon": "lightbulb"
       },
       {
-        "title": "Arquitectura de Software",
-        "description": "Diseño de sistemas escalables y mantenibles que crecen con tu negocio.",
-        "longDescription": "Diseño arquitecturas de software construidas para durar. Mi enfoque se centra en crear sistemas que no solo sean escalables y mantenibles, sino también rentables y alineados con las necesidades de tu negocio. Desde microservicios hasta arquitecturas monolíticas, elijo el patrón correcto para tu situación. Aseguro que tus sistemas puedan crecer con tu negocio mientras permanecen estables, seguros y fáciles de mantener.",
+        "title": "Arquitectura de Datos Cloud para IA",
+        "description": "Reestructuración y migración de datos en SharePoint, OneDrive y Google Workspace listos para IA.",
+        "longDescription": "Ningún sistema de IA puede dar respuestas útiles si los documentos de la empresa están duplicados, desordenados o sin permisos claros. Con experiencia probada migrando y reestructurando más de 200 GB de datos corporativos en entornos reales, organizo tu repositorio en la nube para mejorar hasta un 40% la recuperación de archivos y dejar tu base documental lista para asistentes de IA y búsqueda semántica.",
         "benefits": [
-          "Diseño de sistemas escalables",
-          "Estructura de código mantenible",
-          "Optimización de rendimiento",
-          "Arquitectura con seguridad primero",
-          "Soluciones preparadas para el futuro"
+          "Migración y ordenación sin pérdida de datos (100% integridad verificada)",
+          "Estructura de permisos y control de acceso por departamento",
+          "Preparación de bases de conocimiento limpias para RAG y Copilot/Claude",
+          "Mejora del 40% en tiempos de localización de archivos críticos",
+          "Copias de seguridad y políticas de recuperación ante desastres"
         ],
         "icon": "layers"
       },
       {
-        "title": "Transformación Digital",
-        "description": "Guía paso a paso para modernizar tus procesos sin interrumpir tu operación.",
-        "longDescription": "La transformación digital no tiene que ser disruptiva. Te guío a través de un proceso de modernización paso a paso que minimiza el riesgo y maximiza los resultados. Comenzamos entendiendo tus procesos actuales, identificando puntos de dolor, y luego implementando soluciones incrementalmente. Este enfoque asegura que tus operaciones continúen sin problemas mientras adoptas gradualmente nuevas tecnologías y procesos que impulsan la eficiencia y el crecimiento.",
+        "title": "Ciberseguridad, Redes y Gobernanza IA",
+        "description": "Endurecimiento de sistemas, redes LAN/WAN y políticas de seguridad para usar IA sin fugas de información.",
+        "longDescription": "Respaldado por certificaciones en Ciberseguridad de Google (2024), protocolos de red aplicados a ciberseguridad de FUNDAE (2025) y Cisco CCNA 1–3, audito y protejo tu infraestructura antes y durante la adopción de IA. Configuro routers, switches, firewalls y políticas de seguridad en estaciones Windows, Linux y macOS para garantizar disponibilidad crítica y privacidad.",
         "benefits": [
-          "Mínima interrupción operativa",
-          "Implementación incremental",
-          "Automatización de procesos",
-          "Modernización de sistemas heredados",
-          "Apoyo en gestión del cambio"
+          "Auditoría de vulnerabilidades en red local, WiFi y trabajo remoto",
+          "Políticas claras de gobernanza para evitar filtración de datos en IA",
+          "Hardening de sistemas operativos Windows, Linux y macOS",
+          "Monitoreo proactivo que reduce el tiempo de inactividad un 25%",
+          "Configuración profesional de routers, switches y segmentación LAN/WAN"
         ],
-        "icon": "refresh-cw"
+        "icon": "target"
       },
       {
-        "title": "Capacitación de Equipos",
-        "description": "Formación práctica que realmente mejora la productividad de tu equipo.",
-        "longDescription": "Entrego formación que marca una diferencia real. En lugar de cursos genéricos, proporciono formación práctica y directa adaptada a las necesidades específicas de tu equipo y tu stack tecnológico. Mi formación se centra en escenarios del mundo real que tu equipo realmente encontrará, asegurando que puedan aplicar inmediatamente lo que aprenden. Desde la adopción de nuevas tecnologías hasta las mejores prácticas, ayudo a tu equipo a ser más productivo y confiado.",
+        "title": "Automatización Operativa & SOPs con IA",
+        "description": "Flujos automatizados y manuales operativos estandarizados que aceleran a tu equipo.",
+        "longDescription": "Analizo los cuellos de botella de tu operación y combino automatización técnica (flujos con n8n, conectores API y scripts en Linux/SQL) con Procedimientos Operativos Estandarizados (SOPs) potenciados por IA. Este enfoque ha demostrado reducir incidentes recurrentes en un 30% y disminuir el tiempo de incorporación de nuevos empleados en un 20%.",
         "benefits": [
-          "Formación práctica y aplicada",
-          "Currículo personalizado",
-          "Escenarios del mundo real",
-          "Soporte continuo",
-          "Mejora medible de habilidades"
-        ],
-        "icon": "users"
-      },
-      {
-        "title": "Optimización de Procesos",
-        "description": "Identifico y elimino cuellos de botella que frenan tu crecimiento.",
-        "longDescription": "Analizo tus flujos de trabajo e identifico cuellos de botella que te están ralentizando. A través de un examen cuidadoso de tus procesos, encuentro ineficiencias, redundancias y áreas donde la automatización puede tener un impacto real. No solo identifico problemas, proporciono soluciones concretas que optimizan tus operaciones, reducen costos y liberan a tu equipo para enfocarse en lo que más importa. El resultado es una organización más eficiente y productiva.",
-        "benefits": [
-          "Identificación de cuellos de botella",
-          "Optimización de flujos de trabajo",
-          "Oportunidades de automatización",
-          "Reducción de costos",
-          "Mejoras de productividad"
+          "Identificación y eliminación de tareas administrativas repetitivas",
+          "Creación de guías técnicas y manuales vivos asistidos por IA",
+          "Automatización de flujos entre correo, nube, CRM y soporte",
+          "Reducción del 20% en tiempos de capacitación de nuevo personal",
+          "Estandarización de procesos con métricas claras de rendimiento"
         ],
         "icon": "zap"
       },
       {
-        "title": "Mentoría Ejecutiva",
-        "description": "Acompañamiento personalizado para líderes que necesitan claridad tecnológica.",
-        "longDescription": "Como líder, necesitas tomar decisiones tecnológicas sin perderte en detalles técnicos. Proporciono mentoría ejecutiva que te da la claridad y confianza para tomar decisiones informadas. Traduzco conceptos técnicos complejos a términos de negocio, te ayudo a entender las implicaciones de las opciones tecnológicas y te guío a través de la planificación tecnológica estratégica. Obtendrás el conocimiento que necesitas para liderar con confianza.",
+        "title": "Infraestructura AI-Ready & Optimización Hardware",
+        "description": "Selección de hardware, GPUs y optimización de estaciones de trabajo con ahorro comprobado del 30%.",
+        "longDescription": "Con más de 500 computadoras ensambladas y reparadas y más de 200 componentes críticos diagnosticados (GPUs, RAM, almacenamiento NVMe, placas base), te asesoro con total independencia comercial sobre qué equipamiento comprar o actualizar. Ya sea para renovar las estaciones de tu oficina o montar un nodo local para inferencia de IA, optimizo cada euro invertido.",
         "benefits": [
-          "Claridad en decisiones tecnológicas",
-          "Orientación en planificación estratégica",
-          "Evaluación de riesgos",
-          "Gestión de relaciones con proveedores",
-          "Confianza en el liderazgo tecnológico"
+          "Ahorro promedio del 30% en compras de hardware evitando sobrecostes",
+          "Aumento del 40% en rendimiento de estaciones de trabajo existentes",
+          "Extensión de la vida útil del parque informático en 3 años o más",
+          "Dimensionamiento real de GPUs y VRAM para cargas de IA local",
+          "Planes de mantenimiento preventivo que reducen fallos de hardware un 45%"
         ],
-        "icon": "target"
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Capacitación de Equipos & Soporte Senior N1–N3",
+        "description": "Entrenamiento práctico en herramientas de IA y soporte técnico resolutivo con 95% de éxito en primer contacto.",
+        "longDescription": "La tecnología solo sirve si tu equipo sabe utilizarla sin frustración. Imparto formación directa y aplicada al puesto de trabajo sobre uso seguro y productivo de modelos de IA, entornos cloud y buenas prácticas de seguridad, respaldada por un servicio de soporte técnico senior (remoto y presencial) con un 95% de resolución en primer contacto.",
+        "benefits": [
+          "Formación 100% práctica adaptada al nivel real de tus empleados",
+          "Índice del 95% de resolución de incidencias en el primer contacto",
+          "Soporte multiplataforma experto en Windows, Linux y macOS",
+          "Tasa de satisfacción y fidelidad de clientes superior al 95%",
+          "Acompañamiento técnico continuo sin jerga incomprensible"
+        ],
+        "icon": "users"
       }
     ]
   },
   "faq": {
     "title": "Preguntas Frecuentes",
-    "subtitle": "Respuestas claras sobre mi trabajo",
+    "subtitle": "Respuestas directas y sin humo sobre cómo integro IA, infraestructura y seguridad",
     "items": [
       {
-        "question": "¿Qué significa exactamente que eres un \"Arquitecto Tecnológico\"?",
-        "answer": "Significa que diseño, integro y optimizo sistemas completos: infraestructura, redes, servidores, hardware, automatización con IA, seguridad y plataformas web. No trabajo piezas sueltas; construyo el ecosistema tecnológico completo que sostiene un negocio digital moderno."
+        "question": "¿Por qué contratar a un especialista en Infraestructura y Ciberseguridad para asesorarme en IA?",
+        "answer": "Porque la IA no vive en el vacío: se conecta a tus archivos en la nube, corre sobre tus equipos, pasa por tu red y maneja datos privados de tus clientes. Con más de 20 años en sistemas, redes (CCNA) y ciberseguridad (Google / FUNDAE), garantizo que la IA que implementes sea rentable, rápida y no abra brechas de seguridad en tu empresa."
       },
       {
-        "question": "¿Cómo me beneficia contratar a un Arquitecto Tecnológico en vez de varios especialistas?",
-        "answer": "No necesitas un programador, un sysadmin, un automatizador y un técnico de seguridad por separado. Yo cubro todas esas áreas de forma integrada, asegurando coherencia, estabilidad y eficiencia. Ahorras costes, reduces fricción y obtienes un sistema funcional de principio a fin."
+        "question": "¿Cómo me beneficia trabajar contigo en lugar de contratar a varias agencias por separado?",
+        "answer": "Evitas el clásico problema donde el consultor de IA culpa al informático, el informático culpa a la red y nadie resuelve nada. Yo cubro de extremo a extremo la cadena: desde el hardware, el sistema operativo y la red hasta la estructuración en SharePoint/OneDrive y la integración de modelos de IA y automatizaciones."
       },
       {
-        "question": "¿Puedes analizar mi infraestructura actual y proponer mejoras reales?",
-        "answer": "Sí. Realizo auditorías técnicas donde evalúo rendimiento, seguridad, configuraciones, compatibilidad, automatizaciones, hardware, redes y despliegues. Identifico cuellos de botella y entrego un plan estratégico claro basado en criterios técnicos profesionales."
+        "question": "¿Puedes analizar nuestra infraestructura actual antes de meter herramientas de IA?",
+        "answer": "Sí, y es mi forma estándar de trabajar. Realizo un diagnóstico técnico donde evalúo el estado de tus equipos, cómo están organizados tus datos en la nube, qué riesgos de seguridad existen y en qué tareas concretas un modelo de IA o automatización te dará retorno inmediato."
       },
       {
-        "question": "¿Qué tipo de automatizaciones con IA puedes implementar en mi negocio?",
-        "answer": "Desde asistentes inteligentes operativos hasta flujos avanzados con n8n para tareas administrativas, documentación, atención al cliente, clasificación de información, integraciones con APIs y procesos internos. Diseñadas para reducir tiempo operativo y aumentar eficiencia real."
+        "question": "¿Qué tipo de soluciones de IA y automatización implementas en la práctica?",
+        "answer": "Implemento soluciones con impacto real: estructuración documental para asistentes de IA sobre datos propios, flujos automatizados con n8n e integraciones API, estandarización de manuales y soporte operativo asistido por IA, y evaluación de modelos locales (privacidad total) frente a modelos cloud como Claude o ChatGPT Enterprise."
       },
       {
-        "question": "¿Puedes diseñar la infraestructura tecnológica completa de mi empresa?",
-        "answer": "Sí. Desde la selección de hardware y servidores hasta la configuración de redes, virtualización, entornos de producción, seguridad y despliegue web. Esto incluye escalabilidad, redundancia básica y buenas prácticas para evitar fallos y caídas."
+        "question": "¿También resuelves problemas críticos de soporte TI, redes y ordenadores del día a día?",
+        "answer": "Absolutamente. Mantengo un índice del 95% de resolución en primer contacto en sistemas Windows, Linux y macOS, configuración de routers, switches, impresoras de red y migraciones cloud. Una empresa no puede innovar con IA si su operativa diaria se detiene por fallos técnicos."
       },
       {
-        "question": "¿También ofreces servicios de DevOps o SysOps?",
-        "answer": "Sí, en un enfoque práctico y adaptado a pequeñas y medianas empresas. Configuro entornos, pipelines, despliegues seguros, VPS, contenedores básicos, monitorización y automatizaciones técnicas, sin la complejidad innecesaria de entornos enterprise."
-      },
-      {
-        "question": "¿Puedo cambiar todo mi entorno tecnológico aunque no sepas cómo está construido actualmente?",
-        "answer": "Sí. Tengo experiencia auditando y reconstruyendo sistemas heredados, híbridos, obsoletos o mal integrados. Puedo migrarlos, modernizarlos y estabilizarlos sin interrumpir tu operación."
-      },
-      {
-        "question": "¿Ofreces asesoría en compras de equipos o en la renovación tecnológica de una empresa?",
-        "answer": "Sí. Evalúo necesidades reales, rendimiento deseado, compatibilidad, durabilidad y escalabilidad. Mi enfoque evita compras impulsivas o malas inversiones, garantizando que el hardware elegido rinda y tenga vida útil prolongada."
-      },
-      {
-        "question": "¿Qué nivel de seguridad puedes implementar en mis sistemas?",
-        "answer": "Aplico seguridad técnica práctica: hardening de servidores, configuración segura, segmentación básica de redes, buenas prácticas en web, revisión de vectores de ataque, blindajes operativos y monitorización. Seguridad realista y efectiva para PYMEs y profesionales."
-      },
-      {
-        "question": "¿Qué tipo de proyectos puedes realizar de forma completa y llave en mano?",
-        "answer": "– Web moderna corporativa\n– VPS + despliegue + seguridad\n– Automatización con IA\n– Sistemas híbridos (local + nube)\n– Redes y cámaras\n– Infraestructura para negocios digitales\n– Auditorías y modernización de entornos\n– Soporte y mantenimiento integral"
+        "question": "¿Ofreces asesoría imparcial para comprar ordenadores, GPUs o renovar equipos?",
+        "answer": "Sí. Tras haber ensamblado y reparado más de 500 estaciones de trabajo y asesorado a más de 150 clientes, analizo tus cargas reales de trabajo para que compres exactamente lo que necesitas, logrando reducciones de costes del 30% y alargando la vida útil de los equipos más de 3 años."
       }
     ]
   },
   "cta": {
-    "title": "Escalabilidad y Crecimiento",
-    "subtitle": "¿Listo para dar el siguiente paso?",
-    "description": "Trabajemos juntos para construir soluciones tecnológicas que realmente impulsen tu negocio. Sin humo, sin complicaciones, solo resultados.",
+    "title": "Ingeniería Real, Cero Humo",
+    "subtitle": "¿Listo para integrar IA y optimizar tu infraestructura con seguridad?",
+    "description": "Hablemos de tu caso concreto. Analizaremos tus sistemas, tus datos y tus flujos de trabajo para trazar una hoja de ruta clara, segura y rentable.",
     "button": "Iniciar conversación"
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "Hablemos",
-    "description": "¿Tienes una pregunta o quieres conocer más sobre cómo puedo ayudarte? Escríbeme y te responderé lo antes posible.",
+    "subtitle": "Diagnóstico y Consultoría Directa",
+    "description": "Cuéntame qué desafío tienes en tu infraestructura TI, seguridad o adopción de modelos de IA y te responderé personalmente con criterio técnico claro.",
     "form": {
       "name": "Nombre",
       "email": "Email",
       "message": "Mensaje",
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "¡Mensaje enviado! Te responderé pronto.",
-      "error": "Hubo un error. Por favor, intenta de nuevo."
+      "success": "¡Mensaje enviado! Revisaré tu caso y te responderé pronto.",
+      "error": "Hubo un error al enviar. Por favor, intenta de nuevo."
     }
   },
   "footer": {
-    "tagline": "Tecnología sin fricción.",
-    "rights": "Ivan Tech Coach. Todos los derechos reservados.",
-    "madeBy": "Diseñado y desarrollado por Ivan, combinando arquitectura web moderna con técnicas de Context Engineering y Vibe Coding asistidas por IA.",
+    "tagline": "Infraestructura TI, Ciberseguridad e IA Aplicada sin fricción.",
+    "rights": "Ivan Tech Coach (Jaime Iván Rodríguez Morales). Todos los derechos reservados.",
+    "madeBy": "Ingeniería y arquitectura por Ivan Tech Coach · Sistema visual basado en Refero Styles (DESIGN.md) y Context Engineering.",
     "social": {
       "instagram": "https://www.instagram.com/ivantechcoach/",
       "youtube": "https://www.youtube.com/@SinceramenteIvan",
@@ -231,4 +374,3 @@
     }
   }
 }
-

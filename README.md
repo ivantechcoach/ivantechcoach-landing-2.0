@@ -1,160 +1,57 @@
-# Ivan Tech Coach - Landing Page
+# Ivan Tech Coach — AI & Systems Engineering Advisory Platform
 
-Landing page profesional y moderna para Ivan Tech Coach, desarrollada con Next.js 14, TypeScript y Tailwind CSS. La aplicación ofrece una experiencia multiidioma (español e inglés) con diseño responsivo y optimizado para SEO.
-
-## 🚀 Características
-
-- **Multiidioma**: Soporte completo para español e inglés con routing automático
-- **Diseño Moderno**: Interfaz limpia y profesional con animaciones suaves
-- **Responsive**: Diseño adaptativo que funciona perfectamente en todos los dispositivos
-- **SEO Optimizado**: Meta tags, sitemap y robots.txt configurados
-- **Performance**: Optimización de imágenes (WebP/AVIF) y carga rápida
-- **Componentes Modulares**: Arquitectura basada en componentes reutilizables
-- **Canvas Interactivo**: Animación de ondas en el hero section
-- **Formulario de Contacto**: Sistema de contacto integrado
-
-## 🛠️ Tecnologías
-
-- **Next.js 14**: Framework React con App Router
-- **TypeScript**: Tipado estático para mayor robustez
-- **Tailwind CSS**: Estilos utilitarios y diseño responsivo
-- **Lucide React**: Iconos modernos y ligeros
-- **React 18**: Biblioteca UI con las últimas características
-
-## 📋 Requisitos Previos
-
-- Node.js 18.x o superior
-- pnpm (recomendado por seguridad) - [Instalación](https://pnpm.io/installation)
-
-## 🔧 Instalación
-
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/ivantechcoach-landing-2.0.git
-cd ivantechcoach-landing-2.0
-```
-
-2. Instala las dependencias:
-```bash
-pnpm install
-```
-
-3. Ejecuta el servidor de desarrollo:
-```bash
-pnpm run dev
-```
-
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
-
-## 📜 Scripts Disponibles
-
-### Desarrollo
-- `pnpm run dev`: Inicia el servidor de desarrollo
-- `pnpm run build`: Construye la aplicación para producción
-- `pnpm run start`: Inicia el servidor de producción (requiere build previo)
-
-### QA y Testing
-- `pnpm run lint`: Ejecuta el linter (ESLint)
-- `pnpm run lint:fix`: Ejecuta el linter con corrección automática
-- `pnpm run typecheck`: Verifica tipos de TypeScript
-- `pnpm run test`: Ejecuta tests unitarios
-- `pnpm run test:watch`: Ejecuta tests en modo watch
-- `pnpm run test:coverage`: Ejecuta tests con reporte de cobertura
-
-### Seguridad
-- `pnpm run audit`: Auditoría de seguridad de dependencias
-- `pnpm run audit:fix`: Intenta corregir vulnerabilidades automáticamente
-- `pnpm run store:prune`: Limpia el caché de pnpm
-
-### Todo en uno
-- `pnpm run qa`: Ejecuta lint + typecheck + test + build (recomendado antes de commit)
-
-> **Nota:** Este proyecto usa **pnpm** en lugar de npm por razones de seguridad. Asegúrate de tener pnpm instalado antes de continuar.
-
-## 📁 Estructura del Proyecto
-
-```
-ivantechcoach-landing-2.0/
-├── app/                    # App Router de Next.js
-│   ├── [lang]/            # Rutas dinámicas por idioma
-│   │   ├── contact/       # Página de contacto
-│   │   └── page.tsx       # Página principal
-│   ├── layout.tsx         # Layout raíz
-│   ├── page.tsx           # Redirección inicial
-│   ├── globals.css        # Estilos globales
-│   ├── robots.ts          # Configuración robots.txt
-│   └── sitemap.ts         # Generación de sitemap
-├── components/            # Componentes React
-│   ├── About.tsx          # Sección sobre mí
-│   ├── Contact.tsx        # Componente de contacto
-│   ├── ContactForm.tsx    # Formulario de contacto
-│   ├── CTA.tsx            # Call to action
-│   ├── FAQ.tsx            # Preguntas frecuentes
-│   ├── Footer.tsx         # Pie de página
-│   ├── Header.tsx         # Encabezado y navegación
-│   ├── Hero.tsx           # Sección hero
-│   ├── LangUpdater.tsx    # Selector de idioma
-│   ├── Services.tsx       # Sección de servicios
-│   └── WaveCanvas.tsx    # Canvas de ondas animadas
-├── content/               # Contenido multiidioma
-│   ├── es.json           # Contenido en español
-│   └── en.json           # Contenido en inglés
-├── lib/                   # Utilidades
-│   └── content.ts        # Función para cargar contenido
-├── public/                # Archivos estáticos
-│   └── images/           # Imágenes y assets
-├── middleware.ts          # Middleware para routing de idiomas
-└── package.json          # Dependencias y scripts
-```
-
-## 🌐 Idiomas
-
-El proyecto soporta dos idiomas:
-- **Español** (`/es`): Idioma por defecto
-- **Inglés** (`/en`)
-
-El middleware redirige automáticamente a `/es` si no se especifica un idioma en la URL.
-
-## 🎨 Personalización
-
-### Contenido
-
-El contenido se gestiona a través de archivos JSON en la carpeta `content/`:
-- `content/es.json`: Contenido en español
-- `content/en.json`: Contenido en inglés
-
-### Estilos
-
-Los estilos se gestionan con Tailwind CSS. La configuración se encuentra en `tailwind.config.ts`.
-
-### Imágenes
-
-Las imágenes se almacenan en `public/images/` y se optimizan automáticamente por Next.js.
-
-## 🚀 Despliegue
-
-### Vercel (Recomendado)
-
-1. Conecta tu repositorio a Vercel
-2. Vercel detectará automáticamente Next.js
-3. El despliegue se realizará automáticamente
-
-### Otros Proveedores
-
-```bash
-pnpm run build
-pnpm run start
-```
-
-## 📝 Licencia
-
-Este proyecto es privado y propiedad de Ivan Tech Coach.
-
-## 👤 Autor
-
-**Ivan Tech Coach**
+Plataforma profesional trilingüe (`ES` · `CA` · `EN`) de **Jaime Iván Rodríguez Morales (Ivan Tech Coach)**: más de 20 años de experiencia real en **Infraestructura TI, Hardware, Redes (Cisco CCNA) y Ciberseguridad (Google / FUNDAE)** integrados con **Asesoría Práctica en Modelos de Inteligencia Artificial y Automatización Operativa** desde El Vendrell, Tarragona (Catalunya) hacia clientes locales e internacionales.
 
 ---
 
-Desarrollado con ❤️ usando Next.js y TypeScript
+## 🎨 Sistema de Diseño: Refero Styles (`DESIGN.md`)
 
+La interfaz sigue el estándar **`DESIGN.md`** extraído de **[Refero Styles](https://styles.refero.design/)** bajo la filosofía **"Zero Tech Smoke"** (cero *blobs* decorativos, cero consumo innecesario de GPU, máxima precisión instrumental):
+
+- **Modo Oscuro (Por defecto — `.theme-dark`)**: *Obsidian Command Center* (inspirado en **Warp** y **Raycast** — lienzo `#040506`, tarjetas `#121418`, texto hueso cálido `#faf9f6`, bordes estructurales `1px` y telemetría esmeralda `#10b981` + violeta fósforo `#cbb0f7`).
+- **Modo Claro (Editorial — `.theme-light`)**: *Engineering Dossier on Warm Parchment* (inspirado en **Pravah** y **Anthropic** — pergamino cálido `#f3f1ed`, tarjetas `#ffffff`, tinta `#181011` y bordes hueso `#d8d4ce`).
+- **Montaje Óptico Concéntrico Sincronizado (`InstrumentFrame.tsx`)**: Sistema de profundidad para retrato y marca con doble anillo concéntrico, canal rebajado de instrumento (`4px–5px`), matriz de puntos circular (`closest-side`) y escuadras ópticas esmeralda sincronizadas en ambos temas.
+
+---
+
+## 🖥️ Características Principales de UI/UX
+
+- **Arquitectura Trilingüe Nativa (`ES · CA · EN`)**: Paridad estructural 1:1 entre `content/es.json`, `content/ca.json` y `content/en.json`, detección automática `Accept-Language` en `middleware.ts`, selector táctil segmentado en cabecera y metadatos SEO/OpenGraph (`es_ES`, `ca_ES`, `en_US`).
+- **Consola Interactiva de Diagnóstico IA + Sistemas (`Hero.tsx`)**: Simulador en tiempo real con 4 escenarios empresariales verificados (*MOD-01 Datos Cloud & IA Privada*, *MOD-02 Ciberseguridad para IA*, *MOD-03 Hardware AI-Ready vs Cloud* y *MOD-04 Automatización & SOPs IA*).
+- **Paleta de Comandos Estilo Cockpit (`⌘K` / `Ctrl+K` en `Header.tsx`)**: Acceso instantáneo por teclado a diagnósticos de IA, navegación de módulos, alternancia de tema e idioma.
+- **Bento Grid Técnico de Capacidades (`Services.tsx`)**: Matriz de 6 módulos (`SYS-01` a `SYS-06`) con métricas verificadas de impacto y etiquetas de stack técnico.
+- **Dossier de Trayectoria y Credenciales Verificadas (`About.tsx` & `AboutPage.tsx`)**: Indicadores auditables (`95% FCR`, `-30% Costo Hardware`, `+200 GB Cloud Migrados`, `-25% Downtime`) y registro de certificaciones (`FUNDAE 2025`, `Google Cybersecurity 2024`, `Cisco CCNA 1–3`, `TSU Informática`).
+- **Consola de Transmisión de Diagnóstico (`ContactForm.tsx`)**: Canal de contacto endurecido bajo criterios OWASP/RGPD con validación trilingüe en cliente y servidor.
+- **Gobernanza Agéntica y Docs-as-Code**:
+  - [`DESIGN.md`](./DESIGN.md): Especificación completa de tokens y reglas visuales.
+  - [`AGENTS.md`](./AGENTS.md) y [`.agents/rules/`](./.agents/rules/): Reglas obligatorias de seguridad (OWASP/OPSEC), rendimiento y tipado.
+  - [`.agents/skills/`](./.agents/skills/): 4 Skills modulares (`itc-refero-design-system`, `itc-cv-ai-content-guard`, `itc-qa-security-gate`, `itc-obsidian-github-sync`).
+  - [`docs/`](./docs/): Bóveda de documentación estructurada en *Johnny.Decimal* y vinculada en local con **Obsidian** (`D:\obsidian\IvanTechCoach-Web`).
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Framework**: Next.js 14 (App Router) + React 18
+- **Tipado**: TypeScript 5 (Strict Mode)
+- **Estilos y Tipografía**: Tailwind CSS + CSS Custom Properties + `Inter` & `JetBrains Mono`
+- **Calidad y Accesibilidad**: ESLint (0 warnings), Jest 30, React Testing Library y `jest-axe` (WCAG 2.1 AA — 9 suites / 51 tests)
+- **Gestor de Paquetes**: **`pnpm` exclusivo** (endurecimiento de cadena de suministro)
+
+---
+
+## 📜 Comandos de Desarrollo y Verificación (`pnpm` exclusivo)
+
+```bash
+# Servidor de desarrollo
+pnpm run dev
+
+# Compuertas de Calidad (QA Gate)
+pnpm run lint        # Verificación ESLint (0 warnings, 0 errors)
+pnpm run typecheck   # Verificación estricta TypeScript (tsc --noEmit)
+pnpm run test        # Suite de pruebas unitarias, paridad trilingüe UTF-8 y accesibilidad (jest-axe)
+pnpm run build       # Compilación estática (SSG) de producción Next.js (/es, /ca, /en)
+
+# Ejecución integral (Lint + Typecheck + Test + Build)
+pnpm run qa
+```

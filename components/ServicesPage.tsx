@@ -43,129 +43,111 @@ const iconMap: Record<string, LucideIcon> = {
 export default function ServicesPage({ content, lang }: ServicesPageProps) {
   return (
     <section
-      className="relative section-padding bg-transparent text-[var(--text)]"
+      className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-transparent text-[var(--text)]"
       aria-labelledby="services-page-title"
     >
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Hero Section */}
-        <div className="text-center mb-20">
+      <div className="container-custom relative z-10">
+        {/* Specification Header */}
+        <div className="max-w-3xl mb-16 space-y-4">
+          <span className="telemetry-eyebrow">
+            {"[SYS-MATRIX // ESPECIFICACIÓN DE SERVICIOS IA + INFRAESTRUCTURA]"}
+          </span>
           <h1
             id="services-page-title"
-            className="tracking-tight leading-tight text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--text)] mb-6"
+            className="tracking-[-0.03em] leading-tight text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text)]"
           >
             {content.pageTitle}
           </h1>
-          <p className="text-xl md:text-2xl text-[var(--text-soft)] mb-4 font-medium">
+          <p className="text-lg md:text-xl text-[var(--text-soft)] font-medium">
             {content.pageSubtitle}
           </p>
-          <p className="max-w-3xl mx-auto text-lg text-[var(--text-soft)] leading-relaxed">
+          <p className="text-base text-[var(--text-soft)] leading-relaxed">
             {content.pageDescription}
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
+        {/* Services Technical Specifications Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {content.items.map((service, index) => {
             const Icon = iconMap[service.icon] || Lightbulb
+            const code = `SYS-0${index + 1}`
+
             return (
-              <div
+              <article
                 key={service.title}
-                className="
-                  group relative p-10 md:p-12 rounded-2xl 
-                  bg-[var(--card)]
-                  border border-[var(--border)]
-                  shadow-lg
-                  transition-[transform,box-shadow,border-color] duration-[var(--anim-base)] ease-out
-                  hover:shadow-xl
-                  hover:scale-[1.02]
-                  hover:border-[var(--primary)]
-                  animate-fade-up
-                "
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                  willChange: 'transform, box-shadow, border-color',
-                }}
+                className="blueprint-card p-8 flex flex-col justify-between"
               >
-                {/* Icon */}
-                <div
-                  className="
-                    w-16 h-16 flex items-center justify-center 
-                    rounded-xl mb-6
-                    bg-[var(--primary)]/15
-                    text-[var(--primary-dark)]
-                    group-hover:bg-[var(--primary)]/25
-                    group-hover:scale-110
-                    transition-[transform,background-color] duration-[var(--anim-base)] ease-out
-                  "
-                  style={{ willChange: 'transform, background-color' }}
-                >
-                  <Icon className="w-8 h-8" aria-hidden="true" strokeWidth={2.5} />
+                <div>
+                  {/* Module Header */}
+                  <div className="flex items-center justify-between pb-5 mb-6 border-b border-[var(--border)]">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[var(--primary)]">
+                      {`[${code} // SPECIFICATION]`}
+                    </span>
+                    <div className="w-11 h-11 rounded-lg bg-[var(--card-elevated)] border border-[var(--border)] flex items-center justify-center text-[var(--primary)]">
+                      <Icon className="w-5 h-5" aria-hidden="true" strokeWidth={2} />
+                    </div>
+                  </div>
+
+                  {/* Title & Summary */}
+                  <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3 text-[var(--text)]">
+                    {service.title}
+                  </h2>
+
+                  <p className="text-base md:text-lg text-[var(--text)] font-medium mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Detailed Architecture Explanation */}
+                  <p className="text-[var(--text-soft)] text-sm md:text-base leading-relaxed mb-6">
+                    {service.longDescription}
+                  </p>
+
+                  {/* Deliverables & Benefits */}
+                  {service.benefits && service.benefits.length > 0 && (
+                    <div className="mb-8 p-5 rounded-lg bg-[var(--bg)] border border-[var(--border)]">
+                      <h3 className="font-mono text-xs font-semibold text-[var(--text-muted)] mb-3 uppercase tracking-wider">
+                        {lang === 'en'
+                          ? 'VERIFIABLE DELIVERABLES & BENEFITS'
+                          : lang === 'ca'
+                            ? 'LLIURABLES I BENEFICIS VERIFICABLES'
+                            : 'ENTREGABLES Y BENEFICIOS VERIFICABLES'}
+                      </h3>
+                      <ul className="space-y-2.5">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li
+                            key={benefitIndex}
+                            className="flex items-start gap-2.5 text-sm text-[var(--text-soft)]"
+                          >
+                            <Check
+                              className="w-4 h-4 text-[var(--primary)] flex-shrink-0 mt-0.5"
+                              aria-hidden="true"
+                            />
+                            <span className="leading-relaxed">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
-                {/* Title */}
-                <h2 className="
-                  text-3xl md:text-4xl font-extrabold tracking-tight 
-                  mb-4
-                  text-[var(--text)]
-                  group-hover:text-[var(--primary-dark)]
-                  transition-colors duration-200 ease-out
-                "
-                style={{ willChange: 'color' }}
-                >
-                  {service.title}
-                </h2>
-
-                {/* Short Description */}
-                <p className="text-xl text-[var(--text-soft)] font-medium mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Long Description */}
-                <p className="text-[var(--text-soft)] font-normal leading-relaxed text-base mb-8">
-                  {service.longDescription}
-                </p>
-
-                {/* Benefits List */}
-                {service.benefits && service.benefits.length > 0 && (
-                  <div className="mb-8">
-                    <h3 className="text-sm font-semibold text-[var(--text)] mb-4 uppercase tracking-wide">
-                      {lang === 'es' ? 'Beneficios clave' : 'Key Benefits'}
-                    </h3>
-                    <ul className="space-y-3">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li
-                          key={benefitIndex}
-                          className="flex items-start gap-3 text-[var(--text-soft)]"
-                        >
-                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[var(--primary)]/20 flex items-center justify-center mt-0.5">
-                            <Check className="w-3 h-3 text-[var(--primary-dark)]" aria-hidden="true" />
-                          </div>
-                          <span className="leading-relaxed">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* CTA Button */}
-                <Link
-                  href={`/${lang}/contact`}
-                  className="
-                    inline-flex items-center gap-2
-                    px-6 py-3 rounded-lg
-                    bg-[var(--primary)] text-white
-                    font-semibold text-base
-                    hover:bg-[var(--primary-dark)]
-                    hover:scale-105
-                    transition-all duration-[var(--anim-base)]
-                    shadow-md hover:shadow-lg
-                    focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 focus:ring-offset-[var(--card)]
-                  "
-                >
-                  {lang === 'es' ? 'Contáctame' : 'Contact me'}
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </Link>
-              </div>
+                {/* Action Button */}
+                <div className="pt-4 border-t border-[var(--border)]">
+                  <Link
+                    href={`/${lang}/contact`}
+                    prefetch={false}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[var(--cta-bg)] text-[var(--cta-text)] hover:bg-[var(--cta-hover)] font-semibold text-sm transition-colors"
+                  >
+                    <span>
+                      {lang === 'en'
+                        ? 'Request diagnostic for this service'
+                        : lang === 'ca'
+                          ? 'Sol·licitar diagnòstic per a aquest servei'
+                          : 'Solicitar diagnóstico para este servicio'}
+                    </span>
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </article>
             )
           })}
         </div>

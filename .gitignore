@@ -38,5 +38,7 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 
+# local reference documents (OPSEC / PII protection)
+/CVs/
 
 dist/

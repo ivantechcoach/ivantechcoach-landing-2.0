@@ -15,6 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${content.aboutPage.pageTitle} | Ivan Tech Coach`
   const description = content.aboutPage.pageSubtitle
   const url = `https://www.ivantechcoach.com/${lang}/about`
+  const ogLocale = lang === 'en' ? 'en_US' : lang === 'ca' ? 'ca_ES' : 'es_ES'
+  const alternateLocale = ['es_ES', 'ca_ES', 'en_US'].filter((l) => l !== ogLocale)
 
   return {
     title,
@@ -23,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: url,
       languages: {
         'es': 'https://www.ivantechcoach.com/es/about',
+        'ca': 'https://www.ivantechcoach.com/ca/about',
         'en': 'https://www.ivantechcoach.com/en/about',
         'x-default': 'https://www.ivantechcoach.com/es/about',
       },
@@ -30,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       url,
-      locale: lang === 'en' ? 'en_US' : 'es_ES',
-      alternateLocale: lang === 'en' ? 'es_ES' : 'en_US',
+      locale: ogLocale,
+      alternateLocale,
       title,
       description,
       siteName: 'Ivan Tech Coach',

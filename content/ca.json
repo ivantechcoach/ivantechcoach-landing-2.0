@@ -1,0 +1,376 @@
+{
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre mi",
+    "services": "Serveis",
+    "contact": "Contacte",
+    "commandHint": "Comandes i Diagnòstic IA"
+  },
+  "commandPalette": {
+    "placeholder": "Cercar servei d'IA, cas d'infraestructura o comanda...",
+    "empty": "No s'han trobat comandes coincidents.",
+    "groups": {
+      "aiScenarios": "Simulador d'Arquitectura i IA Aplicada",
+      "navigation": "Navegació Directa",
+      "preferences": "Preferències del Sistema"
+    },
+    "actions": {
+      "toggleTheme": "Alternar Tema (Obsidian Fosc / Dossier Pergamí)",
+      "toggleLang": "Canviar Idioma (ES · CA · EN)",
+      "goContact": "Programar Diagnòstic Tècnic i d'IA",
+      "goServices": "Explorar Matriu de Serveis IA + Sistemes",
+      "goAbout": "Veure Dossier de +20 Anys i Certificacions"
+    }
+  },
+  "hero": {
+    "badge": "SYS-CORE // +20 ANYS INFRAESTRUCTURA TI · CIBERSEGURETAT · IA APLICADA",
+    "title": "Tecnologia i IA sense fricció.",
+    "subtitle": "Integro models d'Intel·ligència Artificial sobre infraestructures TI reals, segures i endreçades. Més de 20 anys diagnosticant sistemes, xarxes i seguretat perquè adoptis IA sense fum tecnològic i amb retorn mesurable.",
+    "ctaPrimary": "Sol·licitar diagnòstic tècnic",
+    "ctaSecondary": "Explorar arquitectura i serveis",
+    "metricsStrip": [
+      {
+        "value": "20+ Anys",
+        "label": "Sistemes, Xarxes i Maquinari"
+      },
+      {
+        "value": "95% FCR",
+        "label": "Resolució al 1r Contacte"
+      },
+      {
+        "value": "+200 GB",
+        "label": "Dades Cloud Estructurades"
+      },
+      {
+        "value": "-30% Cost",
+        "label": "Optimització Maquinari/TI"
+      }
+    ],
+    "simulator": {
+      "headerTitle": "CONSOLA D'ARQUITECTURA I INFERÈNCIA // DIAGNÒSTIC EN VIU",
+      "statusBadge": "TELEMETRIA ACTIVA · ZERO FUM",
+      "scenarioLabel": "Selecciona un repte real de negoci:",
+      "labels": {
+        "problem": "DIAGNÒSTIC DE CAMP",
+        "architecture": "ARQUITECTURA I MODELS IA",
+        "security": "CAPA DE SEGURETAT / INFRAESTRUCTURA",
+        "impact": "IMPACTE VERIFICAT"
+      },
+      "scenarios": [
+        {
+          "id": "cloud-rag",
+          "code": "MOD-01",
+          "tab": "Dades Cloud & IA Privada",
+          "problem": "«Volem utilitzar IA amb els nostres pressupostos, contractes i manuals, però tenim centenars de gigabytes desordenats i por de filtrar dades confidencials.»",
+          "architecture": "Reestructuració a Microsoft 365 (SharePoint / OneDrive) o Google Workspace + desplegament d'assistents sobre corpus documental net (Claude Enterprise / Copilot / RAG privat).",
+          "security": "Segmentació de permisos per rol, polítiques Zero-Data-Retention en crides a models i traçabilitat d'accés.",
+          "impact": "+40% velocitat de recuperació documental (cas real +200 GB migrats a MASMEL)."
+        },
+        {
+          "id": "sec-governance",
+          "code": "MOD-02",
+          "tab": "Ciberseguretat per a IA",
+          "problem": "«El nostre equip ja fa servir ChatGPT o Claude pel seu compte sense control tècnic, exposant credencials, clients i la xarxa interna.»",
+          "architecture": "Protocol de governança de models d'IA, estandardització de comptes corporatius i passarel·les d'accés auditades.",
+          "security": "Enduriment d'endpoints (Windows, Linux, macOS), segmentació de xarxa LAN/WAN (criteri Cisco CCNA) i controls Google Cybersecurity / FUNDAE.",
+          "impact": "100% disponibilitat en operacions crítiques i -25% en temps d'inactivitat mensual."
+        },
+        {
+          "id": "hardware-llm",
+          "code": "MOD-03",
+          "tab": "Maquinari AI-Ready vs Cloud",
+          "problem": "«No sabem si pagar llicències mensuals d'IA al núvol o invertir en estacions de treball amb GPU per executar models locals privats.»",
+          "architecture": "Auditoria de càrregues de treball: inferència local (Ollama / vLLM / Open-Weights) per a dades sensibles enfront d'APIs frontier (Claude / GPT) per a raonament complex.",
+          "security": "Dimensionament exacte de VRAM, GPU, RAM i emmagatzematge local sense sobrecost comercial.",
+          "impact": "-30% estalvi en inversió de maquinari, +40% rendiment per estació i +3 anys de vida útil."
+        },
+        {
+          "id": "ops-automation",
+          "code": "MOD-04",
+          "tab": "Automatització & SOPs IA",
+          "problem": "«Perdem hores cada setmana en suport repetitiu, redacció d'informes tècnics i formació de nou personal.»",
+          "architecture": "Fluxos automatitzats (n8n / APIs de models) integrats amb guies operatives estandarditzades (SOPs) assistides per IA.",
+          "security": "Validació humana en el bucle (Human-in-the-Loop) i control d'errors abans de producció.",
+          "impact": "-30% en incidències recurrents i -20% en temps d'incorporació (onboarding) de personal."
+        }
+      ]
+    }
+  },
+  "about": {
+    "eyebrow": "DOSSIER TÈCNIC // TRAJECTÒRIA VERIFICADA",
+    "title": "Sobre mi: Criteri d'Enginyeria + IA Pràctica",
+    "roleHeadline": "Consultor Sènior d'Infraestructura TI, Ciberseguretat i Adopció Pràctica de Models d'IA",
+    "description": "Sóc Jaime Iván Rodríguez Morales. A diferència dels consultors que van arribar a la tecnologia fa sis mesos amb un curs de prompts, porto més de 20 anys a les trinxeres reals de la informàtica: he acoblat i diagnosticat més de 500 estacions de treball, dissenyat més de 50 xarxes LAN/WAN, migrat centenars de gigabytes corporatius al núvol i assegurat entorns Windows, Linux i macOS. Integro models d'IA únicament on aporten retorn real, sobre una base sòlida d'infraestructura i ciberseguretat.",
+    "cta": "Consultar disponibilitat",
+    "metrics": [
+      {
+        "code": "KPI-01",
+        "value": "95%",
+        "label": "Resolució al 1r Contacte",
+        "detail": "Diagnòstic avançat multiplataforma (Windows, Linux, macOS) reduint incidents recurrents un 30%."
+      },
+      {
+        "code": "KPI-02",
+        "value": "+40%",
+        "label": "Eficiència Documental Cloud",
+        "detail": "Lideratge en migració i estructuració de +200 GB a SharePoint i OneDrive llestos per a fluxos d'IA."
+      },
+      {
+        "code": "KPI-03",
+        "value": "-30%",
+        "label": "Reducció de Cost Maquinari",
+        "detail": "Assessoria en +150 projectes i +500 equips optimitzats, allargant la vida útil en +3 anys."
+      },
+      {
+        "code": "KPI-04",
+        "value": "-25%",
+        "label": "Menys Temps d'Inactivitat",
+        "detail": "Monitoratge proactiu d'infraestructura, xarxes LAN/WAN i enduriment de seguretat operativa."
+      }
+    ],
+    "certificationsTitle": "Credencials i Formació Contínua Verificada",
+    "certifications": [
+      {
+        "year": "2025",
+        "title": "Protocols de Xarxa Aplicats a Ciberseguretat & Ciberseguretat Bàsica",
+        "issuer": "FUNDAE (Espanya)"
+      },
+      {
+        "year": "2024",
+        "title": "Google Cybersecurity Professional Certificate",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2024",
+        "title": "Eines Linux, SQL & Seguretat de Xarxes",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2017–2018",
+        "title": "Cisco CCNA 1, CCNA 2, CCNA 3 & IT Essentials",
+        "issuer": "Cisco Networking Academy"
+      },
+      {
+        "year": "2001",
+        "title": "Tècnic Superior Universitari (TSU) en Informàtica",
+        "issuer": "Instituto Tecnológico Sucre"
+      }
+    ]
+  },
+  "aboutPage": {
+    "pageTitle": "Sobre mi",
+    "pageSubtitle": "Especialista amb més de 20 anys en infraestructura TI, xarxes i ciberseguretat units a la consultoria pràctica en models d'IA",
+    "content": [
+      "Sóc un professional de la informàtica amb més de 20 anys d'experiència pràctica en sistemes, maquinari, xarxes, ciberseguretat i suport tècnic avançat. Des dels meus inicis acoblant i optimitzant més de 500 estacions de treball, configurant més de 50 xarxes LAN/WAN i diagnosticant fallades crítiques, el meu enfocament sempre ha estat comprendre la tecnologia des del ferro físic fins a la lògica de sistemes i la intel·ligència artificial.",
+      "Amb el pas dels anys, el meu perfil va evolucionar de manera integral: a la base sòlida de maquinari i infraestructura s'hi van sumar l'administració avançada de sistemes (Windows, Linux, macOS), enginyeria de xarxes (Cisco CCNA 1–3), ciberseguretat tècnica (Google Cybersecurity i FUNDAE 2025) i reestructuració de dades corporatives al núvol (+200 GB a SharePoint i OneDrive).",
+      "El meu criteri és contundent: no construeixo solucions improvisades ni imposo modes tecnològiques. Cada recomanació respon a estabilitat operacional, optimització de recursos, privadesa de dades i cost-benefici mesurable per al negoci.",
+      "En l'àmbit de la Intel·ligència Artificial, assessoro empreses i professionals a Catalunya i en remot per integrar models d'IA (LLMs al núvol o locals, fluxos automatitzats i assistents documentals) sobre fonaments segurs. El 90% de les fallades en adoptar IA provenen de dades desorganitzades, xarxes vulnerables o compres errònies de maquinari: exactament els tres fronts que porto dues dècades resolent.",
+      "En projectes recents com a Consultor Sènior a MASMEL Rehabilitaciones y Reformas i Especialista Nivell 2 a Mundofabian.com, he assolit un 95% de resolució en primer contacte, una reducció del 25% en temps d'inactivitat mensual, un 40% de millora en recuperació d'arxius al núvol i una reducció del 20% en temps d'incorporació mitjançant documentació estandarditzada.",
+      "Valoro la claredat, l'ètica tècnica i la transparència absoluta. Aquí no hi ha fum ni promeses màgiques: hi ha enginyeria de camp demostrada i resultats que perduren."
+    ],
+    "closing": "No implemento IA ni tecnologia per moda, sinó per criteri tècnic, seguretat i retorn real.",
+    "cta": "Parlem del teu projecte",
+    "portraitLabel": "ID VERIFICAT · 20+ ANYS"
+  },
+  "services": {
+    "eyebrow": "MATRIU DE CAPACITATS // ARQUITECTURA IA + SISTEMES",
+    "title": "Serveis",
+    "subtitle": "Solucions on la Intel·ligència Artificial es recolza en infraestructura real, ciberseguretat i +20 anys de criteri tècnic",
+    "items": [
+      {
+        "code": "SYS-01",
+        "title": "Assessoria i Integració de Models d'IA",
+        "description": "Selecció i implementació pràctica de LLMs (Claude, GPT, Gemini o models locals privats) aplicats als teus fluxos reals sense fum comercial.",
+        "metric": "ROI Operatiu Mesurable",
+        "tags": ["LLMs", "Context Engineering", "IA Privada"],
+        "icon": "lightbulb"
+      },
+      {
+        "code": "SYS-02",
+        "title": "Arquitectura de Dades Cloud per a IA",
+        "description": "Reestructuració i migració de dades a SharePoint, OneDrive, Microsoft 365 i Google Workspace perquè la IA treballi sobre informació endreçada i segura.",
+        "metric": "+40% Recuperació Documental",
+        "tags": ["SharePoint / M365", "RAG Corporatiu", "+200 GB Migrats"],
+        "icon": "layers"
+      },
+      {
+        "code": "SYS-03",
+        "title": "Ciberseguretat, Xarxes i Governança IA",
+        "description": "Enduriment de sistemes (Windows, Linux, macOS), segmentació de xarxes LAN/WAN (CCNA) i polítiques de privadesa per evitar fuites de dades en usar IA.",
+        "metric": "-25% Inactivitat Mensual",
+        "tags": ["Google Cybersecurity", "Cisco CCNA", "Zero Data Leakage"],
+        "icon": "target"
+      },
+      {
+        "code": "SYS-04",
+        "title": "Automatització Operativa & SOPs amb IA",
+        "description": "Disseny de fluxos automatitzats (n8n, integracions API) i procediments tècnics estandarditzats que eliminen colls d'ampolla i tasques repetitives.",
+        "metric": "-30% Incidències Recurrents",
+        "tags": ["n8n / Workflows", "SOPs Tècnics", "-20% Onboarding"],
+        "icon": "zap"
+      },
+      {
+        "code": "SYS-05",
+        "title": "Infraestructura AI-Ready & Optimització Maquinari",
+        "description": "Auditoria i dimensionament d'estacions de treball, GPUs, servidors i xarxes per a càrregues d'IA local o híbrida, evitant despeses innecessàries.",
+        "metric": "-30% Cost de Maquinari",
+        "tags": ["+500 Equips", "GPUs / Local AI", "+40% Rendiment"],
+        "icon": "refresh-cw"
+      },
+      {
+        "code": "SYS-06",
+        "title": "Capacitació d'Equips & Suport Sènior N1–N3",
+        "description": "Formació pràctica perquè la teva plantilla domini eines d'IA amb seguretat, acompanyada de suport tècnic integral remot i presencial.",
+        "metric": "95% Resolució 1r Contacte",
+        "tags": ["Formació Aplicada", "Suport N1–N3", "Windows / Linux / macOS"],
+        "icon": "users"
+      }
+    ]
+  },
+  "servicesPage": {
+    "pageTitle": "Serveis d'Enginyeria TI, Ciberseguretat i IA Aplicada",
+    "pageSubtitle": "Ecosistemes tecnològics complets dissenyats amb criteri de sistemes, seguretat de dades i eficiència operativa",
+    "pageDescription": "Descobreix com fusiono més de 20 anys d'experiència en infraestructura, xarxes i suport avançat amb l'adopció pràctica i segura de models d'Intel·ligència Artificial.",
+    "items": [
+      {
+        "title": "Assessoria i Integració de Models d'IA",
+        "description": "Selecció i implementació pràctica de LLMs aplicats als teus fluxos reals sense fum comercial.",
+        "longDescription": "Avaluo els teus processos operatius i determino exactament quin model d'IA (Claude, OpenAI, Gemini o models open-weights executats en local) resol el teu problema amb el menor cost i la màxima privadesa. No venc promeses genèriques: dissenyo prompts de sistema, estructures de context (Context Engineering) i criteris de validació perquè la IA generi valor des de la primera setmana.",
+        "benefits": [
+          "Avaluació objectiva entre models al núvol i models locals privats",
+          "Disseny de Context Engineering i plantilles operatives per al teu negoci",
+          "Reducció immediata de temps en redacció tècnica, anàlisi i suport",
+          "Control estricte de costos per llicències o consum d'API",
+          "Adopció pas a pas sense interrompre l'operativa diària"
+        ],
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Arquitectura de Dades Cloud per a IA",
+        "description": "Reestructuració i migració de dades a SharePoint, OneDrive i Google Workspace llestos per a IA.",
+        "longDescription": "Cap sistema d'IA pot donar respostes útils si els documents de l'empresa estan duplicats, desordenats o sense permisos clars. Amb experiència provada migrant i reestructurant més de 200 GB de dades corporatives en entorns reals, organitzo el teu repositori al núvol per millorar fins a un 40% la recuperació d'arxius i deixar la teva base documental llesta per a assistents d'IA i cerca semàntica.",
+        "benefits": [
+          "Migració i ordenació sense pèrdua de dades (100% integritat verificada)",
+          "Estructura de permisos i control d'accés per departament",
+          "Preparació de bases de coneixement netes per a RAG i Copilot/Claude",
+          "Millora del 40% en temps de localització d'arxius crítics",
+          "Còpies de seguretat i polítiques de recuperació davant desastres"
+        ],
+        "icon": "layers"
+      },
+      {
+        "title": "Ciberseguretat, Xarxes i Governança IA",
+        "description": "Enduriment de sistemes, xarxes LAN/WAN i polítiques de seguretat per utilitzar IA sense fuites d'informació.",
+        "longDescription": "Recolzat per certificacions en Ciberseguretat de Google (2024), protocols de xarxa aplicats a ciberseguretat de FUNDAE (2025) i Cisco CCNA 1–3, audito i protegeixo la teva infraestructura abans i durant l'adopció d'IA. Configuro routers, switches, tallafocs i polítiques de seguretat en estacions Windows, Linux i macOS per garantir disponibilitat crítica i privadesa.",
+        "benefits": [
+          "Auditoria de vulnerabilitats en xarxa local, WiFi i teletreball",
+          "Polítiques clares de governança per evitar filtració de dades en IA",
+          "Enduriment (hardening) de sistemes operatius Windows, Linux i macOS",
+          "Monitoratge proactiu que redueix el temps d'inactivitat un 25%",
+          "Configuració professional de routers, switches i segmentació LAN/WAN"
+        ],
+        "icon": "target"
+      },
+      {
+        "title": "Automatització Operativa & SOPs amb IA",
+        "description": "Fluxos automatitzats i manuals operatius estandarditzats que acceleren el teu equip.",
+        "longDescription": "Analitzo els colls d'ampolla de la teva operació i combino automatització tècnica (fluxos amb n8n, connectors API i scripts en Linux/SQL) amb Procediments Operatius Estandarditzats (SOPs) potenciats per IA. Aquest enfocament ha demostrat reduir incidents recurrents en un 30% i disminuir el temps d'incorporació de nous empleats en un 20%.",
+        "benefits": [
+          "Identificació i eliminació de tasques administratives repetitives",
+          "Creació de guies tècniques i manuals vius assistits per IA",
+          "Automatització de fluxos entre correu, núvol, CRM i suport",
+          "Reducció del 20% en temps de capacitació de nou personal",
+          "Estandardització de processos amb mètriques clares de rendiment"
+        ],
+        "icon": "zap"
+      },
+      {
+        "title": "Infraestructura AI-Ready & Optimització Maquinari",
+        "description": "Selecció de maquinari, GPUs i optimització d'estacions de treball amb estalvi comprovat del 30%.",
+        "longDescription": "Amb més de 500 ordinadors acoblats i reparats i més de 200 components crítics diagnosticats (GPUs, RAM, emmagatzematge NVMe, plaques base), t'assessoro amb total independència comercial sobre quin equipament comprar o actualitzar. Ja sigui per renovar les estacions de la teva oficina o muntar un node local per a inferència d'IA, optimitzo cada euro invertit.",
+        "benefits": [
+          "Estalvi mitjà del 30% en compres de maquinari evitant sobrecostos",
+          "Augment del 40% en rendiment d'estacions de treball existents",
+          "Extensió de la vida útil del parc informàtic en 3 anys o més",
+          "Dimensionament real de GPUs i VRAM per a càrregues d'IA local",
+          "Plans de manteniment preventiu que redueixen fallades de maquinari un 45%"
+        ],
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Capacitació d'Equips & Suport Sènior N1–N3",
+        "description": "Entrenament pràctic en eines d'IA i suport tècnic resolutiu amb 95% d'èxit al primer contacte.",
+        "longDescription": "La tecnologia només serveix si el teu equip sap utilitzar-la sense frustració. Imparteixo formació directa i aplicada al lloc de treball sobre ús segur i productiu de models d'IA, entorns cloud i bones pràctiques de seguretat, recolzada per un servei de suport tècnic sènior (remot i presencial) amb un 95% de resolució al primer contacte.",
+        "benefits": [
+          "Formació 100% pràctica adaptada al nivell real dels teus empleats",
+          "Índex del 95% de resolució d'incidències al primer contacte",
+          "Suport multiplataforma expert en Windows, Linux i macOS",
+          "Taxa de satisfacció i fidelitat de clients superior al 95%",
+          "Acompanyament tècnic continu sense argot incomprensible"
+        ],
+        "icon": "users"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes Freqüents",
+    "subtitle": "Respostes directes i sense fum sobre com integro IA, infraestructura i seguretat",
+    "items": [
+      {
+        "question": "Per què contractar un especialista en Infraestructura i Ciberseguretat per assessorar-me en IA?",
+        "answer": "Perquè la IA no viu al buit: es connecta als teus arxius al núvol, s'executa sobre els teus equips, passa per la teva xarxa i gestiona dades privades dels teus clients. Amb més de 20 anys en sistemes, xarxes (CCNA) i ciberseguretat (Google / FUNDAE), garanteixo que la IA que implementis sigui rendible, ràpida i no obri bretxes de seguretat a la teva empresa."
+      },
+      {
+        "question": "Com em beneficia treballar amb tu en lloc de contractar diverses agències per separat?",
+        "answer": "Evites el clàssic problema on el consultor d'IA culpa l'informàtic, l'informàtic culpa la xarxa i ningú resol res. Jo cobreixo d'extrem a extrem la cadena: des del maquinari, el sistema operatiu i la xarxa fins a l'estructuració a SharePoint/OneDrive i la integració de models d'IA i automatitzacions."
+      },
+      {
+        "question": "Pots analitzar la nostra infraestructura actual abans d'introduir eines d'IA?",
+        "answer": "Sí, i és la meva forma estàndard de treballar. Realitzo un diagnòstic tècnic on avaluo l'estat dels teus equips, com estan organitzades les teves dades al núvol, quins riscos de seguretat existeixen i en quines tasques concretes un model d'IA o automatització et donarà retorn immediat."
+      },
+      {
+        "question": "Quin tipus de solucions d'IA i automatització implementes a la pràctica?",
+        "answer": "Implemento solucions amb impacte real: estructuració documental per a assistents d'IA sobre dades pròpies, fluxos automatitzats amb n8n i integracions API, estandardització de manuals i suport operatiu assistit per IA, i avaluació de models locals (privadesa total) enfront de models cloud com Claude o ChatGPT Enterprise."
+      },
+      {
+        "question": "També resols problemes crítics de suport TI, xarxes i ordinadors del dia a dia?",
+        "answer": "Absolutament. Mantinc un índex del 95% de resolució en primer contacte en sistemes Windows, Linux i macOS, configuració de routers, switches, impressores de xarxa i migracions cloud. Una empresa no pot innovar amb IA si la seva operativa diària s'atura per fallades tècniques."
+      },
+      {
+        "question": "Ofereixes assessoria imparcial per comprar ordinadors, GPUs o renovar equips?",
+        "answer": "Sí. Després d'haver acoblat i reparat més de 500 estacions de treball i assessorat més de 150 clients, analitzo les teves càrregues reals de treball perquè compris exactament el que necessites, assolint reduccions de costos del 30% i allargant la vida útil dels equips més de 3 anys."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Enginyeria Real, Zero Fum",
+    "subtitle": "Preparat per integrar IA i optimitzar la teva infraestructura amb seguretat?",
+    "description": "Parlem del teu cas concret. Analitzarem els teus sistemes, les teves dades i els teus fluxos de treball per traçar un full de ruta clar, segur i rendible.",
+    "button": "Iniciar conversa"
+  },
+  "contact": {
+    "title": "Contacte",
+    "subtitle": "Diagnòstic i Consultoria Directa",
+    "description": "Explica'm quin repte tens en la teva infraestructura TI, seguretat o adopció de models d'IA i et respondré personalment amb criteri tècnic clar.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Missatge",
+      "submit": "Enviar missatge",
+      "sending": "Enviant...",
+      "success": "Missatge enviat! Revisaré el teu cas i et respondré aviat.",
+      "error": "Hi ha hagut un error en enviar. Si us plau, torna-ho a provar."
+    }
+  },
+  "footer": {
+    "tagline": "Infraestructura TI, Ciberseguretat i IA Aplicada sense fricció.",
+    "rights": "Ivan Tech Coach (Jaime Iván Rodríguez Morales). Tots els drets reservats.",
+    "madeBy": "Enginyeria i arquitectura per Ivan Tech Coach · Sistema visual basat en Refero Styles (DESIGN.md) i Context Engineering.",
+    "social": {
+      "instagram": "https://www.instagram.com/ivantechcoach/",
+      "youtube": "https://www.youtube.com/@SinceramenteIvan",
+      "linkedin": "https://www.linkedin.com/in/jivan-rodriguez-support",
+      "github": "https://github.com/ivantechcoach"
+    }
+  }
+}

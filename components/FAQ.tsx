@@ -17,7 +17,7 @@ interface FAQProps {
 }
 
 export default function FAQ({ content }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -26,92 +26,62 @@ export default function FAQ({ content }: FAQProps) {
   return (
     <section
       id="faq"
-      className="relative section-padding bg-transparent text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)] border-b border-[var(--border)]"
       aria-labelledby="faq-title"
     >
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container-custom relative z-10">
+        <div className="max-w-3xl mb-12 space-y-3">
+          <span className="telemetry-eyebrow">{"[SYS-FAQ // PROTOCOLOS Y CRITERIO]"}</span>
           <h2
             id="faq-title"
-            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--text)] mb-4"
+            className="tracking-[-0.025em] leading-tight text-3xl md:text-4xl font-bold text-[var(--text)]"
           >
             {content.title}
           </h2>
-          <p className="text-lg text-[var(--text-soft)]">{content.subtitle}</p>
+          <p className="text-base md:text-lg text-[var(--text-soft)]">{content.subtitle}</p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl space-y-3">
           {content.items.map((item, index) => {
             const isOpen = openIndex === index
-            
+            const code = `Q-0${index + 1}`
+
             return (
               <div
                 key={index}
-                className="
-                  group relative
-                  bg-[var(--card)]
-                  border border-[var(--border)]
-                  rounded-xl
-                  overflow-hidden
-                  transition-[border-color,box-shadow] duration-[var(--anim-fast)] ease-out
-                  hover:border-[var(--primary)]
-                  hover:shadow-lg
-                  hover:scale-[1.01]
-                "
-                style={{ willChange: 'border-color, box-shadow' }}
+                className="blueprint-card overflow-hidden"
               >
                 <button
+                  type="button"
                   onClick={() => toggleItem(index)}
-                  className="
-                    w-full px-6 md:px-8 py-5 md:py-6
-                    flex items-center justify-between
-                    text-left
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2
-                    transition-colors duration-[var(--anim-fast)]
-                  "
+                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-[var(--card-elevated)] transition-colors"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3 className="
-                    text-lg md:text-xl font-extrabold tracking-tight
-                    text-[var(--text)]
-                    pr-8
-                    group-hover:text-[var(--primary-dark)]
-                    transition-colors duration-[var(--anim-fast)]
-                  ">
-                    {item.question}
-                  </h3>
+                  <div className="flex items-baseline gap-3 pr-4">
+                    <span className="font-mono text-xs text-[var(--primary)] flex-shrink-0">
+                      [{code}]
+                    </span>
+                    <h3 className="text-base md:text-lg font-semibold text-[var(--text)]">
+                      {item.question}
+                    </h3>
+                  </div>
                   <ChevronDown
-                    className={`
-                      w-5 h-5 md:w-6 md:h-6
-                      text-[var(--text-soft)]
-                      flex-shrink-0
-                      transition-transform duration-[var(--anim-base)] ease-out
-                      ${isOpen ? 'transform rotate-180' : ''}
-                    `}
+                    className={`w-5 h-5 text-[var(--text-muted)] flex-shrink-0 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-[var(--primary)]' : ''
+                    }`}
                     aria-hidden="true"
                   />
                 </button>
 
                 <div
                   id={`faq-answer-${index}`}
-                  className={`
-                    overflow-hidden
-                    transition-all duration-[var(--anim-base)] ease-out
-                    ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
-                  `}
+                  className={`overflow-hidden transition-all duration-200 ${
+                    isOpen ? 'max-h-[800px] opacity-100 border-t border-[var(--border)]' : 'max-h-0 opacity-0'
+                  }`}
                 >
-                  <div className="px-6 md:px-8 pb-5 md:pb-6">
-                    <div className="
-                      pt-2
-                      font-normal
-                      text-[var(--text-soft)]
-                      leading-relaxed
-                      text-base md:text-lg
-                      whitespace-pre-line
-                    ">
-                      {item.answer}
-                    </div>
+                  <div className="px-6 py-5 bg-[var(--bg)] text-[var(--text-soft)] leading-relaxed text-sm md:text-base whitespace-pre-line">
+                    {item.answer}
                   </div>
                 </div>
               </div>

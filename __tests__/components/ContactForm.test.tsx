@@ -22,7 +22,7 @@ describe('ContactForm Component', () => {
   }
 
   beforeEach(() => {
-    jest.clearAllMocks()
+    jest.resetAllMocks()
   })
 
   it('should render form fields', () => {

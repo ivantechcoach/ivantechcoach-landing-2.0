@@ -7,20 +7,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
       colors: {
-        mint: 'var(--color-mint)',
         primary: {
-          DEFAULT: 'var(--color-primary)',
-          dark: '#0ea5e9',
-          light: '#7dd3fc',
+          DEFAULT: 'var(--primary)',
+          dark: 'var(--primary-dark)',
+          light: 'var(--primary-light)',
         },
-        background: {
-          DEFAULT: '#0f172a',
-          light: '#1e293b',
+        surface: {
+          canvas: 'var(--bg)',
+          secondary: 'var(--bg-2)',
+          card: 'var(--card)',
+          elevated: 'var(--card-elevated)',
         },
-        gray: {
-          100: 'var(--color-gray-100)',
-          900: 'var(--color-gray-900)',
+        telemetry: {
+          emerald: 'var(--primary)',
+          violet: 'var(--accent-violet)',
         },
       },
       spacing: {
@@ -33,75 +38,10 @@ const config: Config = {
         '12': 'var(--space-12)',
         '16': 'var(--space-16)',
       },
-      boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-      },
       transitionDuration: {
-        'fast': 'var(--anim-fast)',
-        'base': 'var(--anim-base)',
-        'slow': 'var(--anim-slow)',
-      },
-      transitionTimingFunction: {
-        'ease-base': 'ease',
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-in-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'slide-down': 'slideDown 0.6s ease-out',
-        'float': 'float 6s ease-in-out infinite',
-        'blob-pulse': 'blobPulse 30s ease-in-out infinite alternate',
-        'fog-drift': 'fogDrift 60s linear infinite',
-        'parallax-float': 'parallaxFloat 20s ease-in-out infinite alternate',
-        'subtle-float': 'subtleFloat 8s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        blobPulse: {
-          '0%, 100%': { 
-            transform: 'translate(0, 0) scale(1)',
-          },
-          '25%': { 
-            transform: 'translate(30px, -30px) scale(1.1)',
-          },
-          '50%': { 
-            transform: 'translate(-20px, 20px) scale(0.95)',
-          },
-          '75%': { 
-            transform: 'translate(20px, 30px) scale(1.05)',
-          },
-        },
-        fogDrift: {
-          '0%': { backgroundPosition: '0 0' },
-          '100%': { backgroundPosition: '256px 256px' },
-        },
-        parallaxFloat: {
-          '0%, 100%': { backgroundPosition: '0 0' },
-          '50%': { backgroundPosition: '20px 20px' },
-        },
-        subtleFloat: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-      },
-      backdropBlur: {
-        xs: '2px',
+        fast: 'var(--anim-fast)',
+        base: 'var(--anim-base)',
+        slow: 'var(--anim-slow)',
       },
     },
   },

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Download } from 'lucide-react';
@@ -31,7 +32,7 @@ export const HeroSection = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Automatiza tu Soporte IT y Escala tu Carrera con IA
               </h1>
-              
+
               {/* Trust Quote */}
               <blockquote className="border-l-4 border-accent pl-4 italic text-lg opacity-90">
                 &ldquo;La verdadera transformación comienza cuando dominas las herramientas que automatizan tu trabajo.&rdquo;
@@ -50,8 +51,8 @@ export const HeroSection = () => {
             {/* CTA Principal - Lead Magnet */}
             <Dialog>
               <DialogTrigger asChild>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 h-auto transition-all hover:scale-105"
                 >
                   <Download className="mr-2 h-5 w-5" />
@@ -68,11 +69,11 @@ export const HeroSection = () => {
                 <form className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="tu@email.com" 
-                      required 
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="tu@email.com"
+                      required
                     />
                   </div>
                   <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
@@ -87,9 +88,11 @@ export const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
-              <img
-                src={typeof coachAvatar === 'string' ? coachAvatar : (coachAvatar as any)?.src || coachAvatar}
+              <Image
+                src={coachAvatar}
                 alt="Ivan - IT & AI Coach"
+                width={448}
+                height={448}
                 className="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover aspect-square"
               />
             </div>

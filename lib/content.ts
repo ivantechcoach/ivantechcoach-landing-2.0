@@ -1,14 +1,20 @@
 import esContent from '@/content/es.json'
+import caContent from '@/content/ca.json'
 import enContent from '@/content/en.json'
 
 export type Content = typeof esContent
 
-export async function getContent(lang: string): Promise<Content> {
-  const content = lang === 'en' ? enContent : esContent
-  return content as Content
+const contentByLang: Record<string, Content> = {
+  es: esContent,
+  ca: caContent,
+  en: enContent,
 }
 
-export const supportedLanguages = ['es', 'en'] as const
+export async function getContent(lang: string): Promise<Content> {
+  return contentByLang[lang] || esContent
+}
+
+export const supportedLanguages = ['es', 'ca', 'en'] as const
 export type SupportedLanguage = typeof supportedLanguages[number]
 
 const DEFAULT_LOCALE: SupportedLanguage = 'es'
@@ -26,7 +32,3 @@ export function isValidLanguage(lang: string): lang is SupportedLanguage {
 export function getDefaultLanguage(): SupportedLanguage {
   return DEFAULT_LOCALE
 }
-
-
-
-

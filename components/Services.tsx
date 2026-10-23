@@ -11,13 +11,17 @@ import {
 } from 'lucide-react'
 
 interface Service {
+  code?: string
   title: string
   description: string
+  metric?: string
+  tags?: string[]
   icon: string
 }
 
 interface ServicesProps {
   content: {
+    eyebrow?: string
     title: string
     subtitle: string
     items: Service[]
@@ -37,71 +41,83 @@ export default function Services({ content }: ServicesProps) {
   return (
     <section
       id="services"
-      className="relative section-padding bg-transparent text-[var(--text)]"
+      className="relative section-padding bg-transparent text-[var(--text)] border-b border-[var(--border)]"
       aria-labelledby="services-title"
     >
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container-custom relative z-10">
+        {/* Section Blueprint Header */}
+        <div className="max-w-3xl mb-14 space-y-3">
+          <span className="telemetry-eyebrow">
+            [{content.eyebrow || 'MATRIZ DE CAPACIDADES // ARQUITECTURA IA + SISTEMAS'}]
+          </span>
           <h2
             id="services-title"
-            className="tracking-tight leading-tight text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--text)] mb-4"
+            className="tracking-[-0.025em] leading-tight text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text)]"
           >
             {content.title}
           </h2>
-          <p className="text-lg text-[var(--text-soft)]">{content.subtitle}</p>
+          <p className="text-base md:text-lg text-[var(--text-soft)] leading-relaxed">
+            {content.subtitle}
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+        {/* Refero Styles Technical Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {content.items.map((service, index) => {
             const Icon = iconMap[service.icon] || Lightbulb
+            const moduleCode =
+              service.code || `SYS-0${index + 1}`
+
             return (
-              <div
+              <article
                 key={service.title}
-                className="
-                  group relative p-8 rounded-2xl 
-                  bg-[var(--card)]
-                  border border-[var(--border)]
-                  shadow-lg
-                  transition-[transform,box-shadow,border-color] duration-[var(--anim-base)] ease-out
-                  hover:shadow-xl
-                  hover:scale-[1.04]
-                  hover:border-[var(--primary)]
-                  animate-fade-up
-                "
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                  willChange: 'transform, box-shadow, border-color',
-                }}
+                className="blueprint-card p-6 sm:p-7 flex flex-col justify-between group"
               >
-                <div
-                  className="
-                    w-14 h-14 flex items-center justify-center 
-                    rounded-xl mb-6
-                    bg-[var(--primary)]/15
-                    text-[var(--primary-dark)]
-                    group-hover:bg-[var(--primary)]/25
-                    group-hover:scale-110
-                    transition-[transform,background-color] duration-[var(--anim-base)] ease-out
-                  "
-                  style={{ willChange: 'transform, background-color' }}
-                >
-                  <Icon className="w-6 h-6" aria-hidden="true" strokeWidth={2.5} />
+                <div>
+                  {/* Top Bar: Module Code + Icon */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-[var(--border)]">
+                    <span className="font-mono text-xs uppercase tracking-[0.08em] text-[var(--text-muted)] group-hover:text-[var(--primary)] transition-colors">
+                      [{moduleCode}]
+                    </span>
+                    <div className="w-10 h-10 rounded-lg bg-[var(--card-elevated)] border border-[var(--border)] flex items-center justify-center text-[var(--primary)]">
+                      <Icon className="w-5 h-5" aria-hidden="true" strokeWidth={2} />
+                    </div>
+                  </div>
+
+                  {/* Title & Description */}
+                  <h3 className="text-xl font-semibold tracking-[-0.015em] mb-3 text-[var(--text)]">
+                    {service.title}
+                  </h3>
+                  <p className="text-[var(--text-soft)] leading-relaxed text-sm sm:text-base mb-6">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="
-                  text-2xl font-extrabold tracking-tight 
-                  mb-3
-                  text-[var(--text)]
-                  group-hover:text-[var(--primary-dark)]
-                  transition-colors duration-200 ease-out
-                "
-                style={{ willChange: 'color' }}
-                >
-                  {service.title}
-                </h3>
-                <p className="text-[var(--text-soft)] font-normal leading-relaxed text-lg">
-                  {service.description}
-                </p>
-              </div>
+
+                {/* Bottom Telemetry Footer: Verified Metric + Stack Tags */}
+                <div className="pt-4 border-t border-[var(--border)] space-y-3">
+                  {service.metric && (
+                    <div className="flex items-center justify-between text-xs font-mono">
+                      <span className="text-[var(--text-muted)] uppercase">OUTPUT:</span>
+                      <span className="text-[var(--primary)] font-medium">
+                        {service.metric}
+                      </span>
+                    </div>
+                  )}
+
+                  {service.tags && service.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {service.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="font-mono text-[11px] px-2 py-0.5 rounded bg-[var(--card-elevated)] text-[var(--text-soft)] border border-[var(--border)]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </article>
             )
           })}
         </div>

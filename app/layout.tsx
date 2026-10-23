@@ -1,14 +1,19 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import LangUpdater from '@/components/LangUpdater'
 import TechBackground from '@/components/TechBackground'
-import AntigravityBackground from '@/components/AntigravityBackground'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
 })
 
 export const metadata: Metadata = {
@@ -17,14 +22,22 @@ export const metadata: Metadata = {
     canonical: 'https://www.ivantechcoach.com/es',
     languages: {
       'es': 'https://www.ivantechcoach.com/es',
+      'ca': 'https://www.ivantechcoach.com/ca',
       'en': 'https://www.ivantechcoach.com/en',
       'x-default': 'https://www.ivantechcoach.com/es',
     },
   },
-  title: 'Ivan Tech Coach | Tecnología sin fricción',
-  description: 'Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.',
-  keywords: ['consultoría tecnológica', 'arquitectura de software', 'transformación digital', 'tecnología sin fricción', 'Ivan Tech Coach'],
-  authors: [{ name: 'Ivan Tech Coach' }],
+  title: 'Ivan Tech Coach | Infraestructura TI, Ciberseguridad e IA Aplicada',
+  description: 'Más de 20 años de experiencia en sistemas, redes y ciberseguridad integrados con asesoría práctica en modelos de IA. Cero humo tecnológico, resultados medibles.',
+  keywords: [
+    'asesoría inteligencia artificial',
+    'modelos de IA para empresas',
+    'infraestructura TI',
+    'ciberseguridad',
+    'automatización de procesos',
+    'Ivan Tech Coach',
+  ],
+  authors: [{ name: 'Jaime Iván Rodríguez Morales (Ivan Tech Coach)' }],
   creator: 'Ivan Tech Coach',
   icons: {
     icon: [
@@ -44,22 +57,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     alternateLocale: 'en_US',
-    title: 'Ivan Tech Coach | Tecnología sin fricción',
-    description: 'Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.',
+    title: 'Ivan Tech Coach | Infraestructura TI, Ciberseguridad e IA Aplicada',
+    description: 'Más de 20 años en sistemas, redes y ciberseguridad unidos a la adopción práctica y segura de modelos de IA.',
     siteName: 'Ivan Tech Coach',
     images: [
       {
         url: '/images/og-cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ivan Tech Coach - Tecnología sin fricción',
+        alt: 'Ivan Tech Coach - Infraestructura TI, Ciberseguridad e IA Aplicada',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ivan Tech Coach | Tecnología sin fricción',
-    description: 'Transformo la complejidad tecnológica en soluciones claras y accionables. Sin jerga, sin complicaciones, solo resultados que impulsan tu negocio.',
+    title: 'Ivan Tech Coach | Infraestructura TI, Ciberseguridad e IA Aplicada',
+    description: 'Más de 20 años en sistemas, redes y ciberseguridad unidos a la adopción práctica y segura de modelos de IA.',
     images: ['/images/og-cover.jpg'],
   },
   robots: {
@@ -87,30 +100,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="es"
+      className={`${inter.variable} ${jetbrainsMono.variable} theme-dark`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* 
-          FIX DEL THEME:
-          Este script elimina todas las clases viejas y aplica solo la correcta
-        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  const stored = localStorage.getItem('itc-theme') || 'light';
-                  const root = document.documentElement;
-
-                  root.classList.remove(
-                    'theme-light',
-                    'theme-dark',
-                    'theme-high-contrast',
-                    'theme-sepia'
-                  );
-
-                  root.classList.add('theme-' + stored);
+                  var stored = localStorage.getItem('itc-theme');
+                  var theme = (stored === 'light' || stored === 'dark') ? stored : 'dark';
+                  var root = document.documentElement;
+                  root.classList.remove('theme-light', 'theme-dark', 'theme-high-contrast', 'theme-sepia');
+                  root.classList.add('theme-' + theme);
                 } catch (e) {
-                  document.documentElement.classList.add('theme-light');
+                  document.documentElement.classList.add('theme-dark');
                 }
               })();
             `,
@@ -119,11 +126,10 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
-        <AntigravityBackground />
         <TechBackground />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:px-4 focus:py-2 focus:bg-[var(--bg-2)] focus:text-[var(--text)] focus:rounded-md focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:px-4 focus:py-2 focus:bg-[var(--card)] focus:text-[var(--text)] focus:border focus:border-[var(--border-strong)] focus:rounded-md"
         >
           Saltar al contenido principal
         </a>

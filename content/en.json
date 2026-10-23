@@ -3,226 +3,369 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "commandHint": "AI Commands & Diagnostics"
+  },
+  "commandPalette": {
+    "placeholder": "Search AI service, infrastructure case, or system command...",
+    "empty": "No matching commands found.",
+    "groups": {
+      "aiScenarios": "Applied AI & Architecture Simulator",
+      "navigation": "Direct Navigation",
+      "preferences": "System Preferences"
+    },
+    "actions": {
+      "toggleTheme": "Toggle Theme (Obsidian Dark / Parchment Dossier)",
+      "toggleLang": "Switch Language (ES · CA · EN)",
+      "goContact": "Schedule Technical & AI Diagnostic",
+      "goServices": "Explore AI + Systems Service Matrix",
+      "goAbout": "View 20+ Year Dossier & Certifications"
+    }
   },
   "hero": {
-    "badge": "Ivan Tech Coach",
-    "title": "Frictionless Technology.",
-    "subtitle": "I transform technological complexity into clear, actionable solutions. No jargon, no complications, just results that drive your business forward.",
-    "ctaPrimary": "Let's talk now",
-    "ctaSecondary": "View services"
+    "badge": "SYS-CORE // 20+ YEARS IT INFRASTRUCTURE · CYBERSECURITY · APPLIED AI",
+    "title": "Frictionless Technology & AI.",
+    "subtitle": "I integrate Artificial Intelligence models on top of secure, structured, real-world IT infrastructures. Over 20 years diagnosing systems, networks, and cybersecurity so you can adopt AI with zero tech smoke and measurable ROI.",
+    "ctaPrimary": "Request technical diagnostic",
+    "ctaSecondary": "Explore architecture & services",
+    "metricsStrip": [
+      {
+        "value": "20+ Years",
+        "label": "Systems, Networks & Hardware"
+      },
+      {
+        "value": "95% FCR",
+        "label": "First-Contact Resolution"
+      },
+      {
+        "value": "+200 GB",
+        "label": "Structured Cloud Data"
+      },
+      {
+        "value": "-30% Cost",
+        "label": "Hardware/IT Optimization"
+      }
+    ],
+    "simulator": {
+      "headerTitle": "ARCHITECTURE & INFERENCE CONSOLE // LIVE DIAGNOSTIC",
+      "statusBadge": "ACTIVE TELEMETRY · ZERO SMOKE",
+      "scenarioLabel": "Select a real-world business challenge:",
+      "labels": {
+        "problem": "FIELD DIAGNOSTIC",
+        "architecture": "AI ARCHITECTURE & MODELS",
+        "security": "SECURITY / INFRASTRUCTURE LAYER",
+        "impact": "VERIFIED IMPACT"
+      },
+      "scenarios": [
+        {
+          "id": "cloud-rag",
+          "code": "MOD-01",
+          "tab": "Cloud Data & Private AI",
+          "problem": "“We want to use AI with our quotes, contracts, and manuals, but we have hundreds of gigabytes of unstructured files and fear leaking confidential data.”",
+          "architecture": "Data restructuring in Microsoft 365 (SharePoint / OneDrive) or Google Workspace + deploying assistants over a clean knowledge base (Claude Enterprise / Copilot / Private RAG).",
+          "security": "Role-based permission segmentation, Zero-Data-Retention model policies, and access auditability.",
+          "impact": "+40% faster file retrieval efficiency (verified on 200+ GB corporate migration at MASMEL)."
+        },
+        {
+          "id": "sec-governance",
+          "code": "MOD-02",
+          "tab": "AI Cybersecurity",
+          "problem": "“Our team is already using ChatGPT or Claude on their own without technical oversight, exposing credentials, client data, and the local network.”",
+          "architecture": "AI model governance protocol, corporate workspace standardization, and audited API/assistant gateways.",
+          "security": "Endpoint hardening (Windows, Linux, macOS), LAN/WAN network segmentation (Cisco CCNA standard), and Google Cybersecurity / FUNDAE controls.",
+          "impact": "100% availability in critical operations and -25% monthly downtime reduction."
+        },
+        {
+          "id": "hardware-llm",
+          "code": "MOD-03",
+          "tab": "AI-Ready Hardware vs Cloud",
+          "problem": "“We don't know whether to pay recurring cloud AI subscriptions or invest in GPU workstations to run private local models.”",
+          "architecture": "Workload audit: local inference (Ollama / vLLM / Open-Weights) for sensitive data vs. frontier cloud APIs (Claude / GPT) for complex reasoning.",
+          "security": "Exact sizing of VRAM, GPUs, RAM, and NVMe storage with zero vendor lock-in or overspending.",
+          "impact": "-30% hardware procurement cost, +40% workstation performance, and +3 years extended lifespan."
+        },
+        {
+          "id": "ops-automation",
+          "code": "MOD-04",
+          "tab": "Automation & AI SOPs",
+          "problem": "“We lose hours every week on repetitive support tickets, technical documentation, and onboarding new staff.”",
+          "architecture": "Automated workflows (n8n / model APIs) paired with AI-assisted Standard Operating Procedures (SOPs).",
+          "security": "Human-in-the-Loop validation and deterministic error handling prior to production.",
+          "impact": "-30% recurring incidents and -20% employee onboarding time."
+        }
+      ]
+    }
   },
   "about": {
-    "title": "About me",
-    "description": "I'm Ivan, and I believe in technology that actually works. Over the years, I've seen how companies get lost in empty promises and solutions that don't deliver. That's why I decided to focus on what really matters: clear results, honest communication, and technology that drives your business without unnecessary complications. My goal is to help you make informed technology decisions, without unnecessary technical jargon, with a practical approach and measurable results.",
-    "cta": "Contact me"
+    "eyebrow": "TECHNICAL DOSSIER // VERIFIED TRACK RECORD",
+    "title": "About Me: Engineering Judgment + Practical AI",
+    "roleHeadline": "Senior IT Infrastructure, Cybersecurity & Applied AI Consultant",
+    "description": "I am Jaime Iván Rodríguez Morales. Unlike consultants who entered tech six months ago with a prompt engineering crash course, I have spent over 20 years in the real IT trenches: assembling and diagnosing 500+ workstations, designing 50+ LAN/WAN networks, migrating hundreds of gigabytes of corporate cloud data, and securing Windows, Linux, and macOS environments. I integrate AI models strictly where they deliver measurable ROI on top of resilient infrastructure and security.",
+    "cta": "Check availability",
+    "metrics": [
+      {
+        "code": "KPI-01",
+        "value": "95%",
+        "label": "First-Contact Resolution",
+        "detail": "Advanced cross-platform diagnostics (Windows, Linux, macOS) cutting recurring incidents by 30%."
+      },
+      {
+        "code": "KPI-02",
+        "value": "+40%",
+        "label": "Cloud Retrieval Efficiency",
+        "detail": "Led migration and structuring of 200+ GB in SharePoint and OneDrive ready for AI workflows."
+      },
+      {
+        "code": "KPI-03",
+        "value": "-30%",
+        "label": "Hardware Cost Reduction",
+        "detail": "Advised 150+ clients and optimized 500+ workstations, extending average hardware lifespan by 3+ years."
+      },
+      {
+        "code": "KPI-04",
+        "value": "-25%",
+        "label": "Monthly Downtime Reduction",
+        "detail": "Proactive infrastructure monitoring, LAN/WAN networking, and operational security hardening."
+      }
+    ],
+    "certificationsTitle": "Verified Credentials & Continuous Education",
+    "certifications": [
+      {
+        "year": "2025",
+        "title": "Network Protocols Applied to Cybersecurity & Basic Cybersecurity",
+        "issuer": "FUNDAE (Spain)"
+      },
+      {
+        "year": "2024",
+        "title": "Google Cybersecurity Professional Certificate",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2024",
+        "title": "Linux & SQL Tools + Network Security",
+        "issuer": "Google / Coursera"
+      },
+      {
+        "year": "2017–2018",
+        "title": "Cisco CCNA 1, CCNA 2, CCNA 3 & IT Essentials",
+        "issuer": "Cisco Networking Academy"
+      },
+      {
+        "year": "2001",
+        "title": "Higher Technician in Computer Science (TSU)",
+        "issuer": "Instituto Tecnológico Sucre"
+      }
+    ]
   },
   "aboutPage": {
-    "pageTitle": "About me",
-    "pageSubtitle": "IT professional with over 20 years of hands-on experience in systems, hardware, networks, and advanced technical support",
+    "pageTitle": "About Me",
+    "pageSubtitle": "IT Specialist with 20+ years in infrastructure, networking, and cybersecurity paired with practical AI model consulting",
     "content": [
-      "I am an IT professional with over 20 years of hands-on experience in systems, hardware, networks, and advanced technical support. From my early days disassembling and optimizing computers, configuring networks, and diagnosing complex failures, my interest has always been in understanding how technology works from the physical level to system logic and how to make it work reliably, securely, and efficiently.",
-      "Over the years, my profile evolved naturally: to the solid foundation of physical and logical infrastructure, I added system administration (Windows, Linux, macOS), networks, basic technical cybersecurity, cloud deployments, and support in professional environments. This has allowed me to face real challenges, solve complex problems, and design solutions that not only work but endure over time.",
-      "My approach is not to build improvised solutions or impose technological trends. I work with clear technical criteria: operational stability, resource optimization, security awareness, and real cost-benefit for the business.",
-      "Additionally, I offer practical consulting on AI tools and their application in business productivity. I don't seek to sell magical solutions, but to integrate AI when it adds tangible value to workflows, documentation, support, or operational efficiency.",
-      "I have directly supported companies and professionals in resolving advanced incidents, improving existing infrastructures, and building coherent, secure technological environments aligned with their objectives.",
-      "I deeply value clarity, professional ethics, and honest communication. I work with clients and teams seeking lasting results, understanding of their systems, and a relationship of trust based on technical transparency.",
-      "There's no smoke or empty promises here: there's experience, proven judgment, and commitment to solutions that work."
+      "I am an IT professional with over 20 years of hands-on experience in systems, hardware, networking, cybersecurity, and advanced technical support. From my early days assembling and optimizing over 500 workstations, configuring 50+ LAN/WAN networks, and diagnosing critical failures, my focus has always been understanding technology from physical hardware up to system logic and artificial intelligence.",
+      "Over the years, my profile evolved holistically: on top of a rock-solid hardware and infrastructure foundation, I added multi-platform system administration (Windows, Linux, macOS), network engineering (Cisco CCNA 1–3), technical cybersecurity (Google Cybersecurity and FUNDAE 2025), and corporate cloud data restructuring (200+ GB in SharePoint and OneDrive).",
+      "My engineering principle is strict: I do not build improvised workarounds or chase tech hype. Every recommendation is driven by operational stability, resource optimization, data privacy, and measurable cost-benefit for the business.",
+      "In the Artificial Intelligence domain, I advise companies and professionals on integrating AI models (cloud or local LLMs, automated workflows, and document assistants) on secure foundations. 90% of AI adoption failures stem from messy data, vulnerable networks, or poor hardware investments—the exact three domains I have spent two decades solving.",
+      "In recent engagements as Senior IT Consultant at MASMEL Rehabilitaciones y Reformas and Level 2 Specialist at Mundofabian.com, I achieved a 95% first-contact resolution rate, a 25% reduction in monthly downtime, a 40% improvement in cloud file retrieval, and a 20% reduction in staff onboarding time through standardized documentation.",
+      "I value clarity, technical ethics, and complete transparency. There is no smoke or magic promises here: just proven field engineering and lasting results."
     ],
-    "closing": "I don't implement technology for trends, but for technical judgment.",
-    "cta": "Let's talk"
+    "closing": "I don't implement AI or technology for trends, but for technical judgment, security, and real return.",
+    "cta": "Let's discuss your project",
+    "portraitLabel": "ID VERIFIED · 20+ YRS"
   },
   "services": {
+    "eyebrow": "CAPABILITY MATRIX // AI + SYSTEMS ARCHITECTURE",
     "title": "Services",
-    "subtitle": "How I can help you",
+    "subtitle": "Solutions where Artificial Intelligence is backed by real infrastructure, cybersecurity, and 20+ years of technical judgment",
     "items": [
       {
-        "title": "Technology Consulting",
-        "description": "Clear strategies to make informed technology decisions without getting lost in complexity.",
+        "code": "SYS-01",
+        "title": "AI Model Advisory & Integration",
+        "description": "Practical selection and deployment of LLMs (Claude, GPT, Gemini, or private local models) tailored to your real workflows with zero marketing smoke.",
+        "metric": "Measurable Operational ROI",
+        "tags": ["LLMs", "Context Engineering", "Private AI"],
         "icon": "lightbulb"
       },
       {
-        "title": "Software Architecture",
-        "description": "Design of scalable and maintainable systems that grow with your business.",
+        "code": "SYS-02",
+        "title": "Cloud Data Architecture for AI",
+        "description": "Restructuring and migrating corporate data in SharePoint, OneDrive, Microsoft 365, and Google Workspace so AI operates on clean, permissioned information.",
+        "metric": "+40% File Retrieval Speed",
+        "tags": ["SharePoint / M365", "Corporate RAG", "+200 GB Migrated"],
         "icon": "layers"
       },
       {
-        "title": "Digital Transformation",
-        "description": "Step-by-step guidance to modernize your processes without disrupting your operation.",
-        "icon": "refresh-cw"
+        "code": "SYS-03",
+        "title": "Cybersecurity, Networks & AI Governance",
+        "description": "System hardening (Windows, Linux, macOS), LAN/WAN segmentation (CCNA), and privacy policies to prevent data leakage when adopting AI.",
+        "metric": "-25% Monthly Downtime",
+        "tags": ["Google Cybersecurity", "Cisco CCNA", "Zero Data Leakage"],
+        "icon": "target"
       },
       {
-        "title": "Team Training",
-        "description": "Practical training that actually improves your team's productivity.",
-        "icon": "users"
-      },
-      {
-        "title": "Process Optimization",
-        "description": "I identify and eliminate bottlenecks that slow your growth.",
+        "code": "SYS-04",
+        "title": "Operational Automation & AI SOPs",
+        "description": "Automated workflows (n8n, API integrations) and standardized technical procedures that eliminate bottlenecks and repetitive tasks.",
+        "metric": "-30% Recurring Incidents",
+        "tags": ["n8n / Workflows", "Technical SOPs", "-20% Onboarding"],
         "icon": "zap"
       },
       {
-        "title": "Executive Mentoring",
-        "description": "Personalized support for leaders who need technological clarity.",
-        "icon": "target"
+        "code": "SYS-05",
+        "title": "AI-Ready Infrastructure & Hardware Sizing",
+        "description": "Auditing and sizing workstations, GPUs, servers, and networks for local or hybrid AI workloads while avoiding vendor overspending.",
+        "metric": "-30% Hardware Cost",
+        "tags": ["+500 Workstations", "GPUs / Local AI", "+40% Performance"],
+        "icon": "refresh-cw"
+      },
+      {
+        "code": "SYS-06",
+        "title": "Team Training & Senior L1–L3 Support",
+        "description": "Hands-on training so your staff masters AI tools safely, backed by comprehensive remote and onsite senior technical support.",
+        "metric": "95% First-Contact Resolution",
+        "tags": ["Applied Training", "L1–L3 Support", "Windows / Linux / macOS"],
+        "icon": "users"
       }
     ]
   },
   "servicesPage": {
-    "pageTitle": "Our Services",
-    "pageSubtitle": "Comprehensive technology solutions tailored to your needs",
-    "pageDescription": "Discover how I can help transform your technology infrastructure, optimize your processes, and drive your business forward with clear, actionable solutions.",
+    "pageTitle": "IT Engineering, Cybersecurity & Applied AI Services",
+    "pageSubtitle": "Complete technological ecosystems engineered for system stability, data security, and operational efficiency",
+    "pageDescription": "Discover how I combine over 20 years of hands-on experience in infrastructure, networking, and advanced support with the practical, secure adoption of Artificial Intelligence models.",
     "items": [
       {
-        "title": "Technology Consulting",
-        "description": "Clear strategies to make informed technology decisions without getting lost in complexity.",
-        "longDescription": "I provide strategic technology consulting that cuts through the noise. Instead of overwhelming you with technical jargon, I analyze your current situation, understand your business goals, and deliver clear, actionable recommendations. Whether you're choosing between technology options, planning infrastructure upgrades, or navigating digital transformation, I help you make decisions that align with your business objectives and budget.",
+        "title": "AI Model Advisory & Integration",
+        "description": "Practical selection and deployment of LLMs tailored to your real workflows with zero marketing smoke.",
+        "longDescription": "I evaluate your operational processes and determine exactly which AI model (Claude, OpenAI, Gemini, or locally hosted open-weights models) solves your problem with the lowest cost and highest privacy. I don't sell generic hype: I design system prompts, context structures (Context Engineering), and validation guardrails so AI delivers value from week one.",
         "benefits": [
-          "Clear, jargon-free recommendations",
-          "Cost-effective technology strategies",
-          "Risk assessment and mitigation",
-          "Vendor evaluation and selection",
-          "Technology roadmap planning"
+          "Objective evaluation between cloud APIs and private local models",
+          "Context Engineering design and operational templates for your business",
+          "Immediate time savings in technical writing, analysis, and support",
+          "Strict cost control across subscriptions and API token usage",
+          "Incremental adoption without disrupting daily operations"
         ],
         "icon": "lightbulb"
       },
       {
-        "title": "Software Architecture",
-        "description": "Design of scalable and maintainable systems that grow with your business.",
-        "longDescription": "I design software architectures that are built to last. My approach focuses on creating systems that are not only scalable and maintainable but also cost-effective and aligned with your business needs. From microservices to monolithic architectures, I choose the right pattern for your situation. I ensure your systems can grow with your business while remaining stable, secure, and easy to maintain.",
+        "title": "Cloud Data Architecture for AI",
+        "description": "Restructuring and migrating data in SharePoint, OneDrive, and Google Workspace ready for AI.",
+        "longDescription": "No AI system can produce reliable answers if company documents are duplicated, disorganized, or lack clear permissions. With proven experience migrating and restructuring over 200 GB of corporate data in production environments, I organize your cloud repository to boost file retrieval efficiency by 40% and prepare your knowledge base for AI assistants.",
         "benefits": [
-          "Scalable system design",
-          "Maintainable code structure",
-          "Performance optimization",
-          "Security-first architecture",
-          "Future-proof solutions"
+          "Zero-data-loss migration and structuring (100% verified integrity)",
+          "Departmental permission architecture and access control",
+          "Clean knowledge base preparation for RAG and Copilot/Claude",
+          "40% improvement in critical file retrieval times",
+          "Backup strategies and disaster recovery policies"
         ],
         "icon": "layers"
       },
       {
-        "title": "Digital Transformation",
-        "description": "Step-by-step guidance to modernize your processes without disrupting your operation.",
-        "longDescription": "Digital transformation doesn't have to be disruptive. I guide you through a step-by-step modernization process that minimizes risk and maximizes results. We start by understanding your current processes, identifying pain points, and then implementing solutions incrementally. This approach ensures your operations continue smoothly while you gradually adopt new technologies and processes that drive efficiency and growth.",
+        "title": "Cybersecurity, Networks & AI Governance",
+        "description": "System hardening, LAN/WAN networking, and security policies to adopt AI without data leaks.",
+        "longDescription": "Backed by Google Cybersecurity (2024), FUNDAE Network Security Protocols (2025), and Cisco CCNA 1–3 certifications, I audit and protect your infrastructure before and during AI adoption. I configure routers, switches, firewalls, and endpoint policies across Windows, Linux, and macOS to ensure critical availability and privacy.",
         "benefits": [
-          "Minimal operational disruption",
-          "Incremental implementation",
-          "Process automation",
-          "Legacy system modernization",
-          "Change management support"
+          "Vulnerability audits across LAN, WiFi, and remote work setups",
+          "Clear AI governance policies to prevent confidential data leakage",
+          "OS hardening for Windows, Linux, and macOS workstations",
+          "Proactive monitoring that cuts monthly downtime by 25%",
+          "Professional router, switch, and LAN/WAN segmentation setup"
         ],
-        "icon": "refresh-cw"
+        "icon": "target"
       },
       {
-        "title": "Team Training",
-        "description": "Practical training that actually improves your team's productivity.",
-        "longDescription": "I deliver training that makes a real difference. Instead of generic courses, I provide hands-on, practical training tailored to your team's specific needs and your technology stack. My training focuses on real-world scenarios your team will actually encounter, ensuring they can immediately apply what they learn. From new technology adoption to best practices, I help your team become more productive and confident.",
+        "title": "Operational Automation & AI SOPs",
+        "description": "Automated workflows and standardized operational manuals that accelerate your team.",
+        "longDescription": "I analyze operational bottlenecks and combine technical automation (n8n workflows, API connectors, and Linux/SQL scripts) with AI-enhanced Standard Operating Procedures (SOPs). This methodology has proven to reduce recurring incidents by 30% and cut new employee onboarding time by 20%.",
         "benefits": [
-          "Hands-on practical training",
-          "Customized curriculum",
-          "Real-world scenarios",
-          "Ongoing support",
-          "Measurable skill improvement"
-        ],
-        "icon": "users"
-      },
-      {
-        "title": "Process Optimization",
-        "description": "I identify and eliminate bottlenecks that slow your growth.",
-        "longDescription": "I analyze your workflows and identify bottlenecks that are slowing you down. Through careful examination of your processes, I find inefficiencies, redundancies, and areas where automation can make a real impact. I don't just identify problems—I provide concrete solutions that streamline your operations, reduce costs, and free up your team to focus on what matters most. The result is a more efficient, productive organization.",
-        "benefits": [
-          "Bottleneck identification",
-          "Workflow optimization",
-          "Automation opportunities",
-          "Cost reduction",
-          "Productivity improvements"
+          "Identification and elimination of repetitive administrative tasks",
+          "Creation of AI-assisted technical guides and living manuals",
+          "Workflow automation across email, cloud storage, CRM, and support",
+          "20% reduction in new staff onboarding and training time",
+          "Process standardization with clear performance metrics"
         ],
         "icon": "zap"
       },
       {
-        "title": "Executive Mentoring",
-        "description": "Personalized support for leaders who need technological clarity.",
-        "longDescription": "As a leader, you need to make technology decisions without getting lost in technical details. I provide executive mentoring that gives you the clarity and confidence to make informed decisions. I translate complex technical concepts into business terms, help you understand the implications of technology choices, and guide you through strategic technology planning. You'll gain the knowledge you need to lead with confidence.",
+        "title": "AI-Ready Infrastructure & Hardware Sizing",
+        "description": "Hardware selection, GPUs, and workstation optimization with proven 30% cost savings.",
+        "longDescription": "Having assembled and repaired 500+ computers and diagnosed 200+ critical components (GPUs, RAM, NVMe storage, motherboards), I provide vendor-neutral advisory on what equipment to buy or upgrade. Whether refreshing office workstations or building a local AI inference node, I optimize every euro invested.",
         "benefits": [
-          "Technology decision clarity",
-          "Strategic planning guidance",
-          "Risk assessment",
-          "Vendor relationship management",
-          "Confidence in technology leadership"
+          "Average 30% savings on hardware procurement by avoiding overspending",
+          "40% performance increase on existing business workstations",
+          "3+ years extended lifespan across your hardware fleet",
+          "Accurate GPU and VRAM sizing for local AI workloads",
+          "Preventive maintenance plans that cut hardware failure rates by 45%"
         ],
-        "icon": "target"
+        "icon": "refresh-cw"
+      },
+      {
+        "title": "Team Training & Senior L1–L3 Support",
+        "description": "Hands-on AI workflow training and senior technical support with 95% first-contact resolution.",
+        "longDescription": "Technology only works if your team can use it without friction. I deliver practical, role-specific training on the safe and productive use of AI models, cloud tools, and security hygiene, backed by senior remote and onsite technical support with a 95% first-contact resolution rate.",
+        "benefits": [
+          "100% hands-on training adapted to your staff's actual workflows",
+          "95% first-contact incident resolution rate",
+          "Expert cross-platform support across Windows, Linux, and macOS",
+          "Over 95% client satisfaction and long-term retention rate",
+          "Continuous technical guidance without confusing jargon"
+        ],
+        "icon": "users"
       }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Clear answers about my work",
+    "subtitle": "Direct, zero-smoke answers on how I integrate AI, infrastructure, and security",
     "items": [
       {
-        "question": "What exactly does it mean that you are a \"Technology Architect\"?",
-        "answer": "It means I design, integrate, and optimize complete systems: infrastructure, networks, servers, hardware, AI automation, security, and web platforms. I don't work on isolated pieces; I build the complete technological ecosystem that supports a modern digital business."
+        "question": "Why hire an Infrastructure and Cybersecurity specialist for AI advisory?",
+        "answer": "Because AI doesn't live in a vacuum: it connects to your cloud files, runs on your workstations, traverses your network, and handles private client data. With 20+ years in systems, networking (CCNA), and cybersecurity (Google / FUNDAE), I ensure the AI you adopt is cost-effective, fast, and doesn't open security breaches."
       },
       {
-        "question": "How does hiring a Technology Architect benefit me instead of several specialists?",
-        "answer": "You don't need a programmer, a sysadmin, an automation specialist, and a security technician separately. I cover all these areas in an integrated way, ensuring coherence, stability, and efficiency. You save costs, reduce friction, and get a functional system from start to finish."
+        "question": "How does working with you benefit me compared to hiring multiple separate agencies?",
+        "answer": "You avoid the classic blame game where the AI consultant blames IT, IT blames the network, and nothing gets solved. I cover the entire chain end-to-end: from hardware, OS, and networking up to SharePoint/OneDrive structuring and AI model integration."
       },
       {
-        "question": "Can you analyze my current infrastructure and propose real improvements?",
-        "answer": "Yes. I perform technical audits where I evaluate performance, security, configurations, compatibility, automations, hardware, networks, and deployments. I identify bottlenecks and deliver a clear strategic plan based on professional technical criteria."
+        "question": "Can you audit our current infrastructure before introducing AI tools?",
+        "answer": "Yes, and that is my standard protocol. I perform a technical diagnostic evaluating your workstations, cloud data structure, security posture, and specific operational workflows where an AI model or automation will deliver immediate return."
       },
       {
-        "question": "What type of AI automations can you implement in my business?",
-        "answer": "From intelligent operational assistants to advanced flows with n8n for administrative tasks, documentation, customer service, information classification, API integrations, and internal processes. Designed to reduce operational time and increase real efficiency."
+        "question": "What kind of practical AI and automation solutions do you implement?",
+        "answer": "I implement high-impact solutions: cloud knowledge structuring for private AI assistants, automated n8n and API workflows, AI-assisted operational manuals and support protocols, and objective evaluations between local models (total privacy) vs. cloud models like Claude or ChatGPT Enterprise."
       },
       {
-        "question": "Can you design the complete technological infrastructure of my company?",
-        "answer": "Yes. From hardware and server selection to network configuration, virtualization, production environments, security, and web deployment. This includes scalability, basic redundancy, and best practices to avoid failures and downtime."
+        "question": "Do you also handle critical day-to-day IT support, networking, and workstation issues?",
+        "answer": "Absolutely. I maintain a 95% first-contact resolution rate across Windows, Linux, and macOS systems, router/switch configurations, network printers, and cloud migrations. A company cannot innovate with AI if daily operations halt due to technical failures."
       },
       {
-        "question": "Do you also offer DevOps or SysOps services?",
-        "answer": "Yes, with a practical approach adapted to small and medium-sized businesses. I configure environments, pipelines, secure deployments, VPS, basic containers, monitoring, and technical automations, without the unnecessary complexity of enterprise environments."
-      },
-      {
-        "question": "Can I change my entire technological environment even if you don't know how it's currently built?",
-        "answer": "Yes. I have experience auditing and rebuilding legacy, hybrid, obsolete, or poorly integrated systems. I can migrate, modernize, and stabilize them without interrupting your operation."
-      },
-      {
-        "question": "Do you offer advice on equipment purchases or technological renewal of a company?",
-        "answer": "Yes. I evaluate real needs, desired performance, compatibility, durability, and scalability. My approach avoids impulsive purchases or bad investments, ensuring that the chosen hardware performs and has a prolonged useful life."
-      },
-      {
-        "question": "What level of security can you implement in my systems?",
-        "answer": "I apply practical technical security: server hardening, secure configuration, basic network segmentation, web best practices, attack vector review, operational shields, and monitoring. Realistic and effective security for SMEs and professionals."
-      },
-      {
-        "question": "What type of projects can you complete fully and turnkey?",
-        "answer": "– Modern corporate web\n– VPS + deployment + security\n– AI automation\n– Hybrid systems (local + cloud)\n– Networks and cameras\n– Infrastructure for digital businesses\n– Audits and environment modernization\n– Comprehensive support and maintenance"
+        "question": "Do you offer unbiased advice for purchasing computers, GPUs, or renewing company hardware?",
+        "answer": "Yes. Having assembled and repaired 500+ workstations and advised 150+ clients, I analyze your real workloads so you buy exactly what you need—achieving 30% cost reductions and extending hardware lifespan by 3+ years."
       }
     ]
   },
   "cta": {
-    "title": "Scalability and Growth",
-    "subtitle": "Ready to take the next step?",
-    "description": "Let's work together to build technology solutions that truly drive your business. No smoke, no complications, just results.",
+    "title": "Real Engineering, Zero Smoke",
+    "subtitle": "Ready to integrate AI and optimize your infrastructure securely?",
+    "description": "Let's discuss your specific environment. We will analyze your systems, data, and workflows to build a clear, secure, and profitable roadmap.",
     "button": "Start conversation"
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Let's talk",
-    "description": "Have a question or want to learn more about how I can help you? Write to me and I'll get back to you as soon as possible.",
+    "subtitle": "Direct Diagnostic & Consulting",
+    "description": "Tell me about your challenge in IT infrastructure, cybersecurity, or AI model adoption, and I will reply personally with clear technical judgment.",
     "form": {
       "name": "Name",
       "email": "Email",
       "message": "Message",
       "submit": "Send message",
       "sending": "Sending...",
-      "success": "Message sent! I'll get back to you soon.",
-      "error": "There was an error. Please try again."
+      "success": "Message sent! I will review your case and reply shortly.",
+      "error": "There was an error sending your message. Please try again."
     }
   },
   "footer": {
-    "tagline": "Frictionless Technology.",
-    "rights": "Ivan Tech Coach. All rights reserved.",
-    "madeBy": "Designed and developed by Ivan, combining modern web architecture with Context Engineering and Vibe Coding techniques assisted by AI.",
+    "tagline": "Frictionless IT Infrastructure, Cybersecurity & Applied AI.",
+    "rights": "Ivan Tech Coach (Jaime Iván Rodríguez Morales). All rights reserved.",
+    "madeBy": "Engineered by Ivan Tech Coach · Visual system powered by Refero Styles (DESIGN.md) & Context Engineering.",
     "social": {
       "instagram": "https://www.instagram.com/ivantechcoach/",
       "youtube": "https://www.youtube.com/@SinceramenteIvan",
@@ -231,4 +374,3 @@
     }
   }
 }
-
