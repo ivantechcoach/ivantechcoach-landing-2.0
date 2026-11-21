@@ -94,6 +94,7 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
   useEffect(() => {
     const stored = window.localStorage.getItem("itc-theme") as ThemeMode | null;
     const initialTheme = stored && themes.includes(stored) ? stored : "dark";
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time hydration from localStorage (client-only)
     setTheme(initialTheme);
 
     const root = document.documentElement;
@@ -106,12 +107,14 @@ const Header: React.FC<HeaderProps> = ({ lang: langProp, content }) => {
   }, [mobileOpen, commandOpen]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- standard post-hydration mounted guard
     setMounted(true);
   }, []);
 
   useEffect(() => {
     const shouldReopen = sessionStorage.getItem("itc-keep-menu");
     if (shouldReopen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time read from sessionStorage (client-only)
       setMobileOpen(true);
       sessionStorage.removeItem("itc-keep-menu");
     }
