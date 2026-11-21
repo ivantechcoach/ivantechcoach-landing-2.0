@@ -10,11 +10,12 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 type Props = {
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const lang = isValidLanguage(params.lang) ? params.lang : 'es'
+  const { lang: langParam } = await params
+  const lang = isValidLanguage(langParam) ? langParam : 'es'
   const content = await getContent(lang)
   const title = `Ivan Tech Coach | ${
     lang === 'en'
@@ -67,11 +68,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HomePage({ params }: Props) {
-  if (!isValidLanguage(params.lang)) {
+  const { lang } = await params
+  if (!isValidLanguage(lang)) {
     notFound()
   }
 
-  const lang = params.lang
   const content = await getContent(lang)
 
   const jsonLd = [

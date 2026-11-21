@@ -6,11 +6,12 @@ import ContactForm from '@/components/ContactForm'
 import type { Metadata } from 'next'
 
 type Props = {
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const lang = isValidLanguage(params.lang) ? params.lang : 'es'
+  const { lang: langParam } = await params
+  const lang = isValidLanguage(langParam) ? langParam : 'es'
   const content = await getContent(lang)
   const title = `${content.contact.title} | Ivan Tech Coach`
   const description = content.contact.description
@@ -57,11 +58,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ContactPage({ params }: Props) {
-  if (!isValidLanguage(params.lang)) {
+  const { lang } = await params
+  if (!isValidLanguage(lang)) {
     notFound()
   }
 
-  const lang = params.lang
   const content = await getContent(lang)
 
   return (

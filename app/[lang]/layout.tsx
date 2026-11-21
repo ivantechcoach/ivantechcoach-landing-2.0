@@ -9,11 +9,12 @@ export function generateStaticParams() {
 
 type Props = {
   children: React.ReactNode
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }
 
 export default async function LangLayout({ children, params }: Props) {
-  if (!isValidLanguage(params.lang)) {
+  const { lang } = await params
+  if (!isValidLanguage(lang)) {
     notFound()
   }
 
